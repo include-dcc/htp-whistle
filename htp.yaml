@@ -1,0 +1,61 @@
+study_id: SD_7YDC1W4H
+study_accession: 
+study_title: TBD
+study_desc: TBD
+identifier_prefix: https://include.org/htp/fhir
+output_filename: htp
+id_colname: ParticipantID
+whistle_src: htp.wstl
+code_harmonization_dir: harmony
+projector_lib: projector
+dataset:
+  participant:
+    filename: data/csv/participant.csv
+    data_dictionary: 
+      filename: data/csv/dd/participant-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv
+  condition: 
+    filename: data/csv/condition.csv
+    data_dictionary: 
+      filename:  data/csv/dd/condition-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv
+  ds_condition: 
+    filename: data/csv/ds_condition.csv
+    data_dictionary: 
+      filename:  data/csv/dd/ds_condition-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv
+  encounter:
+    filename: data/csv/encounter.csv
+    data_dictionary: 
+      filename:  data/csv/dd/encounter-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv
+  specimen:
+    filename: data/csv/specimen.csv
+    data_dictionary:
+      filename: data/csv/dd/specimen-dd.csv
+      colnames: 
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv        

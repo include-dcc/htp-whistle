@@ -1,0 +1,41 @@
+// Groups
+//
+// We are using groups to reoresent consent and study membership
+
+// Description: Build basic reference to a Patient 
+//
+//  study - This is the full study object created by Whistler
+//  subject - Must have a participantid
+def Reference_Enrollment(study, subject) {
+    if ($IsNotNil(subject.participantid)) {
+        entity: Reference_Key_Identifier(study, "Patient", subject.participantid);
+    }
+}
+
+// Description: Build the group entry
+// 
+// Arguments: 
+//  study - This is the full study object created by Whistler
+//  subjects - array of subjects, each of which should have a participantid 
+//
+// We don't currently have access to consent details, so this just builds the 
+// entire enrollment for the study. 
+def Group(study, subjects) {
+    identifier[0]: Key_Identifier(study, "Group", study.id);
+    identifier[1].value (if study.accession?): study.accession;
+    identifier[1].system (if study.accession?): "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id="
+    type: "person";
+    actual: true;
+    member: Reference_Enrollment(study, subjects[]);
+    quantity: $ListLen(subjects[*]);
+    resourceType: "Group";
+}
+
+// Description: Wrapper to create the group(s)
+// 
+//  study - This is the full study object created by Whistler
+//  demo - Array of demo objects  
+def ProcessGroup(study, participant) {
+    out research_study: Group(study, participant[*]);
+}
+

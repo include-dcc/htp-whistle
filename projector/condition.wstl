@@ -1,0 +1,112 @@
+// Definition: Uniform method for building Condition IDs associated with a patient
+//
+// Arguments: 
+//  study - This is the full study object created by Whistler
+//  participantid - The id assocaited with patient (this isn't likely to be an actual FHIR id)
+//  varname - The variable name associated with the observation (bmi, height, etc)
+
+def BuildConditionId(study, participantid, varcode) {
+    $this (if $IsNotNil(varcode)): $StrCat(study.id, ".", participantid, ".", varcode);
+}
+
+
+// Definition: Construct a Condition record. These will have either Mondo and/or HP code
+//
+// Arguments: 
+//  study - This is the full study object created by Whistler
+//  questionnaire - This is the entire JSON representation of the IHQ form
+//  qcode - The code/question id associated with the condition 
+//  qvalue - The actual value associated with qcode
+//  note - For some situations, we will want to embed a value inside a note. 
+//
+def Condition(study, condition) {
+    var subject_id: condition.participantid;
+    var coding: HarmonizeMapped(condition.condition_code, "condition_code");
+
+    if (~$IsNil(coding) and condition.condition_status = "TRUE") {
+        identifier[]: Key_Identifier(study, "Condition", BuildConditionId(study, subject_id, coding[0].code));
+        subject: Reference_Key_Identifier(study, "Patient", subject_id);
+
+        verificationStatus: HarmonizeAsCoding(condition.condition_status, "ConditionPresent");
+        verificationStatus.text: HarmonizedLocalDisplay(condition.condition_status, "ConditionPresent");
+
+        category[0].coding[0].system: "http://terminology.hl7.org/CodeSystem/condition-category";
+        category[0].coding[0].code: "encounter-diagnosis";
+        category[0].coding[0].display: "Encounter Diagnosis";
+
+        code.text: HarmonizedLocalDisplay(condition.condition_code, "condition_code");
+        code.coding[]: coding;
+        code.coding[]: LocalCodeSystemReference(study.id, "condition_code", condition.condition_code);
+
+        resourceType: "Condition";
+    }
+}
+
+def DS_Condition(study, condition, varname, value) {
+    var subject_id: condition.participantid;
+    var coding: HarmonizeMapped(value, "DS_diagnosis");
+
+    if (coding?) {
+        identifier[]: Key_Identifier(study, "Condition", BuildConditionId(study, subject_id, coding[0].code));
+        subject: Reference_Key_Identifier(study, "Patient", subject_id);
+
+        verificationStatus: HarmonizeAsCoding(value, "ConditionPresent");
+        verificationStatus.text: HarmonizedLocalDisplay(value, "ConditionPresent");
+
+        category[0].coding[0].system: "http://terminology.hl7.org/CodeSystem/condition-category";
+        category[0].coding[0].code: "encounter-diagnosis";
+        category[0].coding[0].display: "Encounter Diagnosis";
+
+        code.text: HarmonizedLocalDisplay(varname, "DS_diagnosis");
+        code.coding[]: coding;
+        code.coding[]: LocalCodeSystemReference(study.id, "condition", varname);
+
+        resourceType: "Condition";
+    }
+}
+
+// Definition: Construct basic Observation whose response is a code from a local vocabulary (i.e. categorial value)
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  questionnaire - This is the entire JSON representation of the IHQ form
+//  qcode - The code/question id associated with the observation 
+//  qvalue - list of checkbox objects. Each should have the following fields
+//     - code Is the code associated with the checkbox's definition
+//     - value is the response provided. This is likely "1" or missing
+//  
+def KaryotypeObservation(study, condition) {
+    var subject_id: condition.participantid;
+    
+    // We want to tag the observation as Down Syndrome 
+    var dscoding: HarmonizeMapped("DS_diagnosis", "ds_condition");
+    var varcode: HarmonizeMapped(condition.karyotype, "Karyotype");
+
+    identifier[]: Key_Identifier(study, "Observation", BuildConditionId(study, subject_id, "karyotype"));
+    subject: Reference_Key_Identifier(study, "Patient", subject_id);
+    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "ds_condition", "Karyotype"));
+    code.text: HarmonizedLocalDisplay("Karyotype", "ds_condition");
+    code.coding[]: dscoding;
+    code.coding[]: LocalCodeSystemReference(study.id, "ds_condition", "Karyotype");
+
+    valueCodeableConcept.coding[]: ValueCodeableConcept(study.id, "ds_condition", "Karyotype", condition.karyotype, condition.karyotype);
+    status: "final";
+    resourceType: "Observation";
+}
+
+// Description: Wrapper for generating DS Condition records
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  condition - individual row in ds_condition array
+// 
+def ProcessDsCondition(study, condition) {
+    out dscondition: KaryotypeObservation(study, condition);
+    out dscondition: DS_Condition(study, condition, "OfficialDSDiagnosis", condition.officialdsdiagnosis);
+    out dscondition: VariableObservation(study, condition, "ds_condition", "OfficialDSDiagnosis", condition.officialdsdiagnosis)
+}
+
+def ProcessCondition(study, condition) {
+    out condition: Condition(study, condition);
+    out condition: VariableObservation(study, condition, "condition", "condition_code", condition.condition_code)
+}

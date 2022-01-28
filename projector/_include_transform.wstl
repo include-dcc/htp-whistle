@@ -1,0 +1,155 @@
+// Transform the ds-connect dataset 
+// This is the entry point for the INCLUDE transformation.
+//
+// The JSON data into the function as resource (passed as $root 
+// from the wrapper wstl script function. ) This is the JSON formmatted
+// data extracted from the CSV. It has been transformed a bit, but mostly
+// just to tease it into a shape that lets the data work with the Whistler
+// pipeline. Changes to this particular dataset were largely to make the
+// column names a bit more manageable. For the checkboxes that apply to 
+// a single "question", those have been merged into a single json object
+// under a simplified question name. 
+//
+// All of the transformed names are mapped back to the original questions 
+// and column names inside the modified data-dictionary. 
+//
+// We have added data-dictionary and code-system/value-set details to 
+// the study. These are based on the contents of the data-dictionary and
+// will be propagated out as actual code systems. 
+// 
+
+
+
+// This version is just a handful to provide some tests while I do some cleanup
+// for public release of the code. 
+def Transform_HTP_Dataset_Test_Subset(resource) {
+    if resource.study? {
+        $this (if resource.code-systems?): ProcessCodeSystem(resource.study, resource.code-systems[]);
+        $this (if resource.study.data-dictionary?): ProcessDatasetDefinitions(resource.study, resource.study.data-dictionary[]);
+        if resource.demo? {
+            $this: ProcessParticipant(resource.study, resource.demo[1]);
+            $this: ProcessParticipant(resource.study, resource.demo[2]);
+            $this: ProcessParticipant(resource.study, resource.demo[3]);
+            $this: ProcessParticipant(resource.study, resource.demo[4]);
+            $this: ProcessParticipant(resource.study, resource.demo[5]);
+            $this: ProcessParticipant(resource.study, resource.demo[6]);
+            $this: ProcessParticipant(resource.study, resource.demo[8]);
+            $this: ProcessParticipant(resource.study, resource.demo[9]);
+            $this: ProcessParticipant(resource.study, resource.demo[10]);
+            $this: ProcessParticipant(resource.study, resource.demo[11]);
+            $this: ProcessParticipant(resource.study, resource.demo[12]);
+            $this: ProcessParticipant(resource.study, resource.demo[13]);
+            $this: ProcessParticipant(resource.study, resource.demo[14]);
+            $this: ProcessParticipant(resource.study, resource.demo[15]);
+            $this: ProcessParticipant(resource.study, resource.demo[16]);
+            $this: ProcessParticipant(resource.study, resource.demo[18]);
+            $this: ProcessParticipant(resource.study, resource.demo[19]);
+            $this: ProcessParticipant(resource.study, resource.demo[20]);
+            $this: ProcessParticipant(resource.study, resource.demo[21]);
+            $this: ProcessParticipant(resource.study, resource.demo[22]);
+            $this: ProcessParticipant(resource.study, resource.demo[23]);
+            $this: ProcessParticipant(resource.study, resource.demo[24]);
+            $this: ProcessParticipant(resource.study, resource.demo[25]);
+            $this: ProcessParticipant(resource.study, resource.demo[26]);
+            $this: ProcessParticipant(resource.study, resource.demo[28]);
+            $this: ProcessParticipant(resource.study, resource.demo[29]);
+            $this: ProcessParticipant(resource.study, resource.demo[30]);
+            $this: ProcessParticipant(resource.study, resource.demo[31]);
+            $this: ProcessParticipant(resource.study, resource.demo[32]);
+            $this: ProcessParticipant(resource.study, resource.demo[33]);
+            $this: ProcessParticipant(resource.study, resource.demo[34]);
+            $this: ProcessParticipant(resource.study, resource.demo[35]);
+            $this: ProcessParticipant(resource.study, resource.demo[36]);
+            $this: ProcessParticipant(resource.study, resource.demo[38]);
+            $this: ProcessParticipant(resource.study, resource.demo[39]);
+            $this: ProcessParticipant(resource.study, resource.demo[40]);
+            $this: ProcessGroup(resource.study, resource.demo[*]);
+            $this: ProcessStudy(resource.study);
+            $this: ProcessResearchSubject(resource.study, resource.demo[1]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[2]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[3]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[4]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[5]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[6]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[8]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[9]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[10]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[11]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[12]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[13]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[14]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[15]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[16]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[18]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[19]);
+
+            $this: ProcessResearchSubject(resource.study, resource.demo[20]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[21]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[22]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[23]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[24]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[25]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[26]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[28]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[29]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[30]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[31]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[32]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[33]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[34]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[35]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[36]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[38]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[39]);
+            $this: ProcessResearchSubject(resource.study, resource.demo[40]);
+        }        
+    }
+}
+
+
+// Transform the ds-connect dataset 
+def Transform_HTP_Dataset_(resource) {
+    if resource.study? {
+        $this (if resource.code-systems?): ProcessCodeSystem(resource.study, resource.code-systems[]);
+        $this (if resource.study.data-dictionary?): ProcessDatasetDefinitions(resource.study, resource.study.data-dictionary[]);
+        if resource.participant? {
+            $this: ProcessParticipant(resource.study, resource.participant[]);
+            var familyids: $Unique(resource.participant[*].familyid);
+            $this: ProcessFamilyGroups(resource.study, resource.participant[*], familyids[]);
+        }        
+        if resource.specimen? {
+            $this: ProcessSpecimen(resource.study, resource.specimen[]);
+        }
+    }
+}
+
+
+// Transform the ds-connect dataset 
+def Transform_HTP_Dataset(resource) {
+    if resource.study? {
+        $this (if resource.code-systems?): ProcessCodeSystem(resource.study, resource.code-systems[]);
+        $this (if resource.study.data-dictionary?): ProcessDatasetDefinitions(resource.study, resource.study.data-dictionary[]);
+        if resource.participant? {
+            $this: ProcessParticipant(resource.study, resource.participant[]);
+            $this: ProcessGroup(resource.study, resource.participant[*]);
+            $this: ProcessStudy(resource.study);
+            $this: ProcessResearchSubject(resource.study, resource.participant[]);
+
+            var familyids: $Unique(resource.participant[*].familyid);
+            $this: ProcessFamilyGroups(resource.study, resource.participant[*], familyids[]);
+        }        
+        if resource.encounter? {
+            $this: ProcessEncounter(resource.study, resource.encounter[]);
+        }
+        if resource.condition? {
+            $this: ProcessCondition(resource.study, resource.condition[]);
+        }
+        if resource.ds_condition? {
+            $this: ProcessDsCondition(resource.study, resource.ds_condition[]);
+        }
+
+        if resource.specimen? {
+            $this: ProcessSpecimen(resource.study, resource.specimen[]);
+        }
+    }
+}

@@ -1,0 +1,76 @@
+// Create an encounter for each survey so that we have a way to 
+// clearly identify the subject's age at survey
+
+// Age at survey is probably the main reason for this to be here, 
+// but we can also utilize the survey's date
+def BuildEncounterId(study, participantid, event_name) {
+    $this : $StrCat(study.id, ".", participantid, ".", event_name);
+}
+
+def AgeAtExtension(study, subject, age, age_unit) {
+    if (age_unit = "years"){
+        url: "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime";
+        extension[0].url: "target";
+        extension[0].valueReference: subject;
+        extension[1].url: "targetPath";
+        extension[1].valueString: "birthDate";
+        extension[2].url: "relationship";
+        extension[2].valueCode: "after";
+        extension[3].url: "offset";
+        extension[3].valueDuration.value: $ParseInt(age);
+        //extension[3].valueDuration.unit: "a";
+        extension[3].valueDuration.system: "http://unitsofmeasure.org";
+        extension[3].valueDuration.code: "a";
+        //extension[3].display: "years";
+    }
+    if (age_unit = "days"){
+        var days: $ParseFloat(age) * 365.25;
+        var m: $Mod(days, 1);
+        
+        url: "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime";
+        extension[0].url: "target";
+        extension[0].valueReference: subject;
+        extension[1].url: "targetPath";
+        extension[1].valueString: "birthDate";
+        extension[2].url: "relationship";
+        extension[2].valueCode: "after";
+        extension[3].url: "offset";
+        extension[3].valueDuration.value: days - m;
+        extension[3].valueDuration.unit: "d";
+        extension[3].valueDuration.system: "http://unitsofmeasure.org";
+        extension[3].valueDuration.code: "days";
+        //extension[3].display: "days";
+    }
+}
+
+def Encounter(study, encounter) {
+    var subject_id: encounter.participantid;
+    identifier[]: Key_Identifier(study, "Encounter", BuildEncounterId(study, subject_id, encounter.event_name));
+    class.code: "FLD";
+    class.display: "field";
+    class.system: "http://terminology.hl7.org/CodeSystem/v3-ActCode";
+    subject: Reference_Key_Identifier(study, "Patient", subject_id);
+
+    if (encounter.age_at_visit?) {
+        period._start.extension[0]: AgeAtExtension(study, subject, encounter.age_at_visit, "years");
+    }
+    status: "finished";
+
+    resourceType: "Encounter";
+}
+
+
+
+
+// Description: Wrapper for generating ResearchSubject records
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  demo - Must have a participantid
+// 
+def ProcessEncounter(study, encounter) {
+    out encounter: Encounter(study, encounter);
+    out measurement: BasicObservation(study, encounter, "BMI", encounter.bmi, "kg/m2");
+    out measurement: BasicObservation(study, encounter, "Weight_kg", encounter.weight_kg, "kg");
+    out measurement: BasicObservation(study, encounter, "Height_cm", encounter.height_cm, "cm");
+}

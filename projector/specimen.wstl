@@ -1,0 +1,99 @@
+// Specimen 
+
+
+
+// Definition: Build the BioSpecimen resource
+//
+// Argument:
+//  study - This is the full study object created by Whistler
+//  specimen - The specimen record from which we pull the details for the FHIR resource
+//
+def BioSpecimen(study, specimen) {
+    var subject_id: $SubStr(specimen.lab_id, 0, 8);
+    var varident: $StrCat(study.id, ".", specimen.lab_id, ".biospecimen.", specimen.barcode);
+
+    identifier[]: Key_Identifier(study, "Specimen", varident);
+    identifier[]: Key_Identifier(study, "Biospecimen/id", specimen.lab_id);
+
+    // Do we actually want to consider the volume inside "vial volume"
+    if (specimen.vial_volume?) {
+        status: "available";
+    } else {
+        status: "unavailable";
+    }
+    type.coding: HarmonizeMapped(specimen.biospecimen_type, "SpecimenType");
+    type.text: specimen.biospecimen_type
+    subject: Reference_Key_Identifier(study, "Patient", subject_id);
+    resourceType: "Specimen";
+}
+
+def Sample(study, specimen) {
+    var subject_id: $SubStr(specimen.lab_id, 0, 8);
+    var varident: $StrCat(study.id, ".", specimen.lab_id, ".sample.", specimen.barcode);
+    var biospecid: $StrCat(study.id, ".", specimen.lab_id, ".biospecimen.", specimen.barcode);
+    identifier[]: Key_Identifier(study, "Specimen", varident);
+    identifier[]: Key_Identifier(study, "Biospecimen/id", specimen.lab_id);
+    identifier[]: Key_Identifier(study, "Sample/id", specimen.barcode);
+
+    parent[]: Reference_Key_Identifier(study, "Specimen", biospecid);
+
+    // Do we actually want to consider the volume inside "vial volume"
+    if (specimen.vial_volume_ml?) {
+        status: "available";
+    } else {
+        status: "unavailable";
+    }
+    if (specimen.vial_volume_ml?) {
+        collection.quantity.value: $ParseFloat(specimen.vial_volume_ml);
+        collection.quantity.unit: "ml";
+        collection.quantity.code: "ml";
+        collection.quantity.system: "http://ucum.org";
+    }
+    type.coding[]: HarmonizeMapped(specimen.sample_type, "SpecimenType");
+    type.text: specimen.sample_type
+    subject: Reference_Key_Identifier(study, "Patient", subject_id);
+    resourceType: "Specimen";
+}
+
+def SpecimenConcentrationObservation(study, specimen) {
+    if (specimen.concentration_cells_ml?) {
+        var value: $ParseFloat(specimen.concentration_cells_ml);
+
+        if (value?) {
+            var subject_id: $SubStr(specimen.lab_id, 0, 8);
+            var varcode: HarmonizeMapped("concentration_cells_ml", "specimen");
+            var unitcode: HarmonizeMappedFirst("permL", "units");
+            var varident: $StrCat(study.id, ".", specimen.lab_id, ".sample.", specimen.barcode);
+
+            identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, "specimen", specimen.barcode));
+            identifier[]: Key_Identifier(study, "Sample/id", specimen.barcode);
+
+            subject: Reference_Key_Identifier(study, "Patient", subject_id);
+            focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "specimen", "Concentration_cells_mL"));
+            code.text: HarmonizedLocalDisplay("concentration_cells_ml", "specimen");
+            code.coding[]: varcode;
+            code.coding[]: LocalCodeSystemReference(study.id, "specimen", "concentration_cells_ml");
+            valueQuantity.value: value;
+            valueQuantity.unit: "/ml";
+            valueQuantity.system: unitcode.system;
+            valueQuantity.code: unitcode.code;
+
+            specimen: Reference_Key_Identifier(study, "Specimen", varident);
+
+            status: "final";
+            resourceType: "Observation";
+        }
+    }
+}
+
+// Description: Wrapper for generating DS Specimen records
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  specimen - individual row in specimen array
+// 
+def ProcessSpecimen(study, specimen) {
+    out specimen: BioSpecimen(study, specimen);
+    out specimen: Sample(study, specimen);
+    out specimen: SpecimenConcentrationObservation(study, specimen)
+}
