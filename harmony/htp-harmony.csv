@@ -1,0 +1,470 @@
+local code,text,local code system,code,display,code system,comment
+2,Condition Unconfirmed,ConditionPresent,unconfirmed,Unconfirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+ADD/ADHD,ADD/ADHD,condition_code,0007018,Attention deficit hyperactivity disorder,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+ADD/ADHD,ADD/ADHD,condition_code,0007743,attention deficit-hyperactivity disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Aberrant subclavian artery,Aberrant subclavian artery,condition_code,0021727,aberrant subclavian artery,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute lymphocytic leukemia (B-cell Precursor ALL),Acute lymphocytic leukemia (B-cell Precursor ALL),condition_code,0004812,B Acute Lymphoblastic Leukemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute lymphocytic leukemia (B-cell Precursor ALL),Acute lymphocytic leukemia (B-cell Precursor ALL),condition_code,0020511,precursor B-cell acute lymphoblastic leukemia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute lymphocytic leukemia (T-cell ALL),Acute lymphocytic leukemia (T-cell ALL),condition_code,0004963,T-cell acute lymphoblastic leukemia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute lymphocytic leukemia (T-cell ALL),Acute lymphocytic leukemia (T-cell ALL),condition_code,0006727,T-cell acute lymphoblastic leukemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute lymphocytic leukemia (Unspecified ALL),Acute lymphocytic leukemia (Unspecified ALL),condition_code,0001909,Leukemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute lymphocytic leukemia (Unspecified ALL),Acute lymphocytic leukemia (Unspecified ALL),condition_code,0005059,leukemia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute megakaryoblastic leukemia (AMKL),Acute megakaryoblastic leukemia (AMKL),condition_code,0006733,Acute megakaryocytic leukemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute megakaryoblastic leukemia (AMKL),Acute megakaryoblastic leukemia (AMKL),condition_code,0018872,acute megakaryoblastic leukemia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute myeloid leukemia (AML),Acute myeloid leukemia (AML),condition_code,0004808,Acute myeloid leukemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute myeloid leukemia (AML),Acute myeloid leukemia (AML),condition_code,0018874,acute myeloid leukemia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Acute stress disorder,Acute stress disorder,condition_code,0003763,acute stress disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Adenoidectomy,Adenoidectomy,condition_code
+Age_at_visit,auto calcuated from visit date and date of birth,encounter
+Alopecia areata,Alopecia areata,condition_code,0002232,Patchy alopecia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Alopecia areata,Alopecia areata,condition_code,0002232,Patchy alopecia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Alopecia areata,Alopecia areata,condition_code,0005340,alopecia areata,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Alopecia areata,Alopecia areata,condition_code,0005340,alopecia areata,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Alzheimer's disease,Alzheimer's disease,condition_code,0002511,Alzheimer disease,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Alzheimer's disease,Alzheimer's disease,condition_code,0004975,Alzheimer disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Amblyopia,Amblyopia,condition_code,0000646,Amblyopia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Amblyopia,Amblyopia,condition_code,0001020,amblyopia (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+American Indian or Alaska Native,American Indian or Alaska Native,Race
+American Indian or Alaska Native,American Indian or Alaska Native,race,1002-5,American Indian or Alaska Native,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Anal stenosis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Anal stenosis,Anal stenosis,condition_code,0002025,Anal atresia
+Anatomical anomaly,Anatomical anomaly,condition_code
+Anomalous pulmonary venous return,Anomalous pulmonary venous return,condition_code,0007130,congenital total pulmonary venous return anomaly,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Anomalous pulmonary venous return,Anomalous pulmonary venous return,condition_code,0010772,Anomalous pulmonary venous return,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Anomalous pulmonary venous return,Anomalous pulmonary venous return,condition_code,0017705,congenital pulmonary venous return anomaly,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Anxiety,Anxiety,condition_code,0000739,Anxiety,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Anxiety,Anxiety,condition_code,0005618,anxiety disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Aortic valve regurgitation,Aortic valve regurgitation,condition_code,0001659,Aortic regurgitation,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Asian,Asian,race,2028-9,Asian,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Aspiration,Aspiration,condition_code,0002835,Aspiration,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Asthma,Asthma,condition_code,0002099,Asthma,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Asthma,Asthma,condition_code,0004979,asthma,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Astigmatism,Astigmatism,condition_code,0000483,Astigmatism,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Astigmatism,Astigmatism,condition_code,0011284,astigmatism (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atherosclerosis,Atherosclerosis,condition_code,0002621,Atherosclerosis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atherosclerosis,Atherosclerosis,condition_code,0005311,atherosclerosis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Athlete's foot,Athlete's foot,condition_code,0005984,tinea pedis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atopic dermatitis/Eczema,Atopic dermatitis/Eczema,condition_code,0001047,Atopic dermatitis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atopic dermatitis/Eczema,Atopic dermatitis/Eczema,condition_code,0001047,Atopic dermatitis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atopic dermatitis/Eczema,Atopic dermatitis/Eczema,condition_code,0004980,atopic eczema,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atopic dermatitis/Eczema,Atopic dermatitis/Eczema,condition_code,0004980,atopic eczema,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atrial fibrillation (A Fib),Atrial fibrillation (A Fib),condition_code,0004981,atrial fibrillation (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atrial fibrillation (A Fib),Atrial fibrillation (A Fib),condition_code,0005110,Atrial fibrillation,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atrial septal defect (ASD),Atrial septal defect (ASD),condition_code,0001631,Atrial septal defect,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atrial septal defect (ASD),Atrial septal defect (ASD),condition_code,0006664,atrial septal defect,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atrioventricular canal,Atrioventricular canal,condition_code,0006695,Atrioventricular canal defect,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Atrioventricular canal,Atrioventricular canal,condition_code,0020290,atrioventricular septal defect,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Autism spectrum disorder,Autism spectrum disorder,condition_code,0000717,Autism,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Autism spectrum disorder,Autism spectrum disorder,condition_code,0005260,autism,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Bacterial endocardosis,Bacterial endocardosis,condition_code
+Behavioral disorder,Behavioral disorder,condition_code
+Bipolar,Bipolar,condition_code,0004985,bipolar disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Bipolar,Bipolar,condition_code,0007302,Bipolar affective disorder,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Black or African-American,Black or African-American,Race
+Black or African-American,Black or African-American,race,2054-5,Black or African American,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Black or African-American,Black or African-American,race,2076-8,Native Hawaiian or Other Pacific Islander,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Boils,Boils,condition_code,0020083,Furuncle,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Bradycardia,Bradycardia,condition_code
+Calcium deficiency,Calcium deficiency,condition_code,0002901,Hypocalcemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Cardiac block,Cardiac block,condition_code,0012722,Heart block,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Cardiac block,Cardiac block,condition_code,0020755,heart block,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Cardiomyopathy,Cardiomyopathy,condition_code,0001638,Cardiomyopathy,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Cardiomyopathy,Cardiomyopathy,condition_code,0004994,cardiomyopathy,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Cataracts,Cataracts,condition_code,0000518,Cataract,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Cataracts,Cataracts,condition_code,0005129,cataract (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Catatonia,Catatonia,condition_code
+Celiac disease,Celiac disease,condition_code,0002608,Celiac disease,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Celiac disease,Celiac disease,condition_code,0002608,Celiac disease,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Celiac disease,Celiac disease,condition_code,0005130,celiac disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Celiac disease,Celiac disease,condition_code,0005130,celiac disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Central sleep apnea,Central sleep apnea,condition_code,0004731,central sleep apnea syndrome,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Central sleep apnea,Central sleep apnea,condition_code,0010536,Central sleep apnea,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Chronic Lung Disease,Chronic Lung Disease,condition_code,0006528,Chronic lung disease,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Chronic constipation,Chronic constipation,condition_code,0012450,Chronic constipation,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Chronic diarrhea,Chronic diarrhea,condition_code,0002028,Chronic diarrhea,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Chronic diarrhea,Chronic diarrhea,condition_code,0044751,chronic diarrheal disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Chronic lymphocytic leukemia (CLL),Chronic lymphocytic leukemia (CLL),condition_code,0001014,chronic leukemia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Chronic lymphocytic leukemia (CLL),Chronic lymphocytic leukemia (CLL),condition_code,0005550,Chronic lymphatic leukemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Chronic myeloid leukemia (CML),Chronic myeloid leukemia (CML),condition_code,0005506,Chronic myelogenous leukemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Chronic myeloid leukemia (CML),Chronic myeloid leukemia (CML),condition_code,0020077,myelodysplastic/myeloproliferative disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Chronic tic,Chronic tic,condition_code
+Chylothorax,Chylothorax,condition_code,0010310,Chylothorax,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Coarctation aorta,Coarctation aorta,condition_code
+Cognitive decline,Cognitive decline,condition_code
+Cognitive disorder not otherwise specified,Cognitive disorder not otherwise specified,condition_code,0002039,cognitive disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Cohort_type,Down syndrome =any type. Control=no Down syndrome (may have other comorbidities),participant
+Colorectal carcinoma,Colorectal carcinoma,condition_code,0024331,colorectal carcinoma,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Complete trisomy 21,Complete trisomy 21,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+Complete trisomy 21,Complete trisomy 21,DS_diagnosis
+Complete trisomy 21,Complete trisomy 21,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl
+Complete trisomy 21,Complete trisomy 21,OfficialDSDiagnosis
+Conduct disorder,Conduct disorder,condition_code
+Conductive hearing loss,Conductive hearing loss,condition_code
+Congenital heart defect (CHD) - any,Congenital heart defect (CHD) - any,condition_code
+Congenital heart defect repair,Congenital heart defect repair,condition_code
+Congestive heart failure,Congestive heart failure,condition_code,0001635,Congestive heart failure,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Congestive heart failure,Congestive heart failure,condition_code,0005009,congestive heart failure,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Control,Control,Cohort_type
+Control,Control,Event_name
+Control,Control,Karyotype
+Crohn's disease/Ulcerative colitis,Crohn's disease/Ulcerative colitis,condition_code,0005265,inflammatory bowel disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Cushing's disease,Cushing's disease,condition_code,0009050,Cushing disease due to pituitary adenoma,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Cyclic vomiting,Cyclic vomiting,condition_code
+DS_diagnosis,What is the participant's Down syndrome diagnosis?,ds_condition,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,I just found this code for Down Syndrome using Mondo's website search
+Depression,Depression,condition_code,0000716,Depression,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Depression,Depression,condition_code,0002050,depressive disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Dev. delay not otherwise specified,Dev. delay not otherwise specified,condition_code,0012759,Neurodevelopmental abnormality,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Dev. delay not otherwise specified,Dev. delay not otherwise specified,condition_code,0021147,disorder of development or morphogenesis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Developmental coordination disorder,Developmental coordination disorder,condition_code,0004922,developmental coordination disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Disruptive disorder,Disruptive disorder,condition_code
+Diverticulitis,Diverticulitis,condition_code,0004235,diverticulitis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Down syndrome,Case,Cohort_type
+Duodenal atresia/stenosis,Duodenal atresia/stenosis,condition_code,0002246,Abnormal duodenum morphology,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Dysphagia,Dysphagia,condition_code,0002015,Dysphagia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Dysrhythmia,Dysrhythmia,condition_code
+Ear tubes,Ear tubes,condition_code
+Early puberty,Early puberty,condition_code,0000826,Precocious puberty,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Ebstein abnormality,Ebstein abnormality,condition_code,0009144,Ebstein anomaly (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Epilepsy,Epilepsy,condition_code,0005027,epilepsy,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Esophageal atresia,Esophageal atresia,condition_code,0001044,esophageal atresia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Esophageal atresia,Esophageal atresia,condition_code,0002032,Esophageal atresia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Ethnicity,Self/Parent report,participant
+Eustachian tube dysfunction,Eustachian tube dysfunction,condition_code,0004866,eustachian tube disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Eustachian tube dysfunction,Eustachian tube dysfunction,condition_code,0040115,Abnormality of the Eustachian tube,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Event_name,Chronologic order of visits/samples obtained. Typically corresonds with trailing numeral on LabID.,encounter
+FALSE,Condition Absent,ConditionPresent,refuted,Refuted,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+FALSE,FALSE,condition_status
+FamilyID,Family IDs are in blood relation to the child/proband. ,participant
+Fatigue,Fatigue,condition_code,0012378,Fatigue,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Febrile seizure,Febrile seizure,condition_code,0032894,Seizure precipitated by febrile infection,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Female,Female,Sex
+Female,Female,gender,female,Female,http://hl7.org/fhir/administrative-gender,
+Folliculitis,Folliculitis,condition_code,0006552,folliculitis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Folliculitis,Folliculitis,condition_code,0025084,Folliculitis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Food dermatitis,Food dermatitis,condition_code
+Frequent/Recurrent pneumonia,Frequent/Recurrent pneumonia,condition_code
+GERD,GERD,condition_code,0002020,Gastroesophageal reflux,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+GERD,GERD,condition_code,0007186,gastroesophageal reflux disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Gallstones,Gallstones,condition_code,0001081,Cholelithiasis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Gallstones,Gallstones,condition_code,0005346,gallstones,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Gender identity disorder not otherwise specified,Gender identity disorder not otherwise specified,condition_code,0001500,gender identity disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+General Seizure,General Seizure,condition_code
+Glasses,Glasses,condition_code
+Glaucoma,Glaucoma,condition_code,0000501,Glaucoma,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Glaucoma,Glaucoma,condition_code,0005041,glaucoma (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Grave's hyperthyroidism,Grave's hyperthyroidism,condition_code,0005364,Graves disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Grave's hyperthyroidism,Grave's hyperthyroidism,condition_code,0005364,Graves disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Grave's hyperthyroidism,Grave's hyperthyroidism,condition_code,0100647,Graves disease,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Grave's hyperthyroidism,Grave's hyperthyroidism,condition_code,0100647,Graves disease,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Growth hormone deficiency,Growth hormone deficiency,condition_code,0000824,Decreased response to growth hormone stimuation test,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Guillain-Barr?? syndrome,Guillain-Barr?? syndrome,condition_code
+Hashimoto's hypothyroidism,Hashimoto's hypothyroidism,condition_code,0000872,Hashimoto thyroiditis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hashimoto's hypothyroidism,Hashimoto's hypothyroidism,condition_code,0000872,Hashimoto thyroiditis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hashimoto's hypothyroidism,Hashimoto's hypothyroidism,condition_code,0007699,Hashimoto thyroiditis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hashimoto's hypothyroidism,Hashimoto's hypothyroidism,condition_code,0007699,Hashimoto thyroiditis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Headache cluster,Headache cluster,condition_code,0043537,cluster headache syndrome,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Headache,Headache,condition_code,0002315,Headache,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hearing aids,Hearing aids,condition_code
+Height_cm,"Obtained at time of visit. If not available at visit, height may be obtained from EMR within 3 months of visit. Height may be used within 12 months of visit for participants >18 years old.",encounter
+Hemorrhoids,Hemorrhoids,condition_code,0004872,hemorrhoid,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hidradenitis suppurativa,Hidradenitis suppurativa,condition_code,0006559,hidradenitis suppurativa,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hidradenitis suppurativa,Hidradenitis suppurativa,condition_code,0006559,hidradenitis suppurativa,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hidradenitis suppurativa,Hidradenitis suppurativa,condition_code,0040154,Acne inversa,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hidradenitis suppurativa,Hidradenitis suppurativa,condition_code,0040154,Acne inversa,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+High cholesterol,High cholesterol,condition_code,0003124,Hypercholesterolemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+High cortisol,High cortisol,condition_code
+High triglycerides,High triglycerides,condition_code
+Hirschsprung,Hirschsprung,condition_code,0018309,Hirschsprung disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hispanic or Latino,Hispanic or Latino,ethnicity,2135-2,Hispanic or Latino,urn:oid:2.16.840.1.113883.6.238,
+Hyperopia,Hyperopia,condition_code,0000540,Hypermetropia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hyperopia,Hyperopia,condition_code,0004891,hyperopia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hypertension,Hypertension,condition_code,0000822,Hypertension,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hypertension,Hypertension,condition_code,0005044,hypertensive disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hyperthyroidism,Hyperthyroidism,condition_code,0000836,Hyperthyroidism,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hyperthyroidism,Hyperthyroidism,condition_code,0004425,hyperthyroidism,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hypoglycemia,Hypoglycemia,condition_code,0001943,Hypoglycemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hypoglycemia,Hypoglycemia,condition_code,0004946,hypoglycemia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hypothyroidism,Hypothyroidism,condition_code,0000821,Hypothyroidism,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hypothyroidism,Hypothyroidism,condition_code,0005420,hypothyroidism,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Hypotonia,Hypotonia,condition_code,0001252,Hypotonia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Infantile spasms,Infantile spasms,condition_code,0012469,Infantile spasms,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Interrupted aortic arch,Interrupted aortic arch,condition_code
+Irritable bowel syndrome,Irritable bowel syndrome,condition_code,0005052,irritable bowel syndrome,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Karyotype,T21 Status of participant,ds_condition
+Keratoconus,Keratoconus,condition_code,0000563,Keratoconus,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Keratoconus,Keratoconus,condition_code,0015486,keratoconus (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+LabID,"Study specific ID, karyotype, visit number",encounter
+Laryngomalacia,Laryngomalacia,condition_code,0001601,Laryngomalacia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Laryngomalacia,Laryngomalacia,condition_code,0007878,congenital laryngomalacia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Late puberty,Late puberty,condition_code,0000823,Delayed puberty,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Learning difficulty,Learning difficulty,condition_code
+Learning disorder not otherwise specified,Learning disorder not otherwise specified,condition_code
+Long QT syndrome,Long QT syndrome,condition_code
+Low testosterone,Low testosterone,condition_code
+MRAbstractionStatus,"Descriptive assignment. Complete = Participant must have at least 2 encounters available with at least one detailed medical history report available. Not complete = No medical records available. Partially complete but good abstraction = Criteria for 'Complete' designation not met, but detailed history available that is thought to be representative of participant's health history. Partially complete but pending significant new records = Limited history available, or for longitudinal participants we are aware of new health developments that have not yet been received/abstracted. ",participant
+Male,Male,Sex
+Male,Male,gender,male,Male,http://hl7.org/fhir/administrative-gender,
+Medication-induced movement disorder not otherwise specified,Medication-induced movement disorder not otherwise specified,condition_code
+Memory loss,Memory loss,condition_code
+Metabolic syndrome,Metabolic syndrome,condition_code,0004955,metabolic syndrome,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Microcephalus,Microcephalus,condition_code,0001149,microcephaly (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Migraine,Migraine,condition_code,0002076,Migraine,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Migraine,Migraine,condition_code,0005277,migraine disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Mitral valve regurgitation,Mitral valve regurgitation,condition_code,0001653,Mitral regurgitation,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Mixed hearing loss,Mixed hearing loss,condition_code
+permL,/mL,units,/mL,/mL,http://ucum.org,
+Mood disorder not otherwise specified,Mood disorder not otherwise specified,condition_code,0005371,mood disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+More than one race,More than one race,Race
+Mosaic Translocation Down syndrome,Mosaic Translocation Down syndrome,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+Mosaic Translocation Down syndrome,Mosaic Translocation Down syndrome,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
+Mosaic translocation Down syndrome,Mosaic translocation Down syndrome,DS_diagnosis
+Mosaic translocation Down syndrome,Mosaic translocation Down syndrome,OfficialDSDiagnosis
+Mosaic trisomy 21,Mosaic trisomy 21,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+Mosaic trisomy 21,Mosaic trisomy 21,DS_diagnosis
+Mosaic trisomy 21,Mosaic trisomy 21,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
+Mosaic trisomy 21,Mosaic trisomy 21,OfficialDSDiagnosis
+Myasthenia gravis,Myasthenia gravis,condition_code,0009688,myasthenia gravis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Myocarditis,Myocarditis,condition_code,0004496,myocarditis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Myocarditis,Myocarditis,condition_code,0012819,Myocarditis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Myopia,Myopia,condition_code,0000545,Myopia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Myopia,Myopia,condition_code,0001384,myopia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+NA,NA,DS_diagnosis
+NA,NA,Ethnicity
+NA,NA,OfficialDSDiagnosis
+NA,NA,race,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Nasolacriminal duct surgery,Nasolacriminal duct surgery,condition_code
+Native Hawaiian or Other Pacific Islander,Native Hawaiian or Other Pacific Islander,Race
+Neonatal Complication Other,Neonatal Complication Other,condition_code
+Neonatal recurrent infections,Neonatal recurrent infections,condition_code,0100336,infectious disease or post-infectious disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Neonatal seizure,Neonatal seizure,condition_code
+No,Condition Absent,ConditionPresent,refuted,Refuted,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+Not Hispanic or Latino,Not Hispanic or Latino,ethnicity,2186-5,Not Hispanic or Latino,urn:oid:2.16.840.1.113883.6.238,
+Not tested,Not tested,ConditionPresent,unconfirmed,Unconfirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+Not tested,Not tested,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
+Not tested,Not tested,OfficialDSDiagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
+Nystagmus,Nystagmus,condition_code,0000639,Nystagmus,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Nystagmus,Nystagmus,condition_code,0004843,pathologic nystagmus,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Obesity,Obesity,condition_code,0001513,Obesity,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Obesity,Obesity,condition_code,0011122,obesity disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Obessive compulsive disorder,Obessive compulsive disorder,condition_code,0000722,Obsessive-compulsive behavior,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Obessive compulsive disorder,Obessive compulsive disorder,condition_code,0008114,obsessive-compulsive disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Obstructive hypoventilation,Obstructive hypoventilation,condition_code,0002791,Hypoventilation,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Obstructive sleep apnea,Obstructive sleep apnea,condition_code,0002870,Obstructive sleep apnea,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Obstructive sleep apnea,Obstructive sleep apnea,condition_code,0007147,obstructive sleep apnea syndrome,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+OfficialDSDiagnosis,Typically self/parent report.,ds_condition
+OfficialDSDiagnosis,What is the participant's Down syndrome diagnosis?,ds_condition,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,I just found this code for Down Syndrome using Mondo's website search
+Oppositional defiance disorder,Oppositional defiance disorder,condition_code,0000495,oppositional defiant disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Oppositional defiance disorder,Oppositional defiance disorder,condition_code,0010865,Oppositional defiant disorder,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other CHD history,Other CHD history,condition_code
+Other ENT history,Other ENT history,condition_code,0024623,otorhinolaryngologic disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other GI history,Other GI history,condition_code,0004335,digestive system disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other GI history,Other GI history,condition_code,0025031,Abnormality of the digestive system,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other Nutrition history,Other Nutrition history,condition_code
+Other Pulmonary/Respiratory disease,Other Pulmonary/Respiratory disease,condition_code,0002086,Abnormality of the respiratory system,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other Pulmonary/Respiratory disease,Other Pulmonary/Respiratory disease,condition_code,0005087,respiratory system disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other Skeletal history,Other Skeletal history,condition_code,0002081,musculoskeletal system disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other Skeletal history,Other Skeletal history,condition_code,0033127,Abnormality of the musculoskeletal system,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other Urogenital history,Other Urogenital history,condition_code,0000119,Abnormality of the genitourinary system,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other Urogenital history,Other Urogenital history,condition_code,0021145,disease of genitourinary system,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other arrythmia history,Other arrythmia history,condition_code
+Other autoimmune disease,Other autoimmune disease,condition_code,0002960,Autoimmunity,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other autoimmune disease,Other autoimmune disease,condition_code,0007179,autoimmune disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other cancer history,Other cancer history,condition_code
+Other cardiac history,Other cardiac history,condition_code,0001626,Abnormality of the cardiovascular system,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other cardiac history,Other cardiac history,condition_code,0001626,Abnormality of the cardiovascular system,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other cardiac history,Other cardiac history,condition_code,0001626,Abnormality of the cardiovascular system,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other cardiac history,Other cardiac history,condition_code,0004995,cardiovascular disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other cardiac history,Other cardiac history,condition_code,0004995,cardiovascular disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other cardiac history,Other cardiac history,condition_code,0004995,cardiovascular disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other eye history,Other eye history,condition_code,0000478,Abnormality of the eye,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other eye history,Other eye history,condition_code,0024458,disease of visual system,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other feeding problems,Other feeding problems,condition_code
+Other metabolic/endocrine history,Other metabolic/endocrine history,condition_code,0000818,Abnormality of the endocrine system,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other metabolic/endocrine history,Other metabolic/endocrine history,condition_code,0005151,endocrine system disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other neuro history,Other neuro history,condition_code
+Other psych history,Other psych history,condition_code
+Other secondary neurologic conditions,Other secondary neurologic conditions,condition_code
+Other secondary psychological conditions,Other secondary psychological conditions,condition_code
+Other skin conditions,Other skin conditions,condition_code,0000951,Abnormality of the skin,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other skin conditions,Other skin conditions,condition_code,0005093,skin disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other thyroid condition,Other thyroid condition,condition_code,0000820,Abnormality of the thyroid gland,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other thyroid condition,Other thyroid condition,condition_code,0003240,thyroid gland disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Other,Other,Race
+Other,Other,gender,other,Other,http://hl7.org/fhir/administrative-gender,
+Other,Other,race,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Overweight,Overweight,condition_code,0025502,Overweight,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+PTSD,PTSD,condition_code,0005146,post-traumatic stress disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+PTSD,PTSD,condition_code,0033676,Posttraumatic stress symptom,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Parkinson,Parkinson,condition_code
+Parkinsonism,Parkinsonism,condition_code
+Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),DS_diagnosis
+Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
+Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),OfficialDSDiagnosis
+Patent ductus arteriosus (PDA),Patent ductus arteriosus (PDA),condition_code,0001643,Patent ductus arteriosus,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Patent ductus arteriosus (PDA),Patent ductus arteriosus (PDA),condition_code,0011827,patent ductus arteriosus,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Patent foramen ovale (PFO),Patent foramen ovale (PFO),condition_code,0001655,Patent foramen ovale,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Patent foramen ovale (PFO),Patent foramen ovale (PFO),condition_code,0020439,patent foramen ovale,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Perimenopause,Perimenopause,condition_code
+Pharyngitis,Pharyngitis,condition_code,0002258,pharyngitis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pharyngitis,Pharyngitis,condition_code,0025439,Pharyngitis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pica,Pica,condition_code,0001441,pica disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pica,Pica,condition_code,0011856,Pica,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pleural effusion,Pleural effusion,condition_code,0002202,Pleural effusion,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Polycythemia,Polycythemia,condition_code,0001901,Polycythemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Polycythemia,Polycythemia,condition_code,0005571,polycythemia (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Positive TPO or Tg antibodies,Positive TPO or Tg antibodies,condition_code
+Positive antimicrosomal antibodies,Positive antimicrosomal antibodies,condition_code
+Postmenopause,Postmenopause,condition_code
+Prefer not to answer,Prefer not to answer,ethnicity,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Prefer not to answer,Prefer not to answer,race,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Prefer not to answer,Prefer not to answerrace,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pruritis,Pruritis,condition_code,0000989,Pruritus,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Psoriasis,Psoriasis,condition_code,0003765,Psoriasiform dermatitis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Psoriasis,Psoriasis,condition_code,0003765,Psoriasiform dermatitis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Psoriasis,Psoriasis,condition_code,0005083,psoriasis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Psoriasis,Psoriasis,condition_code,0005083,psoriasis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Psych disorder not otherwise specified,Psych disorder not otherwise specified,condition_code
+Pulmonary atresia,Pulmonary atresia,condition_code,0004935,Pulmonary artery atresia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pulmonary hypertension,Pulmonary hypertension,condition_code,0005149,pulmonary hypertension,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pulmonary hypertension,Pulmonary hypertension,condition_code,0030875,Abnormality of pulmonary circulation,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pulmonary stenosis,Pulmonary stenosis,condition_code,0001642,Pulmonic stenosis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pulmonary stenosis,Pulmonary stenosis,condition_code,0009938,pulmonic stenosis (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pulmonary valve regurgitation,Pulmonary valve regurgitation,condition_code,0001927,pulmonary valve insufficiency,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pyloric stenosis,Pyloric stenosis,condition_code,0001561,pyloric stenosis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Pyloric stenosis,Pyloric stenosis,condition_code,0002021,Pyloric stenosis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Race,Self/Parent report,participant
+Rash,Rash,condition_code,0000988,Skin rash,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Rash,Rash,condition_code,0006547,exanthem (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Reactive airway disease,Reactive airway disease,condition_code,0002099,Asthma,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Reactive airway disease,Reactive airway disease,condition_code,0100470,reactive airway disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Recurrent otitis media,Recurrent otitis media,condition_code,0000403,Recurrent otitis media,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Recurrent otitis media,Recurrent otitis media,condition_code,0021204,chronic otitis media,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Regression,Regression,condition_code,0002376,Developmental regression,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Retinoblastoma,Retinoblastoma,condition_code,0008380,retinoblastoma,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Retinoblastoma,Retinoblastoma,condition_code,0009919,Retinoblastoma,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Rheumatoid arthritis - adult,Rheumatoid arthritis - adult,condition_code
+Rheumatoid arthritis - juvenile,Rheumatoid arthritis - juvenile,condition_code
+Rumination disorder,Rumination disorder,condition_code,0001301,rumination disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Sarcoidosis,Sarcoidosis,condition_code,0019338,sarcoidosis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Schizophrenia,Schizophrenia,condition_code,0005090,schizophrenia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Schizophrenia,Schizophrenia,condition_code,0100753,Schizophrenia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Scoliosis,Scoliosis,condition_code,0005392,scoliosis,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Scoliosis,Scoliosis,condition_code,0010674,Abnormality of the curvature of the vertebral column,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Seasonal allergies,Seasonal allergies,condition_code,0012395,Seasonal allergy,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Seborrheic dermatitis,Seborrheic dermatitis,condition_code,0001051,Seborrheic dermatitis,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Seborrheic dermatitis,Seborrheic dermatitis,condition_code,0006608,seborrheic dermatitis (disease),http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Sensorineural hearing loss,Sensorineural hearing loss,condition_code
+Separation anxiety,Separation anxiety,condition_code
+Sex,Assigned at birth,participant
+Single ventricle anomalies,Single ventricle anomalies,condition_code,0001750,Single ventricle,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Sleep apnea - general,Sleep apnea - general,condition_code,0005296,sleep apnea syndrome,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Sleep apnea - general,Sleep apnea - general,condition_code,0010535,Sleep apnea,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Sleep hypoxia,Sleep hypoxia,condition_code
+Snores,Snores,condition_code,0025267,Snoring,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Solid tumor,Solid tumor,condition_code
+Specific Phobia,Specific Phobia,condition_code,0012000,specific phobia,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Stereotypic movement disorder,Stereotypic movement disorder,condition_code
+Strabismus surgery,Strabismus surgery,condition_code
+Strabismus,Strabismus,condition_code,0000486,Strabismus,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Strabismus,Strabismus,condition_code,0003432,strabismus,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Subclinical hypothyroidism,Subclinical hypothyroidism,condition_code,0008223,Compensated hypothyroidism,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Supraventricular tachycardia,Supraventricular tachycardia,condition_code
+Syncope,Syncope,condition_code,0001279,Syncope,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Systemic lupus erythematosus,Systemic lupus erythematosus,condition_code,0002725,Systemic lupus erythematosus,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Systemic lupus erythematosus,Systemic lupus erythematosus,condition_code,0007915,systemic lupus erythematosus,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+T21,T21,Event_name
+T21,T21,Karyotype
+TRUE,Condition Present,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+TRUE,TRUE,condition_status
+Tachycardia,Tachycardia,condition_code
+Testicular cancer,Testicular cancer,condition_code,0005447,testicular cancer,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Tetralogy of Fallot,Tetralogy of Fallot,condition_code,0001636,Tetralogy of Fallot,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Tetralogy of Fallot,Tetralogy of Fallot,condition_code,0008542,tetralogy of fallot,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Thrombocytopenia,Thrombocytopenia,condition_code,0001973,Autoimmune thrombocytopenia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Thrombocytopenia,Thrombocytopenia,condition_code,0043768,thrombocytopenic purpura,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Tic disorder not otherwise specified,Tic disorder not otherwise specified,condition_code
+Toenail fungus,Toenail fungus,condition_code
+Tonsillectomy,Tonsillectomy,condition_code
+Tourette's syndrome,Tourette's syndrome,condition_code,0007661,Tourette syndrome,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Transient Hearing Loss,Transient Hearing Loss,condition_code
+Transient myeloproliferative disorder,Transient myeloproliferative disorder,condition_code,0005534,Transient myeloproliferative syndrome,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Transient myeloproliferative disorder,Transient myeloproliferative disorder,condition_code,0008040,transient myeloproliferative syndrome,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Transient tic disorder,Transient tic disorder,condition_code,0002419,transient tic disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Translocation Down syndrome,Translocation Down syndrome,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+Translocation Down syndrome,Translocation Down syndrome,DS_diagnosis
+Translocation Down syndrome,Translocation Down syndrome,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
+Translocation Down syndrome,Translocation Down syndrome,OfficialDSDiagnosis
+Transposition great arteries,Transposition great arteries,condition_code,0000153,transposition of the great arteries,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Transposition great arteries,Transposition great arteries,condition_code,0001669,Transposition of the great arteries,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Traumatic brain injury,Traumatic brain injury,condition_code,0043510,brain injury,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Trichotillomania,Trichotillomania,condition_code,0012167,Hair-pulling,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Trichotillomania,Trichotillomania,condition_code,0013189,trichotillomania,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Tricuspid atresia,Tricuspid atresia,condition_code
+Tricuspid valve regurgitation,Tricuspid valve regurgitation,condition_code
+Truncus arteriosis,Truncus arteriosis,condition_code,0001660,Truncus arteriosus,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Ulcers,Ulcers,condition_code,0004247,peptic ulcer disease,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Ulcers,Ulcers,condition_code,0004398,Peptic ulcer,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Unknown hearing loss,Unknown hearing loss,condition_code
+Unknown,Unknown,ethnicity,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,
+Unknown,Unknown,gender,unknown,Unknown,http://hl7.org/fhir/administrative-gender,
+Unsure ENT history,Unsure ENT history,condition_code
+Unsure GI History,Unsure GI History,condition_code
+Unsure arrythmia history,Unsure arrythmia history,condition_code
+Unsure cancer history,Unsure cancer history,condition_code
+Unsure cardiac history,Unsure cardiac history,condition_code
+Unsure eye history,Unsure eye history,condition_code
+Unsure psych history,Unsure psych history,condition_code
+Unsure secondary neurologic condition history,Unsure secondary neurologic condition history,condition_code
+Unsure secondary psychological condition history,Unsure secondary psychological condition history,condition_code
+Unsure,Unsure,OfficialDSDiagnosis
+Unsure,Condition Unconfirmed,ConditionPresent,unconfirmed,Unconfirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+Unsure,Unsure,ConditionPresent,unconfirmed,Unconfirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+Unsure,Unsure,DS_diagnosis
+Unsure,Unsure,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,,
+Unsure,Unsure,ethnicity,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,
+Vascular ring,Vascular ring,condition_code,0010775,Vascular ring,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Ventricular septal defect (VSD),Ventricular septal defect (VSD),condition_code,0001629,Ventricular septal defect,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Ventricular septal defect (VSD),Ventricular septal defect (VSD),condition_code,0002070,ventricular septal defect,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Ventricular tachycardia,Ventricular tachycardia,condition_code
+Vitamin B deficiency,Vitamin B deficiency,condition_code
+Vitamin B1 deficiency,Vitamin B1 deficiency,condition_code
+Vitamin B6 deficiency,Vitamin B6 deficiency,condition_code
+Vitamin D deficiency,Vitamin D deficiency,condition_code,0100471,vitamin D deficiency,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Vitamin D deficiency,Vitamin D deficiency,condition_code,0100512,Low levels of vitamin D,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Vitiligo,Vitiligo,condition_code,0001045,Vitiligo,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Vitiligo,Vitiligo,condition_code,0001045,Vitiligo,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Vitiligo,Vitiligo,condition_code,0008661,Vitiligo,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Vitiligo,Vitiligo,condition_code,0008661,vitiligo,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Weight_kg,"Obtained at time of visit. If not available at visit, weight may be obtained from EMR within 3 months of visit.",encounter
+White,White,race,2028-9,White,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Yes,Condition Present,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+bmi,BMI Derived from ht/wt at time of visit. ,encounter,39156-5,Body mass index (BMI) [Ratio],http://loinc.org
+cm,cm,units,cm,cm,http://ucum.org,
+condition_code,Condition Name,condition
+condition_status,Status of participant,condition
+height,Height,encounter,8303-3,Body height,http://loinc.org
+kg,Kilograms,units,kg,Kilograms,http://ucum.org,
+kg/m2,kg/m2,units,kg/m2,kg/m2,http://ucum.org,
+weight,Weight,encounter,29463-7,Body weight,http://loinc.org
+B Cells,B-Lymphocyte,SpecimenType,C12474,B-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12474,
+Blood,Blood Sample,SpecimenType,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610,"For query purposes, can blood, whole blood, peripheral whole blood be grouped together?"
+CD4+ Tconv cells,,SpecimenType,,,,,
+CD8+ T cells,,SpecimenType,,,,,
+Derived Cell Line,Derived Cell Line,SpecimenType,C156445,Derived Cell Line,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C156445,
+Granulocytes,Granulocyte,SpecimenType,C12530,Granulocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12530,
+Monocytes,Monocyte,SpecimenType,C12547,Monocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12547,
+NK cells,Natural Killer Cell,SpecimenType,C12536,Natural Killer Cell,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12536,
+PAXgene DNA,PAXgene Blood DNA Tube,SpecimenType,C126393,PAXgene Blood DNA Tube,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C126393,
+PAXgene RNA,PAXgene Blood RNA Tube,SpecimenType,C126394,PAXgene Blood RNA Tube,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C126394,
+PBMC Lysate,,SpecimenType,,,,,
+Peripheral Whole Blood,Blood Sample,SpecimenType,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610,
+Plasma,Plasma,SpecimenType,C13356,Plasma,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C13356,
+Red Blood Cells,,SpecimenType,,,,,
+Saliva,Saliva Sample,SpecimenType,C174119,Saliva Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C174119,"For query purposes, Saliva and saliva_bolus grouped together"
+saliva_bolus,Saliva Sample,SpecimenType,C174119,Saliva Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C174119,
+Solid Tissue,Solid Tissue Specimen,SpecimenType,C164014,Solid Tissue Specimen,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C164014,
+WBC Cryo,,SpecimenType,,,,,
+WBC DNA,,SpecimenType,,,,,
+Whole blood,Blood Sample,SpecimenType,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610,
+Bone Marrow,Bone Marrow Sample,SpecimenType,C164009,Bone Marrow Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C164009,
