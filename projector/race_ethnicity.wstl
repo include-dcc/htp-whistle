@@ -21,7 +21,7 @@
 //
 // We will ignore any race details that are not checked 
 def RaceExtension(subject) {
-    if (subject.race? and ~subject.race = "NA") {
+    if (subject.race? and subject.race ~= "NA") {
         var RaceValueCoding: HarmonizeMappedFirst(subject.race, "race");
 
         if (RaceValueCoding?) {
@@ -41,7 +41,7 @@ def RaceExtension(subject) {
 // We will ignore any race details that are not checked 
 // Add the ethnicity extension
 def EthnicityExtension(subject) {
-    if (subject.ethnicity? and ~subject.ethnicity = "NA") {
+    if (subject.ethnicity? and subject.ethnicity ~= "NA") {
         var EthnicityValueCoding : HarmonizeMappedFirst(subject.ethnicity, "ethnicity");
 
         if (EthnicityValueCoding?) {
@@ -59,9 +59,6 @@ def EthnicityExtension(subject) {
                     extension[0].url: "text";
                 }
             }    
-        } else {
-            wonky_ethnicity: subject.ethnicity;
-
-        }
-    }
+        } 
+    } 
 }
