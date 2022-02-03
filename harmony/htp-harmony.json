@@ -6393,17 +6393,6 @@
           ]
         },
         {
-          "code": "Height_cm",
-          "display": "Obtained at time of visit. If not available at visit, height may be obtained from EMR within 3 months of visit. Height may be used within 12 months of visit for participants >18 years old.",
-          "target": [
-            {
-              "code": "Height_cm",
-              "display": "Obtained at time of visit. If not available at visit, height may be obtained from EMR within 3 months of visit. Height may be used within 12 months of visit for participants >18 years old.",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "LabID",
           "display": "Study specific ID, karyotype, visit number",
           "target": [
@@ -6415,12 +6404,12 @@
           ]
         },
         {
-          "code": "Weight_kg",
-          "display": "Obtained at time of visit. If not available at visit, weight may be obtained from EMR within 3 months of visit.",
+          "code": "BMI",
+          "display": "BMI Derived from ht/wt at time of visit. ",
           "target": [
             {
-              "code": "Weight_kg",
-              "display": "Obtained at time of visit. If not available at visit, weight may be obtained from EMR within 3 months of visit.",
+              "code": "BMI",
+              "display": "BMI Derived from ht/wt at time of visit. ",
               "equivalence": "equivalent"
             }
           ]
@@ -6437,12 +6426,34 @@
           ]
         },
         {
+          "code": "Height_cm",
+          "display": "Obtained at time of visit. If not available at visit, height may be obtained from EMR within 3 months of visit. Height may be used within 12 months of visit for participants >18 years old.",
+          "target": [
+            {
+              "code": "Height_cm",
+              "display": "Obtained at time of visit. If not available at visit, height may be obtained from EMR within 3 months of visit. Height may be used within 12 months of visit for participants >18 years old.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "height",
           "display": "Height",
           "target": [
             {
               "code": "height",
               "display": "Height",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Weight_kg",
+          "display": "Obtained at time of visit. If not available at visit, weight may be obtained from EMR within 3 months of visit.",
+          "target": [
+            {
+              "code": "Weight_kg",
+              "display": "Obtained at time of visit. If not available at visit, weight may be obtained from EMR within 3 months of visit.",
               "equivalence": "equivalent"
             }
           ]
@@ -6465,6 +6476,17 @@
       "target": "http://loinc.org",
       "element": [
         {
+          "code": "BMI",
+          "display": "BMI Derived from ht/wt at time of visit. ",
+          "target": [
+            {
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "bmi",
           "display": "BMI Derived from ht/wt at time of visit. ",
           "target": [
@@ -6476,12 +6498,34 @@
           ]
         },
         {
+          "code": "Height_cm",
+          "display": "Obtained at time of visit. If not available at visit, height may be obtained from EMR within 3 months of visit. Height may be used within 12 months of visit for participants >18 years old.",
+          "target": [
+            {
+              "code": "8303-3",
+              "display": "Body height",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "height",
           "display": "Height",
           "target": [
             {
               "code": "8303-3",
               "display": "Body height",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Weight_kg",
+          "display": "Obtained at time of visit. If not available at visit, weight may be obtained from EMR within 3 months of visit.",
+          "target": [
+            {
+              "code": "29463-7",
+              "display": "Body weight",
               "equivalence": "equivalent"
             }
           ]
@@ -6510,17 +6554,6 @@
             {
               "code": "American Indian or Alaska Native",
               "display": "American Indian or Alaska Native",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Black or African-American",
-          "display": "Black or African-American",
-          "target": [
-            {
-              "code": "Black or African-American",
-              "display": "Black or African-American",
               "equivalence": "equivalent"
             }
           ]
@@ -6594,7 +6627,13 @@
               "code": "2054-5",
               "display": "Black or African American",
               "equivalence": "equivalent"
-            },
+            }
+          ]
+        },
+        {
+          "code": "Native Hawaiian or Other Pacific Islander",
+          "display": "Native Hawaiian or Other Pacific Islander",
+          "target": [
             {
               "code": "2076-8",
               "display": "Native Hawaiian or Other Pacific Islander",
@@ -6649,10 +6688,16 @@
               "code": "Black or African-American",
               "display": "Black or African-American",
               "equivalence": "equivalent"
-            },
+            }
+          ]
+        },
+        {
+          "code": "Native Hawaiian or Other Pacific Islander",
+          "display": "Native Hawaiian or Other Pacific Islander",
+          "target": [
             {
-              "code": "Black or African-American",
-              "display": "Black or African-American",
+              "code": "Native Hawaiian or Other Pacific Islander",
+              "display": "Native Hawaiian or Other Pacific Islander",
               "equivalence": "equivalent"
             }
           ]
@@ -7801,6 +7846,17 @@
           ]
         },
         {
+          "code": "CD8+ T cells",
+          "display": "",
+          "target": [
+            {
+              "code": "C12542",
+              "display": "CD8-Positive T-Lymphocyte",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "Derived Cell Line",
           "display": "Derived Cell Line",
           "target": [
@@ -7884,6 +7940,17 @@
             {
               "code": "C13356",
               "display": "Plasma",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Red Blood Cells",
+          "display": "",
+          "target": [
+            {
+              "code": "C12521",
+              "display": "Erythrocyte",
               "equivalence": "equivalent"
             }
           ]

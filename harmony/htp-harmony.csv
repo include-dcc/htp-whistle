@@ -60,9 +60,8 @@ Bacterial endocardosis,Bacterial endocardosis,condition_code
 Behavioral disorder,Behavioral disorder,condition_code
 Bipolar,Bipolar,condition_code,0004985,bipolar disorder,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Bipolar,Bipolar,condition_code,0007302,Bipolar affective disorder,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
-Black or African-American,Black or African-American,Race
 Black or African-American,Black or African-American,race,2054-5,Black or African American,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
-Black or African-American,Black or African-American,race,2076-8,Native Hawaiian or Other Pacific Islander,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
+Native Hawaiian or Other Pacific Islander,Native Hawaiian or Other Pacific Islander,race,2076-8,Native Hawaiian or Other Pacific Islander,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Boils,Boils,condition_code,0020083,Furuncle,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Bradycardia,Bradycardia,condition_code
 Calcium deficiency,Calcium deficiency,condition_code,0002901,Hypocalcemia,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
@@ -165,7 +164,6 @@ Hashimoto's hypothyroidism,Hashimoto's hypothyroidism,condition_code,0007699,Has
 Headache cluster,Headache cluster,condition_code,0043537,cluster headache syndrome,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Headache,Headache,condition_code,0002315,Headache,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Hearing aids,Hearing aids,condition_code
-Height_cm,"Obtained at time of visit. If not available at visit, height may be obtained from EMR within 3 months of visit. Height may be used within 12 months of visit for participants >18 years old.",encounter
 Hemorrhoids,Hemorrhoids,condition_code,0004872,hemorrhoid,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Hidradenitis suppurativa,Hidradenitis suppurativa,condition_code,0006559,hidradenitis suppurativa,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Hidradenitis suppurativa,Hidradenitis suppurativa,condition_code,0006559,hidradenitis suppurativa,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
@@ -436,16 +434,18 @@ Vitiligo,Vitiligo,condition_code,0001045,Vitiligo,http://purl.obolibrary.org/obo
 Vitiligo,Vitiligo,condition_code,0001045,Vitiligo,http://purl.obolibrary.org/obo/hp.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Vitiligo,Vitiligo,condition_code,0008661,Vitiligo,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Vitiligo,Vitiligo,condition_code,0008661,vitiligo,http://purl.obolibrary.org/obo/mondo.owl,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
-Weight_kg,"Obtained at time of visit. If not available at visit, weight may be obtained from EMR within 3 months of visit.",encounter
 White,White,race,2028-9,White,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Yes,Condition Present,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+BMI,BMI Derived from ht/wt at time of visit. ,encounter,39156-5,Body mass index (BMI) [Ratio],http://loinc.org
 bmi,BMI Derived from ht/wt at time of visit. ,encounter,39156-5,Body mass index (BMI) [Ratio],http://loinc.org
 cm,cm,units,cm,cm,http://ucum.org,
 condition_code,Condition Name,condition
 condition_status,Status of participant,condition
+Height_cm,"Obtained at time of visit. If not available at visit, height may be obtained from EMR within 3 months of visit. Height may be used within 12 months of visit for participants >18 years old.",encounter,8303-3,Body height,http://loinc.org
 height,Height,encounter,8303-3,Body height,http://loinc.org
 kg,Kilograms,units,kg,Kilograms,http://ucum.org,
 kg/m2,kg/m2,units,kg/m2,kg/m2,http://ucum.org,
+Weight_kg,"Obtained at time of visit. If not available at visit, weight may be obtained from EMR within 3 months of visit.",encounter,29463-7,Body weight,http://loinc.org
 weight,Weight,encounter,29463-7,Body weight,http://loinc.org
 B Cells,B-Lymphocyte,SpecimenType,C12474,B-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12474,
 Blood,Blood Sample,SpecimenType,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610,"For query purposes, can blood, whole blood, peripheral whole blood be grouped together?"
