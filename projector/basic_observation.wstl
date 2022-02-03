@@ -25,15 +25,17 @@ def BasicObservation(study, encounter, varname, value, units) {
     var varcode: HarmonizeMapped(varname, "encounter");
     var unitcode: HarmonizeMappedFirst(units, "units");
 
+    meta.tag[]: StudyMeta(study);
+    
     identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, encounter.event_name, varname));
     subject: Reference_Key_Identifier(study, "Patient", subject_id);
     focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "encounter", varname));
     code.text: HarmonizedLocalDisplay(varname, "encounter");
     code.coding[]: varcode;
     code.coding[]: LocalCodeSystemReference(study.id, "encounter", varname);
-    if (~value = "NA") {
+    if (value ~= "NA") {
         valueQuantity.value (if value ): $ParseFloat(value);
-        valueQuantity.units: units;
+        valueQuantity.unit: units;
         valueQuantity.system: unitcode.system;
         valueQuantity.code: unitcode.code;
     } else {
@@ -48,6 +50,9 @@ def BasicObservation(study, encounter, varname, value, units) {
 def VariableObservation(study, condition, tablename, varname, value) {
     var subject_id: condition.participantid;
     var coding: ValueCodeableConcept(study.id, tablename, varname, value, value);
+
+    meta.tag[]: StudyMeta(study);
+    
     identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, tablename, $StrCat(varname, "-", $StrJoin(".", $StrSplit(value, " ")))));
     subject: Reference_Key_Identifier(study, "Patient", subject_id);
     focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
