@@ -9,6 +9,8 @@
 // We don't currently have access to consent details, so this just builds the 
 // entire enrollment for the study. 
 def FamilyGroup(study, subjects, famid) {
+    meta.tag[]: StudyMeta(study);
+
     identifier[0]: Key_Identifier(study, "Group", $StrCat(study.id, ".", famid));
     identifier[1]: Key_Identifier(study, "Group/id", famid);
     type: "person";

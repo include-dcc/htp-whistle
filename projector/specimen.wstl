@@ -11,6 +11,7 @@
 def BioSpecimen(study, specimen) {
     var subject_id: $SubStr(specimen.lab_id, 0, 8);
     var varident: $StrCat(study.id, ".", specimen.lab_id, ".biospecimen.", specimen.barcode);
+    meta.tag[]: StudyMeta(study);
 
     identifier[]: Key_Identifier(study, "Specimen", varident);
     identifier[]: Key_Identifier(study, "Biospecimen/id", specimen.lab_id);
@@ -31,6 +32,7 @@ def Sample(study, specimen) {
     var subject_id: $SubStr(specimen.lab_id, 0, 8);
     var varident: $StrCat(study.id, ".", specimen.lab_id, ".sample.", specimen.barcode);
     var biospecid: $StrCat(study.id, ".", specimen.lab_id, ".biospecimen.", specimen.barcode);
+    meta.tag[]: StudyMeta(study);
     identifier[]: Key_Identifier(study, "Specimen", varident);
     identifier[]: Key_Identifier(study, "Biospecimen/id", specimen.lab_id);
     identifier[]: Key_Identifier(study, "Sample/id", specimen.barcode);
@@ -60,6 +62,7 @@ def SpecimenConcentrationObservation(study, specimen) {
         var value: $ParseFloat(specimen.concentration_cells_ml);
 
         if (value?) {
+            meta.tag[]: StudyMeta(study);
             var subject_id: $SubStr(specimen.lab_id, 0, 8);
             var varcode: HarmonizeMapped("concentration_cells_ml", "specimen");
             var unitcode: HarmonizeMappedFirst("permL", "units");

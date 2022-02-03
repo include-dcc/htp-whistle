@@ -11,6 +11,7 @@
 //  study - This is the full study object created by Whistler
 //  subject - Must have a participantid
 def ResearchSubject(study, subject) {
+    meta.tag[]: StudyMeta(study);
     identifier[]: Key_Identifier(study, "ResearchSubject", subject.participantid);
     status: "on-study";
     study: Reference_Key_Identifier(study, "ResearchStudy", study.id);
@@ -25,6 +26,7 @@ def ResearchSubject(study, subject) {
 //  subject - Must have a participantid
 // 
 def Participant(study, subject) {
+    meta.tag[]: StudyMeta(study);
     identifier[]: Key_Identifier(study, "Patient", subject.participantid);
     gender (if subject.sex ~= "."): HarmonizeAsCode(subject.sex, "gender");
     extension[]: RaceExtension(subject);

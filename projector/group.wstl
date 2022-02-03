@@ -21,6 +21,8 @@ def Reference_Enrollment(study, subject) {
 // We don't currently have access to consent details, so this just builds the 
 // entire enrollment for the study. 
 def Group(study, subjects) {
+    meta.tag[]: StudyMeta(study);
+    
     identifier[0]: Key_Identifier(study, "Group", study.id);
     identifier[1].value (if study.accession?): study.accession;
     identifier[1].system (if study.accession?): "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id="
