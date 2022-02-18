@@ -10,6 +10,8 @@ def BuildObservationId(study, participantid, visit_name, varname) {
     $this (if $IsNotNil(varname)): $StrCat(study.id, ".", participantid, ".", visit_name, ".", varname);
 }
 
+
+
 // Definition: Construct basic Observation whose response is a code from a local vocabulary (i.e. categorial value)
 //
 // Arguments:
@@ -34,10 +36,12 @@ def BasicObservation(study, encounter, varname, value, units) {
     code.coding[]: varcode;
     code.coding[]: LocalCodeSystemReference(study.id, "encounter", varname);
     if (value ~= "NA") {
-        valueQuantity.value (if value ): $ParseFloat(value);
-        valueQuantity.unit: units;
-        valueQuantity.system: unitcode.system;
-        valueQuantity.code: unitcode.code;
+        valueQuantity.value (if value?): $ParseFloat(value);
+        if (unitcode?) {
+            valueQuantity.unit: units;
+            valueQuantity.system: unitcode.system;
+            valueQuantity.code: unitcode.code;
+        }
     } else {
         valueString: value;
     }
