@@ -9,7 +9,7 @@
 //  specimen - The specimen record from which we pull the details for the FHIR resource
 //
 def BioSpecimen(study, specimen) {
-    var subject_id: $SubStr(specimen.lab_id, 0, 8);
+    var subject_id: $SubStr(specimen.lab_id, 0, 7);
     var varident: $StrCat(study.id, ".", specimen.lab_id, ".biospecimen.", specimen.barcode);
     meta.tag[]: StudyMeta(study);
 
@@ -29,7 +29,7 @@ def BioSpecimen(study, specimen) {
 }
 
 def Sample(study, specimen) {
-    var subject_id: $SubStr(specimen.lab_id, 0, 8);
+    var subject_id: $SubStr(specimen.lab_id, 0, 7);
     var varident: $StrCat(study.id, ".", specimen.lab_id, ".sample.", specimen.barcode);
     var biospecid: $StrCat(study.id, ".", specimen.lab_id, ".biospecimen.", specimen.barcode);
     meta.tag[]: StudyMeta(study);
@@ -57,13 +57,45 @@ def Sample(study, specimen) {
     resourceType: "Specimen";
 }
 
+def SpecimenVialVolumeObservation(study, specimen) {
+    if (specimen.vial_volume_ml?) {
+        var value: $ParseFloat(specimen.vial_volume_ml);
+
+        if (value?) {
+            meta.tag[]: StudyMeta(study);
+            var subject_id: $SubStr(specimen.lab_id, 0, 7);
+            var varcode: HarmonizeMapped("vial_volume_ml", "specimen");
+            var unitcode: HarmonizeMappedFirst("ml", "units");
+            var varident: $StrCat(study.id, ".", specimen.lab_id, ".sample.", specimen.barcode);
+
+            identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, "specimen.vial_volume.", specimen.barcode));
+            identifier[]: Key_Identifier(study, "Sample/volume/id", specimen.barcode);
+
+            subject: Reference_Key_Identifier(study, "Patient", subject_id);
+            focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "specimen", "Vial_Volume_mL"));
+            code.text: HarmonizedLocalDisplay("vial_volume_ml", "specimen");
+            code.coding[]: varcode;
+            code.coding[]: LocalCodeSystemReference(study.id, "specimen", "vial_volume_ml");
+            valueQuantity.value: value;
+            valueQuantity.unit: "ml";
+            valueQuantity.system: "http://ucum.org";
+            valueQuantity.code: unitcode.code;
+
+            specimen: Reference_Key_Identifier(study, "Specimen", varident);
+
+            status: "final";
+            resourceType: "Observation";
+        }
+    }
+}
+
 def SpecimenConcentrationObservation(study, specimen) {
     if (specimen.concentration_cells_ml?) {
         var value: $ParseFloat(specimen.concentration_cells_ml);
 
         if (value?) {
             meta.tag[]: StudyMeta(study);
-            var subject_id: $SubStr(specimen.lab_id, 0, 8);
+            var subject_id: $SubStr(specimen.lab_id, 0, 7);
             var varcode: HarmonizeMapped("concentration_cells_ml", "specimen");
             var unitcode: HarmonizeMappedFirst("permL", "units");
             var varident: $StrCat(study.id, ".", specimen.lab_id, ".sample.", specimen.barcode);
@@ -89,6 +121,78 @@ def SpecimenConcentrationObservation(study, specimen) {
     }
 }
 
+// Definition: Construct basic Observation whose response is a code from a local vocabulary (i.e. categorial value)
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  questionnaire - This is the entire JSON representation of the IHQ form
+//  qcode - The code/question id associated with the observation 
+//  qvalue - list of checkbox objects. Each should have the following fields
+//     - code Is the code associated with the checkbox's definition
+//     - value is the response provided. This is likely "1" or missing
+//  
+def StringObservation(study, specimen, tablename, varname, value) {
+    var subject_id: $SubStr(specimen.lab_id, 0, 7);
+    var varcode: HarmonizeMapped(varname, tablename);
+
+    meta.tag[]: StudyMeta(study);
+    
+    identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, tablename, $StrCat(varname, ".", value)));
+    subject: Reference_Key_Identifier(study, "Patient", subject_id);
+    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
+    code.text: HarmonizedLocalDisplay(varname, tablename);
+    code.coding[]: varcode;
+    code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
+    valueString: value;
+    
+    status: "final";
+    resourceType: "Observation";
+}
+def VariableObservationSpecimen(study, specimen, tablename, varname, value) {
+    var subject_id: $SubStr(specimen.lab_id, 0, 7);
+    var coding: ValueCodeableConcept(study.id, tablename, varname, value, value);
+
+    meta.tag[]: StudyMeta(study);
+    
+    identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, tablename, $StrCat(varname, "-", $StrJoin(".", $StrSplit(value, " ")))));
+    subject: Reference_Key_Identifier(study, "Patient", subject_id);
+    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
+    code.text: HarmonizedLocalDisplay(varname, tablename);
+    code.coding[]: HarmonizeMapped(varname, tablename);
+    code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
+    valueCodeableConcept.text: value;
+    valueCodeableConcept.coding[]: coding;
+    status: "final";
+    resourceType: "Observation";
+}
+
+def NumericObservation(study, specimen, tablename, varname, numvalue) {
+    if (numvalue?) {
+        var value: $ParseFloat(numvalue);
+
+        if (value?) {
+            meta.tag[]: StudyMeta(study);
+            var subject_id: $SubStr(specimen.lab_id, 0, 7);
+            var varcode: HarmonizeMapped(varname, tablename);
+            //var varident: $StrCat(study.id, ".", specimen.lab_id, ".", varname);
+            var varident: $StrCat(study.id, ".", specimen.lab_id, ".biospecimen.", specimen.barcode);
+            identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, "specimen", varident));
+
+            subject: Reference_Key_Identifier(study, "Patient", subject_id);
+            focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
+            code.text: HarmonizedLocalDisplay(varname, tablename);
+            code.coding[]: varcode;
+            code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
+            valueQuantity.value: value;
+
+            specimen: Reference_Key_Identifier(study, "Specimen", varident);
+
+            status: "final";
+            resourceType: "Observation";
+        }
+    }
+}
+
 // Description: Wrapper for generating DS Specimen records
 //
 // Arguments:
@@ -96,7 +200,25 @@ def SpecimenConcentrationObservation(study, specimen) {
 //  specimen - individual row in specimen array
 // 
 def ProcessSpecimen(study, specimen) {
+    // After Speaking with Robert, I'm pulling these observations out of 'commission' since they are numerous and 
+    // not particularly useful. 2020-02-14
+    //out specimen: StringObservation(study, specimen, "specimen", "Lab_ID", specimen.lab_id);
+    //out specimen: StringObservation(study, specimen, "specimen", "Barcode", specimen.barcode);
+    //out specimen: NumericObservation(study, specimen, "specimen", "Vials_Count", specimen.vials_count);
+
+    out specimen: StringObservation(study, specimen, "specimen", "Analyte_Type", specimen.analyte_type);
+
+    //out specimen: StringObservation(study, specimen, "specimen", "Box", specimen.box);
+    //out specimen: StringObservation(study, specimen, "specimen", "Freezer", specimen.freezer);
+
+    out specimen: VariableObservationSpecimen(study, specimen, "specimen", "Sample_Type", specimen.sample_type);
+    out specimen: VariableObservationSpecimen(study, specimen, "specimen", "Biospecimen_Type", specimen.biospecimen_type);
+
+    //out specimen: StringObservation(study, specimen, "specimen", "In-Out", specimen.in-out);
+
     out specimen: BioSpecimen(study, specimen);
     out specimen: Sample(study, specimen);
+    out specimen: SpecimenVialVolumeObservation(study, specimen)
+
     out specimen: SpecimenConcentrationObservation(study, specimen)
 }
