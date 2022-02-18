@@ -104,9 +104,12 @@ def ProcessDsCondition(study, condition) {
     out dscondition: KaryotypeObservation(study, condition);
     out dscondition: DS_Condition(study, condition, "OfficialDSDiagnosis", condition.officialdsdiagnosis);
     out dscondition: VariableObservation(study, condition, "ds_condition", "OfficialDSDiagnosis", condition.officialdsdiagnosis)
+    
 }
 
 def ProcessCondition(study, condition) {
     out condition: Condition(study, condition);
-    out condition: VariableObservation(study, condition, "condition", "condition_code", condition.condition_code)
+    // Cutting back on the 'extra' observations after meeting with robert 2022-2-14
+    //out condition: VariableObservation(study, condition, "condition", "condition_code", condition.condition_code)
+    //out condition: VariableObservation(study, condition, "condition", "condition_status", condition.condition_status)
 }
