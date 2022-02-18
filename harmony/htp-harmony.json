@@ -6996,11 +6996,6 @@
               "code": "Unsure",
               "display": "Unsure",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "Unsure",
-              "display": "Unsure",
-              "equivalence": "equivalent"
             }
           ]
         }
@@ -7385,34 +7380,6 @@
       ]
     },
     {
-      "source": "Sex",
-      "target": "self",
-      "element": [
-        {
-          "code": "Female",
-          "display": "Female",
-          "target": [
-            {
-              "code": "Female",
-              "display": "Female",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Male",
-          "display": "Male",
-          "target": [
-            {
-              "code": "Male",
-              "display": "Male",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "source": "gender",
       "target": "http://hl7.org/fhir/administrative-gender",
       "element": [
@@ -7464,6 +7431,106 @@
     },
     {
       "source": "gender",
+      "target": "self",
+      "element": [
+        {
+          "code": "Female",
+          "display": "Female",
+          "target": [
+            {
+              "code": "Female",
+              "display": "Female",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Male",
+          "display": "Male",
+          "target": [
+            {
+              "code": "Male",
+              "display": "Male",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "Other",
+              "display": "Other",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Unknown",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "Unknown",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "sex",
+      "target": "http://hl7.org/fhir/administrative-gender",
+      "element": [
+        {
+          "code": "Female",
+          "display": "Female",
+          "target": [
+            {
+              "code": "female",
+              "display": "Female",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Male",
+          "display": "Male",
+          "target": [
+            {
+              "code": "male",
+              "display": "Male",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "other",
+              "display": "Other",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Unknown",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "unknown",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "sex",
       "target": "self",
       "element": [
         {
@@ -7667,6 +7734,17 @@
           ]
         },
         {
+          "code": "ml",
+          "display": "ml",
+          "target": [
+            {
+              "code": "ml",
+              "display": "ml",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "kg",
           "display": "Kilograms",
           "target": [
@@ -7712,6 +7790,17 @@
             {
               "code": "cm",
               "display": "cm",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ml",
+          "display": "ml",
+          "target": [
+            {
+              "code": "ml",
+              "display": "ml",
               "equivalence": "equivalent"
             }
           ]
@@ -7846,6 +7935,17 @@
           ]
         },
         {
+          "code": "CD4+ Tconv cells",
+          "display": "",
+          "target": [
+            {
+              "code": "C12537",
+              "display": "CD4-Positive T-Lymphocyte",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "CD8+ T cells",
           "display": "",
           "target": [
@@ -7923,6 +8023,17 @@
           ]
         },
         {
+          "code": "PBMC Lysate",
+          "display": "PBMC Lysate",
+          "target": [
+            {
+              "code": "C178965",
+              "display": "Peripheral Blood Mononuclear Cell Sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "Peripheral Whole Blood",
           "display": "Blood Sample",
           "target": [
@@ -7984,6 +8095,33 @@
             {
               "code": "C164014",
               "display": "Solid Tissue Specimen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WBC Cryo",
+          "display": "",
+          "target": [
+            {
+              "code": "C12529",
+              "display": "Leukocyte",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "C19314",
+              "display": "Cryopreserved cell",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WBC DNA",
+          "display": "WBC DNA",
+          "target": [
+            {
+              "code": "C12529",
+              "display": "Leukocyte",
               "equivalence": "equivalent"
             }
           ]
@@ -8128,11 +8266,11 @@
         },
         {
           "code": "PBMC Lysate",
-          "display": "",
+          "display": "PBMC Lysate",
           "target": [
             {
               "code": "PBMC Lysate",
-              "display": "",
+              "display": "PBMC Lysate",
               "equivalence": "equivalent"
             }
           ]
@@ -8211,16 +8349,26 @@
               "code": "WBC Cryo",
               "display": "",
               "equivalence": "equivalent"
+            },
+            {
+              "code": "WBC Cryo",
+              "display": "",
+              "equivalence": "equivalent"
             }
           ]
         },
         {
           "code": "WBC DNA",
-          "display": "",
+          "display": "WBC DNA",
           "target": [
             {
               "code": "WBC DNA",
-              "display": "",
+              "display": "WBC DNA",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "WBC DNA",
+              "display": "WBC DNA",
               "equivalence": "equivalent"
             }
           ]
@@ -8243,6 +8391,23 @@
             {
               "code": "Bone Marrow",
               "display": "Bone Marrow Sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "SpecimenType",
+      "target": "http://purl.obolibrary.org/obo/obi.owl",
+      "element": [
+        {
+          "code": "WBC DNA",
+          "display": "WBC DNA",
+          "target": [
+            {
+              "code": "OBI_0001051",
+              "display": " DNA extract",
               "equivalence": "equivalent"
             }
           ]
