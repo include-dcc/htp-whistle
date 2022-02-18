@@ -26,10 +26,39 @@ def FamilyGroup(study, subjects, famid) {
     resourceType: "Group";
 }
 
+// Definition: Construct basic Observation whose response is a code from a local vocabulary (i.e. categorial value)
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  questionnaire - This is the entire JSON representation of the IHQ form
+//  qcode - The code/question id associated with the observation 
+//  qvalue - list of checkbox objects. Each should have the following fields
+//     - code Is the code associated with the checkbox's definition
+//     - value is the response provided. This is likely "1" or missing
+//  
+def FamilyIdObservation(study, tablename, varname, value) {
+    var varcode: HarmonizeMapped(varname, tablename);
+
+    meta.tag[]: StudyMeta(study);
+    
+    identifier[]: Key_Identifier(study, "Observation",  $StrCat(study.id, ".", tablename, ".", varname, ".", value));
+    subject: Reference_Key_Identifier(study, "Group", $StrCat(study.id, ".", value));
+    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
+    code.text: HarmonizedLocalDisplay(varname, tablename);
+    code.coding[]: varcode;
+    code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
+    valueString: value;
+    
+    status: "final";
+    resourceType: "Observation";
+}
+
 // Description: Wrapper to create the group(s)
 // 
 //  study - This is the full study object created by Whistler
 //  demo - Array of demo objects  
 def ProcessFamilyGroups(study, participants, familyid) {
     out research_study: FamilyGroup(study, participants, familyid);
+
+    out research_study: FamilyIdObservation(study, "participant", "FamilyID", familyid);
 }
