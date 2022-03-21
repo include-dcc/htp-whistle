@@ -28,6 +28,12 @@ def RaceExtension(subject) {
             url: "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race";
             extension[0].valueCoding : RaceValueCoding;
             extension[0].url : "ombCategory";
+            extension[1].valueString (if subject.race?): subject.race;
+            extension[1].url (if subject.race?): "text";
+        } else {
+            url: "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race";
+            extension[0].valueString (if subject.race_display?): subject.race;
+            extension[0].url (if subject.race?): "text";           
         }
     }
 }
@@ -50,12 +56,12 @@ def EthnicityExtension(subject) {
                 extension[0].valueCoding : EthnicityValueCoding;
                 extension[0].url : "ombCategory";
 
-                extension[1].valueString (if subject.ethnicity_display?): subject.ethnicity_display;
-                extension[1].url (if subject.ethnicity_display?): "text";
+                extension[1].valueString (if subject.ethnicity?): subject.ethnicity;
+                extension[1].url (if subject.ethnicity?): "text";
             } else {
-                if (subject.ethnicity_display?) {
+                if (subject.ethnicity?) {
                     url : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity";
-                    extension[0].valueString: subject.ethnicity_display;
+                    extension[0].valueString: subject.ethnicity;
                     extension[0].url: "text";
                 }
             }    
