@@ -1,0 +1,33 @@
+// Substances can be used for specimen processing additives
+
+def SubstanceIdentifier(study, substance_name) {
+    $this: $StrCat(study.id, ".", substance_name);
+}
+
+def BuildCodeableConcept(code, system, display) {
+    code: code;
+    system: system;
+    display: display;
+}
+
+def ProcessSubstance(study, substance) {
+    var substance_code: HarmonizeMapped(substance, "SpecimenAdditive");
+
+    if (substance_code?) {
+        meta.tag[]: StudyMeta(study);
+        
+        identifier[]: Key_Identifier(study, "Substance", SubstanceIdentifier(study, substance));
+        identifier[0].use: "official";
+        status: "active";
+        category[0].text: "chemical";
+        category[0].coding[]: BuildCodeableConcept("chemical", "http://terminology.hl7.org/CodeSystem/substance-category", "Chemical");
+        code.coding[]: substance_code;
+        code.text: substance;
+        resourceType: "Substance";
+    }
+}
+
+def ProcessSubstanceData(study, substance) {
+    //magic: substance;
+    out substance: ProcessSubstance(study, substance.additive_id);
+}

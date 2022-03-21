@@ -1,224 +1,88 @@
-// Specimen 
+// Specimen
 
-
-
-// Definition: Build the BioSpecimen resource
-//
-// Argument:
-//  study - This is the full study object created by Whistler
-//  specimen - The specimen record from which we pull the details for the FHIR resource
-//
-def BioSpecimen(study, specimen) {
-    var subject_id: $SubStr(specimen.lab_id, 0, 7);
-    var varident: $StrCat(study.id, ".", specimen.lab_id, ".biospecimen.", specimen.barcode);
-    meta.tag[]: StudyMeta(study);
-
-    identifier[]: Key_Identifier(study, "Specimen", varident);
-    identifier[]: Key_Identifier(study, "Biospecimen/id", specimen.lab_id);
-
-    // Do we actually want to consider the volume inside "vial volume"
-    if (specimen.vial_volume?) {
-        status: "available";
-    } else {
-        status: "unavailable";
-    }
-    type.coding: HarmonizeMapped(specimen.biospecimen_type, "SpecimenType");
-    type.text: specimen.biospecimen_type
-    subject: Reference_Key_Identifier(study, "Patient", subject_id);
-    resourceType: "Specimen";
+// The Subject ID is currently baked into the sample_id but 
+// we'll pass it along on the off chance that we decide to 
+// change that rule and will only require a single change 
+// to handle it  
+def SpecimenIdentifier(study, subject_id, sample_id) {
+    $this: $StrCat(sample_id);
 }
 
-def Sample(study, specimen) {
-    var subject_id: $SubStr(specimen.lab_id, 0, 7);
-    var varident: $StrCat(study.id, ".", specimen.lab_id, ".sample.", specimen.barcode);
-    var biospecid: $StrCat(study.id, ".", specimen.lab_id, ".biospecimen.", specimen.barcode);
-    meta.tag[]: StudyMeta(study);
-    identifier[]: Key_Identifier(study, "Specimen", varident);
-    identifier[]: Key_Identifier(study, "Biospecimen/id", specimen.lab_id);
-    identifier[]: Key_Identifier(study, "Sample/id", specimen.barcode);
 
-    parent[]: Reference_Key_Identifier(study, "Specimen", biospecid);
-
-    // Do we actually want to consider the volume inside "vial volume"
-    if (specimen.vial_volume_ml?) {
-        status: "available";
-    } else {
-        status: "unavailable";
+def ConcentrationQuantityExtension(study, aliquot) {
+    if (aliquot.concentration ~= "NA") {
+        url: "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/concentration-quantity";
+        valueQuantity.unit: "Cells/mL";
+        valueQuantity.system: "http://ucum.org";
+        valueQuantity.value: $ParseFloat(aliquot.concentration);
+        valueQuantity.code: "Cells/mL";
     }
-    if (specimen.vial_volume_ml?) {
-        collection.quantity.value: $ParseFloat(specimen.vial_volume_ml);
-        collection.quantity.unit: "ml";
-        collection.quantity.code: "ml";
-        collection.quantity.system: "http://ucum.org";
-    }
-    type.coding[]: HarmonizeMapped(specimen.sample_type, "SpecimenType");
-    type.text: specimen.sample_type
-    subject: Reference_Key_Identifier(study, "Patient", subject_id);
-    resourceType: "Specimen";
 }
 
-def SpecimenVialVolumeObservation(study, specimen) {
-    if (specimen.vial_volume_ml?) {
-        var value: $ParseFloat(specimen.vial_volume_ml);
+def ProcessAliquot(study, subject_id, aliquot) {
+    identifier[]: Key_Identifier(study,"biospecimen/container/id", aliquot.barcode );
+    identifier[0].use: "official";
+    specimenQuantity.value: $ParseFloat(aliquot.vial_volume);
+    specimenQuantity.unit: "ml";
+    specimenQuantity.code: "ml";
+    specimenQuantity.system: "http://ucum.org";
+    description: aliquot.biospecimen_storage;
+    extension[0]: ConcentrationQuantityExtension(study, aliquot);
 
-        if (value?) {
-            meta.tag[]: StudyMeta(study);
-            var subject_id: $SubStr(specimen.lab_id, 0, 7);
-            var varcode: HarmonizeMapped("vial_volume_ml", "specimen");
-            var unitcode: HarmonizeMappedFirst("ml", "units");
-            var varident: $StrCat(study.id, ".", specimen.lab_id, ".sample.", specimen.barcode);
+    if (aliquot.preservation_method? and aliquot.preservation_method ~= "NA") {
+        additiveReference: Reference_Key_Identifier(study, "Substance", SubstanceIdentifier(study, aliquot.preservation_method))
+    }
+}
 
-            identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, "specimen.vial_volume.", specimen.barcode));
-            identifier[]: Key_Identifier(study, "Sample/volume/id", specimen.barcode);
+def ProcessSpecimen(study, specimen, all_aliquots, participants) {
+    // We may not get subject id or it's name will change. This is based on 
+    // RJC example but the final dataset may look very different.
+    //var subject_id: $SubStr(specimen.lab_id, 0, 7);
+    var subject_id: specimen.subject_id;
 
-            subject: Reference_Key_Identifier(study, "Patient", subject_id);
-            focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "specimen", "Vial_Volume_mL"));
-            code.text: HarmonizedLocalDisplay("vial_volume_ml", "specimen");
-            code.coding[]: varcode;
-            code.coding[]: LocalCodeSystemReference(study.id, "specimen", "vial_volume_ml");
-            valueQuantity.value: value;
-            valueQuantity.unit: "ml";
-            valueQuantity.system: "http://ucum.org";
-            valueQuantity.code: unitcode.code;
-
-            specimen: Reference_Key_Identifier(study, "Specimen", varident);
-
-            status: "final";
-            resourceType: "Observation";
+    var matching_subject: participants[where $.participantid=subject_id];
+    if ($ListLen(matching_subject) > 0) {
+        var aliquots: all_aliquots[where $.sample_id=specimen.sample_id];
+        
+        meta.tag[]: StudyMeta(study);
+        
+        // add labID to identifier as separate entry???
+        identifier[0]: Key_Identifier(study, "Specimen", SpecimenIdentifier(study, subject_id, specimen.sample_id));
+        identifier[0].use: "official";
+        
+        if (specimen.parent_sample_id?) {
+            parent[] (if specimen.parent_sample_id ~= specimen.sample_id): Reference_Key_Identifier(study, "Specimen", SpecimenIdentifier(study, subject_id, specimen.parent_sample_id));
         }
-    }
-}
 
-def SpecimenConcentrationObservation(study, specimen) {
-    if (specimen.concentration_cells_ml?) {
-        var value: $ParseFloat(specimen.concentration_cells_ml);
-
-        if (value?) {
-            meta.tag[]: StudyMeta(study);
-            var subject_id: $SubStr(specimen.lab_id, 0, 7);
-            var varcode: HarmonizeMapped("concentration_cells_ml", "specimen");
-            var unitcode: HarmonizeMappedFirst("permL", "units");
-            var varident: $StrCat(study.id, ".", specimen.lab_id, ".sample.", specimen.barcode);
-
-            identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, "specimen", specimen.barcode));
-            identifier[]: Key_Identifier(study, "Sample/id", specimen.barcode);
-
-            subject: Reference_Key_Identifier(study, "Patient", subject_id);
-            focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "specimen", "Concentration_cells_mL"));
-            code.text: HarmonizedLocalDisplay("concentration_cells_ml", "specimen");
-            code.coding[]: varcode;
-            code.coding[]: LocalCodeSystemReference(study.id, "specimen", "concentration_cells_ml");
-            valueQuantity.value: value;
-            valueQuantity.unit: "/ml";
-            valueQuantity.system: unitcode.system;
-            valueQuantity.code: unitcode.code;
-
-            specimen: Reference_Key_Identifier(study, "Specimen", varident);
-
-            status: "final";
-            resourceType: "Observation";
+        // Do we actually want to consider the volume inside "vial volume"
+        if (specimen.in_out = "In") {
+            status: "available";
+        } else {
+            status: "unavailable";
         }
-    }
-}
 
-// Definition: Construct basic Observation whose response is a code from a local vocabulary (i.e. categorial value)
-//
-// Arguments:
-//  study - This is the full study object created by Whistler
-//  questionnaire - This is the entire JSON representation of the IHQ form
-//  qcode - The code/question id associated with the observation 
-//  qvalue - list of checkbox objects. Each should have the following fields
-//     - code Is the code associated with the checkbox's definition
-//     - value is the response provided. This is likely "1" or missing
-//  
-def StringObservation(study, specimen, tablename, varname, value) {
-    var subject_id: $SubStr(specimen.lab_id, 0, 7);
-    var varcode: HarmonizeMapped(varname, tablename);
-
-    meta.tag[]: StudyMeta(study);
-    
-    identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, tablename, $StrCat(varname, ".", value)));
-    subject: Reference_Key_Identifier(study, "Patient", subject_id);
-    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
-    code.text: HarmonizedLocalDisplay(varname, tablename);
-    code.coding[]: varcode;
-    code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
-    valueString: value;
-    
-    status: "final";
-    resourceType: "Observation";
-}
-def VariableObservationSpecimen(study, specimen, tablename, varname, value) {
-    var subject_id: $SubStr(specimen.lab_id, 0, 7);
-    var coding: ValueCodeableConcept(study.id, tablename, varname, value, value);
-
-    meta.tag[]: StudyMeta(study);
-    
-    identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, tablename, $StrCat(varname, "-", $StrJoin(".", $StrSplit(value, " ")))));
-    subject: Reference_Key_Identifier(study, "Patient", subject_id);
-    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
-    code.text: HarmonizedLocalDisplay(varname, tablename);
-    code.coding[]: HarmonizeMapped(varname, tablename);
-    code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
-    valueCodeableConcept.text: value;
-    valueCodeableConcept.coding[]: coding;
-    status: "final";
-    resourceType: "Observation";
-}
-
-def NumericObservation(study, specimen, tablename, varname, numvalue) {
-    if (numvalue?) {
-        var value: $ParseFloat(numvalue);
-
-        if (value?) {
-            meta.tag[]: StudyMeta(study);
-            var subject_id: $SubStr(specimen.lab_id, 0, 7);
-            var varcode: HarmonizeMapped(varname, tablename);
-            //var varident: $StrCat(study.id, ".", specimen.lab_id, ".", varname);
-            var varident: $StrCat(study.id, ".", specimen.lab_id, ".biospecimen.", specimen.barcode);
-            identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, "specimen", varident));
-
-            subject: Reference_Key_Identifier(study, "Patient", subject_id);
-            focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
-            code.text: HarmonizedLocalDisplay(varname, tablename);
-            code.coding[]: varcode;
-            code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
-            valueQuantity.value: value;
-
-            specimen: Reference_Key_Identifier(study, "Specimen", varident);
-
-            status: "final";
-            resourceType: "Observation";
+        var substance_code: HarmonizeMapped(specimen.preservation_method, "SpecimenAdditive");
+        if (substance_code?) {
+            processing[0].additive[0]: Reference_Key_Identifier(study, "Substance", SubstanceIdentifier(study, specimen.preservation_method));
         }
+
+        processing[0].description: specimen.laboratory_procedure;
+        condition[0].coding[]: HarmonizeMapped(specimen.preservation_method, "SpecimenCondition");
+        condition[0].text: specimen.preservation_method;
+
+        type.coding[]: HarmonizeMapped(specimen.sample_type, "SpecimenType");
+        type.text: specimen.sample_type
+        var subref: Reference_Key_Identifier(study, "Patient", subject_id);
+
+        // No consistency...ever
+        collection._collectedDateTime.extension[0] (if specimen.age_at_collection ~= "NA" and specimen.age_at_collection ~= "#N/A"): AgeAtExtension(study, subref, specimen.age_at_collection, "days");
+        container[]: ProcessAliquot(study, subject_id, aliquots[]);
+
+        subject: Reference_Key_Identifier(study, "Patient", subject_id);
+        resourceType: "Specimen";    
     }
 }
 
-// Description: Wrapper for generating DS Specimen records
-//
-// Arguments:
-//  study - This is the full study object created by Whistler
-//  specimen - individual row in specimen array
-// 
-def ProcessSpecimen(study, specimen) {
-    // After Speaking with Robert, I'm pulling these observations out of 'commission' since they are numerous and 
-    // not particularly useful. 2020-02-14
-    //out specimen: StringObservation(study, specimen, "specimen", "Lab_ID", specimen.lab_id);
-    //out specimen: StringObservation(study, specimen, "specimen", "Barcode", specimen.barcode);
-    //out specimen: NumericObservation(study, specimen, "specimen", "Vials_Count", specimen.vials_count);
-
-    out specimen: StringObservation(study, specimen, "specimen", "Analyte_Type", specimen.analyte_type);
-
-    //out specimen: StringObservation(study, specimen, "specimen", "Box", specimen.box);
-    //out specimen: StringObservation(study, specimen, "specimen", "Freezer", specimen.freezer);
-
-    out specimen: VariableObservationSpecimen(study, specimen, "specimen", "Sample_Type", specimen.sample_type);
-    out specimen: VariableObservationSpecimen(study, specimen, "specimen", "Biospecimen_Type", specimen.biospecimen_type);
-
-    //out specimen: StringObservation(study, specimen, "specimen", "In-Out", specimen.in-out);
-
-    out specimen: BioSpecimen(study, specimen);
-    out specimen: Sample(study, specimen);
-    out specimen: SpecimenVialVolumeObservation(study, specimen)
-
-    out specimen: SpecimenConcentrationObservation(study, specimen)
+def ProcessSpecimenData(study, all_specimen, all_aliquots, participants) {
+    out specimen: ProcessSpecimen(study, all_specimen[], all_aliquots[*], participants[*]);
 }
