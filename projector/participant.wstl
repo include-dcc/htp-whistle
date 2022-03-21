@@ -13,6 +13,7 @@
 def ResearchSubject(study, subject) {
     meta.tag[]: StudyMeta(study);
     identifier[]: Key_Identifier(study, "ResearchSubject", subject.participantid);
+    identifier[0].use: "official";
     status: "on-study";
     study: Reference_Key_Identifier(study, "ResearchStudy", study.id);
     individual: Reference_Key_Identifier(study, "Patient", subject.participantid);
@@ -28,6 +29,7 @@ def ResearchSubject(study, subject) {
 def Participant(study, subject) {
     meta.tag[]: StudyMeta(study);
     identifier[]: Key_Identifier(study, "Patient", subject.participantid);
+    identifier[0].use: "official";
     gender (if subject.sex ~= "."): HarmonizeAsCode(subject.sex, "gender");
     extension[]: RaceExtension(subject);
     extension[]: EthnicityExtension(subject);
@@ -41,6 +43,7 @@ def TraitObservation(study, subject, varname, value, tablename) {
     meta.tag[]: StudyMeta(study);
 
     identifier[]: Key_Identifier(study, "Observation", $StrCat(study.id, ".", subject_id, ".", varname));
+    identifier[0].use: "official";
     subject: Reference_Key_Identifier(study, "Patient", subject_id);
     focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
     code.text: HarmonizedLocalDisplay(varname, tablename);
@@ -72,6 +75,7 @@ def StringObservationParticipant(study, fhir_resource, tablename, varname, value
     meta.tag[]: StudyMeta(study);
     
     identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, tablename, varname));
+    identifier[0].use: "official";
     subject: Reference_Key_Identifier(study, "Patient", subject_id);
     focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
     code.text: HarmonizedLocalDisplay(varname, tablename);
@@ -83,6 +87,39 @@ def StringObservationParticipant(study, fhir_resource, tablename, varname, value
     resourceType: "Observation";
 }
 
+// Definition: Construct basic Observation whose response is a code from a local vocabulary (i.e. categorial value)
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  questionnaire - This is the entire JSON representation of the IHQ form
+//  qcode - The code/question id associated with the observation 
+//  qvalue - list of checkbox objects. Each should have the following fields
+//     - code Is the code associated with the checkbox's definition
+//     - value is the response provided. This is likely "1" or missing
+//  
+def AtAtEnrollmentObservation(study, subject) {
+    var subject_id: subject.participantid;
+    var age_at: subject.age_at_enrollment_d;
+
+    if (age_at?) {
+        meta.tag[]: StudyMeta(study);
+
+        identifier[]: Key_Identifier(study, "Observation", $StrCat(study.id, ".", subject_id, ".", "age_at_enrollment_d"));
+        identifier[0].use: "official";
+
+        subject: Reference_Key_Identifier(study, "Patient", subject_id);
+        focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "participant", "Age at enrollment (d)"));
+        code.text: HarmonizedLocalDisplay("age_at_enrollment_d", "participant");
+        code.coding[]: HarmonizeMapped("age_at_enrollment_d", "participant");
+        code.coding[]: LocalCodeSystemReference(study.id, "participant", "Age at enrollment (d)");
+        
+        var subref: Reference_Key_Identifier(study, "Patient", subject_id);
+        _valueDateTime.extension[0]: AgeAtExtension(study, subref, age_at, "days");
+        status: "final";
+        resourceType: "Observation";
+    }
+}
+
 // Description: Wrapper for generating Patient records
 //
 // Arguments:
@@ -91,6 +128,7 @@ def StringObservationParticipant(study, fhir_resource, tablename, varname, value
 // 
 def ProcessParticipant(study, demo) {
     out patient: VariableObservation(study, demo, "participant", "MRAbstractionStatus", demo.mrabstractionstatus);
+    out patient: AtAtEnrollmentObservation(study, demo)
     out patient: Participant(study, demo);
 
     out observation: TraitObservation(study, demo, "Sex", demo.sex, "participant");
