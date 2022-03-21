@@ -6,7 +6,7 @@
 //  varname - The variable name associated with the observation (bmi, height, etc)
 
 def BuildConditionId(study, participantid, varcode) {
-    $this (if $IsNotNil(varcode)): $StrCat(study.id, ".", participantid, ".", varcode);
+    $this (if $IsNotNil(varcode)): $StrCat(participantid, ".", varcode);
 }
 
 
@@ -24,19 +24,21 @@ def Condition(study, condition) {
     var coding: HarmonizeMapped(condition.condition_code, "condition_code");
 
     if (~$IsNil(coding) and condition.condition_status = "TRUE") {
-        identifier[]: Key_Identifier(study, "Condition", BuildConditionId(study, subject_id, coding[0].code));
+        meta.tag[]: StudyMeta(study);
+        
+        identifier[]: Key_Identifier(study, "Condition", BuildConditionId(study, subject_id, condition.condition_code));
+        identifier[0].use: "official";
         subject: Reference_Key_Identifier(study, "Patient", subject_id);
 
         verificationStatus: HarmonizeAsCoding(condition.condition_status, "ConditionPresent");
-        verificationStatus.text: HarmonizedLocalDisplay(condition.condition_status, "ConditionPresent");
 
         category[0].coding[0].system: "http://terminology.hl7.org/CodeSystem/condition-category";
         category[0].coding[0].code: "encounter-diagnosis";
         category[0].coding[0].display: "Encounter Diagnosis";
 
-        code.text: HarmonizedLocalDisplay(condition.condition_code, "condition_code");
         code.coding[]: coding;
         code.coding[]: LocalCodeSystemReference(study.id, "condition_code", condition.condition_code);
+        code.text: condition.condition_code;
 
         resourceType: "Condition";
     }
@@ -47,19 +49,22 @@ def DS_Condition(study, condition, varname, value) {
     var coding: HarmonizeMapped(value, "DS_diagnosis");
 
     if (coding?) {
+        meta.tag[]: StudyMeta(study);
+
         identifier[]: Key_Identifier(study, "Condition", BuildConditionId(study, subject_id, coding[0].code));
+        identifier[0].use: "official";
         subject: Reference_Key_Identifier(study, "Patient", subject_id);
 
         verificationStatus: HarmonizeAsCoding(value, "ConditionPresent");
-        verificationStatus.text: HarmonizedLocalDisplay(value, "ConditionPresent");
 
         category[0].coding[0].system: "http://terminology.hl7.org/CodeSystem/condition-category";
         category[0].coding[0].code: "encounter-diagnosis";
         category[0].coding[0].display: "Encounter Diagnosis";
 
-        code.text: HarmonizedLocalDisplay(varname, "DS_diagnosis");
+        //code.text: coding[0].display;
         code.coding[]: coding;
-        code.coding[]: LocalCodeSystemReference(study.id, "condition", varname);
+        code.coding[]: LocalCodeSystemReference(study.id, "ds_condition", varname);
+        code.text: value;
 
         resourceType: "Condition";
     }
@@ -77,12 +82,15 @@ def DS_Condition(study, condition, varname, value) {
 //  
 def KaryotypeObservation(study, condition) {
     var subject_id: condition.participantid;
-    
+
+    meta.tag[]: StudyMeta(study);
+
     // We want to tag the observation as Down Syndrome 
     var dscoding: HarmonizeMapped("DS_diagnosis", "ds_condition");
     var varcode: HarmonizeMapped(condition.karyotype, "Karyotype");
 
     identifier[]: Key_Identifier(study, "Observation", BuildConditionId(study, subject_id, "karyotype"));
+    identifier[0].use: "official";
     subject: Reference_Key_Identifier(study, "Patient", subject_id);
     focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "ds_condition", "Karyotype"));
     code.text: HarmonizedLocalDisplay("Karyotype", "ds_condition");
@@ -104,7 +112,6 @@ def ProcessDsCondition(study, condition) {
     out dscondition: KaryotypeObservation(study, condition);
     out dscondition: DS_Condition(study, condition, "OfficialDSDiagnosis", condition.officialdsdiagnosis);
     out dscondition: VariableObservation(study, condition, "ds_condition", "OfficialDSDiagnosis", condition.officialdsdiagnosis)
-    
 }
 
 def ProcessCondition(study, condition) {
