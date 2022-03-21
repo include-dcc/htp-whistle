@@ -13,15 +13,16 @@ def FamilyGroup(study, subjects, famid) {
 
     identifier[0]: Key_Identifier(study, "Group", $StrCat(study.id, ".", famid));
     identifier[1]: Key_Identifier(study, "Group/id", famid);
+    identifier[1].use: "official";
     type: "person";
     actual: true;
     var familymembers: subjects[where $.familyid=famid];
     member: Reference_Enrollment(study, familymembers[]);
     quantity: $ListLen(member);
 
-    code.coding[0].system: "http://snomed.info/sct";
-    code.coding[0].code: "35359004";
-    code.coding[0].display: "Family (social concept)";
+    code.coding[0].system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode";
+    code.coding[0].code: "FAMMEMB";
+    code.coding[0].display: "family member";
 
     resourceType: "Group";
 }
@@ -42,6 +43,7 @@ def FamilyIdObservation(study, tablename, varname, value) {
     meta.tag[]: StudyMeta(study);
     
     identifier[]: Key_Identifier(study, "Observation",  $StrCat(study.id, ".", tablename, ".", varname, ".", value));
+    identifier[0].use: "official";
     subject: Reference_Key_Identifier(study, "Group", $StrCat(study.id, ".", value));
     focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
     code.text: HarmonizedLocalDisplay(varname, tablename);
@@ -53,12 +55,45 @@ def FamilyIdObservation(study, tablename, varname, value) {
     resourceType: "Observation";
 }
 
+
+// Subject is the individual we whose relationship with focus_id we are describing in code
+// so of code=mother, then subject_id is the "mother" of focus_id
+def FamilyRelationshipObservation(study, subject_id, focus_id, code) {
+    if (subject_id ~= focus_id) {
+        var varcode: HarmonizeMapped(code, "FamilyRelationship");
+
+        meta.tag[]: StudyMeta(study);
+        meta.profile[]: "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/family-relationship";
+
+        identifier[]: Key_Identifier(study, "Observation",  $StrCat(study.id, ".", subject_id, ".", code, ".", focus_id));
+        identifier[0].use: "official";
+        subject: Reference_Key_Identifier(study, "Patient", subject_id);
+        focus[]: Reference_Key_Identifier(study, "Patient", focus_id);
+
+        code.text: "Family Relationship";
+        code.coding[]: HarmonizeMapped("FAMMEMB", "FamilyRelationship");
+        valueCodeableConcept.coding: varcode;
+        valueCodeableConcept.text: varcode[0].display;
+        
+        status: "final";
+        resourceType: "Observation";
+    }
+}
+
+def ProcessFamilyRelationships(study, subject_id, family_members, code) {
+    $this: FamilyRelationshipObservation(study, subject_id, family_members[], code);
+}
+
 // Description: Wrapper to create the group(s)
 // 
 //  study - This is the full study object created by Whistler
 //  demo - Array of demo objects  
 def ProcessFamilyGroups(study, participants, familyid) {
     out research_study: FamilyGroup(study, participants, familyid);
+
+    var familymembers: participants[where $.familyid=familyid];
+    var subjectids: $Unique(familymembers[*].participantid);
+    out family_members: ProcessFamilyRelationships(study, subjectids[], subjectids[*], "FAMMEMB");
 
     out research_study: FamilyIdObservation(study, "participant", "FamilyID", familyid);
 }
