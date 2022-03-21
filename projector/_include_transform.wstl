@@ -123,6 +123,14 @@ def Transform_HTP_Dataset_(resource) {
     }
 }
 
+def Transform_HTP_Dataset_DD_Only(resource) {
+    if resource.study? {
+        $this (if resource.code-systems?): ProcessCodeSystem(resource.study, resource.code-systems[]);
+        $this (if resource.study.data-dictionary?): ProcessDatasetDefinitions(resource.study, resource.study.data-dictionary[]);
+    }
+
+}
+
 
 // Transform the ds-connect dataset 
 def Transform_HTP_Dataset(resource) {
@@ -148,8 +156,90 @@ def Transform_HTP_Dataset(resource) {
             $this: ProcessDsCondition(resource.study, resource.ds_condition[]);
         }
 
+        if resource.additive? {
+            $this: ProcessSubstanceData(resource.study, resource.additive[]);
+        }
+
+        // Filter out specimen without actual participants
+        if resource.specimen2? {
+            var emptylist: [];
+            //$this: ProcessSpecimenData(resource.study, resource.specimen2[*], emptylist[*], resource.participant[*]);
+        }
+
         if resource.specimen? {
-            $this: ProcessSpecimen(resource.study, resource.specimen[]);
+            //$this: ProcessSpecimenData(resource.study, resource.specimen[*], resource.aliquot[*], resource.participant[*]);
+        }
+
+    }
+}
+
+def DontWantThisInServersYet(resource) {
+        if resource.kf-manifests? {
+            $this: ProcessKfManifests(resource.study, resource.kf-manifest);
+        }
+
+        if resource.metabolomic? {
+            $this: ProcessOmics(resource.study, resource.metabolomic);
+        } else {
+            $this: Dump(resource);
+        }
+
+}
+
+def Dump(resource) {
+    dump: resource;
+}
+
+// Transform the ds-connect dataset 
+def Transform_HTP_Dataset_Min(resource) {
+    if resource.study? {
+        $this (if resource.code-systems?): ProcessCodeSystem(resource.study, resource.code-systems[]);
+        $this (if resource.study.data-dictionary?): ProcessDatasetDefinitions(resource.study, resource.study.data-dictionary[]);
+        if resource.participant? {
+            //$this: ProcessParticipant(resource.study, resource.participant[]);
+            //$this: ProcessGroup(resource.study, resource.participant[*]);
+            //$this: ProcessStudy(resource.study);
+            //$this: ProcessResearchSubject(resource.study, resource.participant[]);
+
+            var familyids: $Unique(resource.participant[*].familyid);
+            $this: ProcessFamilyGroups(resource.study, resource.participant[*], familyids[]);
+        }        
+        if resource.encounter? {
+            //$this: ProcessEncounter(resource.study, resource.encounter[]);
+        }
+        if resource.condition? {
+            //$this: ProcessCondition(resource.study, resource.condition[]);
+        }
+        if resource.ds_condition? {
+           //$this: ProcessDsCondition(resource.study, resource.ds_condition[]);
+        }
+
+        if resource.additive? {
+            //$this: ProcessSubstanceData(resource.study, resource.additive[]);
+        }
+
+        // Filter out specimen without actual participants
+        if resource.specimen2? {
+            var emptylist: [];
+            //$this: ProcessSpecimenData(resource.study, resource.specimen2[*], emptylist[*], resource.participant[*]);
+        }
+
+        if resource.specimen? {
+            //$this: ProcessSpecimenData(resource.study, resource.specimen[*], resource.aliquot[*], resource.participant[*]);
+        }
+
+        if resource.kf-manifests? {
+            // Group by aliquot and then sample
+            //var aliquots: $Unique(response.kf-manifests.aliquot_id);
+            //$this: ProcessKfManifestData(resource.study, resource.kf-manifests[*]);
+
+            //$this: ProcessKfManifestData(resource.study, resource.kf-omics[*]);
+        }
+
+        if resource.metabolomic? {
+            //$this: ProcessOmics(resource.study, resource.metabolomic);
+        } else {
+            //$this: Dump(resource);
         }
     }
 }

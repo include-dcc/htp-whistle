@@ -1,12 +1,17 @@
-study_id: SD_7YDC1W4H
-study_accession: 
-study_title: TBD
+study_id: HTP
+study_accession: phs002330 
+study_title: Crnic Institute Human Trisome Project
 study_desc: TBD
+url: https://includedcc.org/studies/human-trisome-project
 identifier_prefix: https://include.org/htp/fhir
 output_filename: htp
 id_colname: ParticipantID
 whistle_src: htp.wstl
 code_harmonization_dir: harmony
+require_official: True
+curies:
+  http://purl.obolibrary.org/obo/hp.owl: HP
+  http://purl.obolibrary.org/obo/mondo.owl: MONDO
 projector_lib: projector
 dataset:
   participant:
@@ -49,13 +54,53 @@ dataset:
         type: type
         values: values
     code_harmonization: harmony/htp-harmony.csv
-  specimen:
-    filename: data/csv/specimen.csv
+  additive:
+    filename: data/csv/biospecimen-20220303.5/additive.csv
     data_dictionary:
-      filename: data/csv/dd/specimen-dd.csv
+      filename: data/csv/biospecimen-20220303.5/additive-dd.csv
       colnames: 
         varname: varname
         desc: vardesc
         type: type
         values: values
     code_harmonization: harmony/htp-harmony.csv        
+  specimen:
+    filename: data/csv/biospecimen-20220303.5/htp_sample.csv
+    data_dictionary:
+      filename: data/csv/biospecimen-20220303.5/htp_sample-dd.csv
+      colnames: 
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv        
+  specimen2:
+    filename: data/csv/biospecimen-20220303.5/updated-htp_sample_collection_supplement.csv
+    data_dictionary:
+      filename: data/csv/biospecimen-20220303.5/htp_sample-dd.csv
+      colnames: 
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv   
+  aliquot:
+    filename: data/csv/biospecimen-20220303.5/aliquot.csv
+    data_dictionary:
+      filename: data/csv/biospecimen-20220303.5/aliquot-dd.csv
+      colnames: 
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv  
+  kf-manifests:
+    filename: data/csv/updated-kf-file-manifests.csv
+    data_dictionary:
+      filename: data/csv/updated-kf-file-manifests-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+      code_harmonization: harmony/htp-harmony.csv     
