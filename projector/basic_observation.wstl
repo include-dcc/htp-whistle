@@ -30,6 +30,7 @@ def BasicObservation(study, encounter, varname, value, units) {
     meta.tag[]: StudyMeta(study);
     
     identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, encounter.event_name, varname));
+    identifier[0].use: "official";
     subject: Reference_Key_Identifier(study, "Patient", subject_id);
     focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "encounter", varname));
     code.text: HarmonizedLocalDisplay(varname, "encounter");
@@ -58,6 +59,7 @@ def VariableObservation(study, condition, tablename, varname, value) {
     meta.tag[]: StudyMeta(study);
     
     identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, tablename, $StrCat(varname, "-", $StrJoin(".", $StrSplit(value, " ")))));
+    identifier[0].use: "official";
     subject: Reference_Key_Identifier(study, "Patient", subject_id);
     focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
     code.text: HarmonizedLocalDisplay(varname, tablename);
