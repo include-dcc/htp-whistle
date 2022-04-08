@@ -37,87 +37,6 @@ def Participant(study, subject) {
 }
 
 
-def TraitObservation(study, subject, varname, value, tablename) {
-    var subject_id: subject.participantid;
-
-    meta.tag[]: StudyMeta(study);
-
-    identifier[]: Key_Identifier(study, "Observation", $StrCat(study.id, ".", subject_id, ".", varname));
-    identifier[0].use: "official";
-    subject: Reference_Key_Identifier(study, "Patient", subject_id);
-    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
-    code.text: HarmonizedLocalDisplay(varname, tablename);
-    code.coding[]: HarmonizeMapped(varname, tablename);
-    code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
-
-    valueCodeableConcept.coding[]: HarmonizeMapped(value, $ToLower(varname));
-    valueCodeableConcept.text: value;
-    
-    status: "final";
-    resourceType: "Observation";
-
-}
-
-// Definition: Construct basic Observation whose response is a code from a local vocabulary (i.e. categorial value)
-//
-// Arguments:
-//  study - This is the full study object created by Whistler
-//  questionnaire - This is the entire JSON representation of the IHQ form
-//  qcode - The code/question id associated with the observation 
-//  qvalue - list of checkbox objects. Each should have the following fields
-//     - code Is the code associated with the checkbox's definition
-//     - value is the response provided. This is likely "1" or missing
-//  
-def StringObservationParticipant(study, fhir_resource, tablename, varname, value) {
-    var subject_id: fhir_resource.participant;
-    var varcode: HarmonizeMapped(varname, tablename);
-
-    meta.tag[]: StudyMeta(study);
-    
-    identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, tablename, varname));
-    identifier[0].use: "official";
-    subject: Reference_Key_Identifier(study, "Patient", subject_id);
-    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
-    code.text: HarmonizedLocalDisplay(varname, tablename);
-    code.coding[]: varcode;
-    code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
-    valueString: value;
-    
-    status: "final";
-    resourceType: "Observation";
-}
-
-// Definition: Construct basic Observation whose response is a code from a local vocabulary (i.e. categorial value)
-//
-// Arguments:
-//  study - This is the full study object created by Whistler
-//  questionnaire - This is the entire JSON representation of the IHQ form
-//  qcode - The code/question id associated with the observation 
-//  qvalue - list of checkbox objects. Each should have the following fields
-//     - code Is the code associated with the checkbox's definition
-//     - value is the response provided. This is likely "1" or missing
-//  
-def AtAtEnrollmentObservation(study, subject) {
-    var subject_id: subject.participantid;
-    var age_at: subject.age_at_enrollment_d;
-
-    if (age_at?) {
-        meta.tag[]: StudyMeta(study);
-
-        identifier[]: Key_Identifier(study, "Observation", $StrCat(study.id, ".", subject_id, ".", "age_at_enrollment_d"));
-        identifier[0].use: "official";
-
-        subject: Reference_Key_Identifier(study, "Patient", subject_id);
-        focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "participant", "Age at enrollment (d)"));
-        code.text: HarmonizedLocalDisplay("age_at_enrollment_d", "participant");
-        code.coding[]: HarmonizeMapped("age_at_enrollment_d", "participant");
-        code.coding[]: LocalCodeSystemReference(study.id, "participant", "Age at enrollment (d)");
-        
-        _valueDateTime.extension[0]: AgeAtExtension(study, subject_id, age_at, "days");
-        status: "final";
-        resourceType: "Observation";
-    }
-}
 
 // Description: Wrapper for generating Patient records
 //
@@ -126,13 +45,13 @@ def AtAtEnrollmentObservation(study, subject) {
 //  demo - Must have a participantid
 // 
 def ProcessParticipant(study, demo) {
-    out patient: VariableObservation(study, demo, "participant", "MRAbstractionStatus", demo.mrabstractionstatus);
-    out patient: AtAtEnrollmentObservation(study, demo)
+    out patient: VariableObservation(study, demo.participantid, "participant", "MRAbstractionStatus", demo.mrabstractionstatus);
+    out patient: AgeAtEnrollmentObservation(study, demo);
     out patient: Participant(study, demo);
 
-    out observation: TraitObservation(study, demo, "Sex", demo.sex, "participant");
-    out observation: TraitObservation(study, demo, "Race", demo.race, "participant");
-    out observation: TraitObservation(study, demo, "Ethnicity", demo.ethnicity, "participant");
+    out observation: TraitObservation(study, demo.participantid, "Sex", demo.sex, "participant");
+    out observation: TraitObservation(study, demo.participantid, "Race", demo.race, "participant");
+    out observation: TraitObservation(study, demo.participantid, "Ethnicity", demo.ethnicity, "participant");
 }
 
 // Description: Wrapper for generating ResearchSubject records
