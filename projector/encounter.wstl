@@ -7,40 +7,7 @@ def BuildEncounterId(study, participantid, event_name) {
     $this : $StrCat(study.id, ".", participantid, ".", event_name);
 }
 
-def AgeAtExtension(study, subject, age, age_unit) {
-    if (age_unit = "years"){
-        url: "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime";
-        extension[0].url: "target";
-        extension[0].valueReference: subject;
-        extension[1].url: "targetPath";
-        extension[1].valueString: "birthDate";
-        extension[2].url: "relationship";
-        extension[2].valueCode: "after";
-        extension[3].url: "offset";
-        extension[3].valueDuration.value: $ParseInt(age);
-        //extension[3].valueDuration.unit: "a";
-        extension[3].valueDuration.system: "http://unitsofmeasure.org";
-        extension[3].valueDuration.code: "a";
-        //extension[3].display: "years";
-    }
-    if (age_unit = "days"){
-        var days: $ParseFloat(age);
-        
-        url: "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime";
-        extension[0].url: "target";
-        extension[0].valueReference: subject;
-        extension[1].url: "targetPath";
-        extension[1].valueString: "birthDate";
-        extension[2].url: "relationship";
-        extension[2].valueCode: "after";
-        extension[3].url: "offset";
-        extension[3].valueDuration.value: days;
-        extension[3].valueDuration.unit: "d";
-        extension[3].valueDuration.system: "http://unitsofmeasure.org";
-        extension[3].valueDuration.code: "days";
-        //extension[3].display: "days";
-    }
-}
+
 
 def Encounter(study, encounter) {
     var subject_id: encounter.participantid;
@@ -55,7 +22,7 @@ def Encounter(study, encounter) {
     subject: Reference_Key_Identifier(study, "Patient", subject_id);
 
     if (encounter.age_at_visit_d?) {
-        period._start.extension[0]: AgeAtExtension(study, subject, encounter.age_at_visit_d, "days");
+        period._start.extension[0]: AgeAtExtension(study, subject_id, encounter.age_at_visit_d, "days");
     }
     status: "finished";
 
@@ -101,7 +68,7 @@ def VitalSign(study, encounter, varname, value, units) {
     encounter: Reference_Key_Identifier(study, "Encounter", BuildEncounterId(study, subject_id, encounter.event_name));
 
     if (encounter.age_at_visit_d?) {
-        _effectiveDateTime.extension[0]: AgeAtExtension(study, subject, encounter.age_at_visit_d, "days");
+        _effectiveDateTime.extension[0]: AgeAtExtension(study, subject_id, encounter.age_at_visit_d, "days");
     }
 
     status: "final";

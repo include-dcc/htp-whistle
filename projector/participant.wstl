@@ -113,8 +113,7 @@ def AtAtEnrollmentObservation(study, subject) {
         code.coding[]: HarmonizeMapped("age_at_enrollment_d", "participant");
         code.coding[]: LocalCodeSystemReference(study.id, "participant", "Age at enrollment (d)");
         
-        var subref: Reference_Key_Identifier(study, "Patient", subject_id);
-        _valueDateTime.extension[0]: AgeAtExtension(study, subref, age_at, "days");
+        _valueDateTime.extension[0]: AgeAtExtension(study, subject_id, age_at, "days");
         status: "final";
         resourceType: "Observation";
     }

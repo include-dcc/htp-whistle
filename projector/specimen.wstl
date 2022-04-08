@@ -72,10 +72,9 @@ def ProcessSpecimen(study, specimen, all_aliquots, participants) {
 
         type.coding[]: HarmonizeMapped(specimen.sample_type, "SpecimenType");
         type.text: specimen.sample_type
-        var subref: Reference_Key_Identifier(study, "Patient", subject_id);
 
         // No consistency...ever
-        collection._collectedDateTime.extension[0] (if specimen.age_at_collection ~= "NA" and specimen.age_at_collection ~= "#N/A"): AgeAtExtension(study, subref, specimen.age_at_collection, "days");
+        collection._collectedDateTime.extension[0] (if specimen.age_at_collection ~= "NA" and specimen.age_at_collection ~= "#N/A"): AgeAtExtension(study, subject_id, specimen.age_at_collection, "days");
         container[]: ProcessAliquot(study, subject_id, aliquots[]);
 
         subject: Reference_Key_Identifier(study, "Patient", subject_id);
