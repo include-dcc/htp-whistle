@@ -1,0 +1,45 @@
+// Definition: Construct a DS_Condition record. These will have either Mondo and/or HP code
+//
+// Arguments: 
+//  study - This is the full study object created by Whistler
+//  subject_id - This is the participant ID which will be used to build a proper reference to the Patient resource
+//  varname - the variable associated with this particular variable being recorded
+//  value - the value associated with variable above
+def DS_Condition(study, subject_id, varname, value) {
+    var coding: HarmonizeMapped(value, "DS_diagnosis");
+
+    if (coding?) {
+        meta.tag[]: StudyMeta(study);
+
+        identifier[]: Key_Identifier(study, "Condition", BuildConditionId(study, subject_id, coding[0].code));
+        identifier[0].use: "official";
+        subject: Reference_Key_Identifier(study, "Patient", subject_id);
+
+        verificationStatus: HarmonizeAsCoding(value, "ConditionPresent");
+
+        category[0].coding[0].system: "http://terminology.hl7.org/CodeSystem/condition-category";
+        category[0].coding[0].code: "encounter-diagnosis";
+        category[0].coding[0].display: "Encounter Diagnosis";
+
+        //code.text: coding[0].display;
+        code.coding[]: coding;
+        code.coding[]: LocalCodeSystemReference(study.id, "ds_condition", varname);
+        code.text: value;
+
+        resourceType: "Condition";
+    }
+}
+
+
+
+// Description: Wrapper for generating DS Condition records
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  condition - individual row in ds_condition array
+// 
+def ProcessDsCondition(study, condition) {
+    out dscondition: KaryotypeObservation(study, condition);
+    out dscondition: DS_Condition(study, condition.participantid, "OfficialDSDiagnosis", condition.officialdsdiagnosis);
+    out dscondition: VariableObservation(study, condition.participantid, "ds_condition", "OfficialDSDiagnosis", condition.officialdsdiagnosis)
+}
