@@ -32,6 +32,6 @@ def ProcessAliquot(study, subject_id, aliquot) {
     extension[0]: ConcentrationQuantityExtension(study, aliquot);
 
     if (aliquot.preservation_method? and aliquot.preservation_method ~= "NA") {
-        additiveReference: Reference_Key_Identifier(study, "Substance", SubstanceIdentifier(study, aliquot.preservation_method))
+        additiveReference: Reference_Key_Identifier(study, "Substance", BuildSubstanceIdentifier(study, aliquot.preservation_method))
     }
 }

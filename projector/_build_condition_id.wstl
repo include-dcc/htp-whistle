@@ -4,7 +4,7 @@
 //  study - This is the full study object created by Whistler
 //  participantid - The id assocaited with patient (this isn't likely to be an actual FHIR id)
 //  varname - The variable name associated with the observation (bmi, height, etc)
-
+//
 def BuildConditionId(study, participantid, varcode) {
     $this (if $IsNotNil(varcode)): $StrCat(participantid, ".", varcode);
 }

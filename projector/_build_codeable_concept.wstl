@@ -1,0 +1,11 @@
+// Return a proper coding from it's constituent parts 
+// 
+// Arguments: 
+//  code - The code to be used
+//  system - the system to be used
+//  display - the display...
+def BuildCodeableConcept(code, system, display) {
+    code: code;
+    system: system;
+    display: display;
+}
