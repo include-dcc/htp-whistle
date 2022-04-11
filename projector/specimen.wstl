@@ -1,38 +1,8 @@
 // Specimen
 
-// The Subject ID is currently baked into the sample_id but 
-// we'll pass it along on the off chance that we decide to 
-// change that rule and will only require a single change 
-// to handle it  
-def SpecimenIdentifier(study, subject_id, sample_id) {
-    $this: $StrCat(sample_id);
-}
 
 
-def ConcentrationQuantityExtension(study, aliquot) {
-    if (aliquot.concentration ~= "NA") {
-        url: "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/concentration-quantity";
-        valueQuantity.unit: "Cells/mL";
-        valueQuantity.system: "http://ucum.org";
-        valueQuantity.value: $ParseFloat(aliquot.concentration);
-        valueQuantity.code: "Cells/mL";
-    }
-}
 
-def ProcessAliquot(study, subject_id, aliquot) {
-    identifier[]: Key_Identifier(study,"biospecimen/container/id", aliquot.barcode );
-    identifier[0].use: "official";
-    specimenQuantity.value: $ParseFloat(aliquot.vial_volume);
-    specimenQuantity.unit: "ml";
-    specimenQuantity.code: "ml";
-    specimenQuantity.system: "http://ucum.org";
-    description: aliquot.biospecimen_storage;
-    extension[0]: ConcentrationQuantityExtension(study, aliquot);
-
-    if (aliquot.preservation_method? and aliquot.preservation_method ~= "NA") {
-        additiveReference: Reference_Key_Identifier(study, "Substance", SubstanceIdentifier(study, aliquot.preservation_method))
-    }
-}
 
 def ProcessSpecimen(study, specimen, all_aliquots, participants) {
     // We may not get subject id or it's name will change. This is based on 
@@ -47,11 +17,11 @@ def ProcessSpecimen(study, specimen, all_aliquots, participants) {
         meta.tag[]: StudyMeta(study);
         
         // add labID to identifier as separate entry???
-        identifier[0]: Key_Identifier(study, "Specimen", SpecimenIdentifier(study, subject_id, specimen.sample_id));
+        identifier[0]: Key_Identifier(study, "Specimen", BuildSpecimenIdentifier(study, subject_id, specimen.sample_id));
         identifier[0].use: "official";
         
         if (specimen.parent_sample_id?) {
-            parent[] (if specimen.parent_sample_id ~= specimen.sample_id): Reference_Key_Identifier(study, "Specimen", SpecimenIdentifier(study, subject_id, specimen.parent_sample_id));
+            parent[] (if specimen.parent_sample_id ~= specimen.sample_id): Reference_Key_Identifier(study, "Specimen", BuildSpecimenIdentifier(study, subject_id, specimen.parent_sample_id));
         }
 
         // Do we actually want to consider the volume inside "vial volume"
