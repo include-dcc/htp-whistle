@@ -96,7 +96,7 @@ def HarmonizedLocalDisplay(code, system) {
 //              checkbox type questions
 //
 // Arguments:
-//  study - This is the full study object created by Whistler
+//  study - This is the study id
 //  table_name - The table from which the question is found (IHQ)
 //  question - varname associated with the question being 
 //  code - The answer's code given 

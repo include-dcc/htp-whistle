@@ -1,0 +1,29 @@
+
+
+def NumericObservationParticipant(study, fhir_resource, tablename, varname, numvalue) {
+    if (numvalue?) {
+        var value: $ParseFloat(numvalue);
+
+        if (value?) {
+            meta.tag[]: StudyMeta(study);
+            var subject_id: fhir_resource.participantid;
+            var varcode: HarmonizeMapped(varname, tablename);
+            var varident: $StrCat(study.id, ".", subject_id, ".", fhir_resource.event_name, ".", varname);
+
+            identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, tablename, varident));
+            identifier[0].use: "official";
+
+            subject: Reference_Key_Identifier(study, "Patient", subject_id);
+            focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
+            code.text: HarmonizedLocalDisplay(varname, tablename);
+            code.coding[]: varcode;
+            code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
+            valueQuantity.value: value;
+
+            encounter: Reference_Key_Identifier(study, "Encounter", BuildEncounterId(study, subject_id, fhir_resource.event_name));
+
+            status: "final";
+            resourceType: "Observation";
+        }
+    }
+}

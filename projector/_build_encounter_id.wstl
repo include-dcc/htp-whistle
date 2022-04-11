@@ -1,0 +1,3 @@
+def BuildEncounterId(study, participantid, event_name) {
+    $this : $StrCat(study.id, ".", participantid, ".", event_name);
+}

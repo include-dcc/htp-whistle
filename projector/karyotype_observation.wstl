@@ -1,0 +1,27 @@
+// Definition: Construct Observation describing response for Karyotype
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  condition - The row from ds_condition table
+//  
+def KaryotypeObservation(study, condition) {
+    var subject_id: condition.participantid;
+
+    meta.tag[]: StudyMeta(study);
+
+    // We want to tag the observation as Down Syndrome 
+    var dscoding: HarmonizeMapped("DS_diagnosis", "ds_condition");
+    var varcode: HarmonizeMapped(condition.karyotype, "Karyotype");
+
+    identifier[]: Key_Identifier(study, "Observation", BuildConditionId(study, subject_id, "karyotype"));
+    identifier[0].use: "official";
+    subject: Reference_Key_Identifier(study, "Patient", subject_id);
+    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "ds_condition", "Karyotype"));
+    code.text: HarmonizedLocalDisplay("Karyotype", "ds_condition");
+    code.coding[]: dscoding;
+    code.coding[]: LocalCodeSystemReference(study.id, "ds_condition", "Karyotype");
+
+    valueCodeableConcept.coding[]: ValueCodeableConcept(study.id, "ds_condition", "Karyotype", condition.karyotype, condition.karyotype);
+    status: "final";
+    resourceType: "Observation";
+}

@@ -27,62 +27,7 @@ def FamilyGroup(study, subjects, famid) {
     resourceType: "Group";
 }
 
-// Definition: Construct basic Observation whose response is a code from a local vocabulary (i.e. categorial value)
-//
-// Arguments:
-//  study - This is the full study object created by Whistler
-//  questionnaire - This is the entire JSON representation of the IHQ form
-//  qcode - The code/question id associated with the observation 
-//  qvalue - list of checkbox objects. Each should have the following fields
-//     - code Is the code associated with the checkbox's definition
-//     - value is the response provided. This is likely "1" or missing
-//  
-def FamilyIdObservation(study, tablename, varname, value) {
-    var varcode: HarmonizeMapped(varname, tablename);
 
-    meta.tag[]: StudyMeta(study);
-    
-    identifier[]: Key_Identifier(study, "Observation",  $StrCat(study.id, ".", tablename, ".", varname, ".", value));
-    identifier[0].use: "official";
-    subject: Reference_Key_Identifier(study, "Group", $StrCat(study.id, ".", value));
-    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, tablename, varname));
-    code.text: HarmonizedLocalDisplay(varname, tablename);
-    code.coding[]: varcode;
-    code.coding[]: LocalCodeSystemReference(study.id, tablename, varname);
-    valueString: value;
-    
-    status: "final";
-    resourceType: "Observation";
-}
-
-
-// Subject is the individual we whose relationship with focus_id we are describing in code
-// so of code=mother, then subject_id is the "mother" of focus_id
-def FamilyRelationshipObservation(study, subject_id, focus_id, code) {
-    if (subject_id ~= focus_id) {
-        var varcode: HarmonizeMapped(code, "FamilyRelationship");
-
-        meta.tag[]: StudyMeta(study);
-        meta.profile[]: "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/family-relationship";
-
-        identifier[]: Key_Identifier(study, "Observation",  $StrCat(study.id, ".", subject_id, ".", code, ".", focus_id));
-        identifier[0].use: "official";
-        subject: Reference_Key_Identifier(study, "Patient", subject_id);
-        focus[]: Reference_Key_Identifier(study, "Patient", focus_id);
-
-        code.text: "Family Relationship";
-        code.coding[]: HarmonizeMapped("FAMMEMB", "FamilyRelationship");
-        valueCodeableConcept.coding: varcode;
-        valueCodeableConcept.text: varcode[0].display;
-        
-        status: "final";
-        resourceType: "Observation";
-    }
-}
-
-def ProcessFamilyRelationships(study, subject_id, family_members, code) {
-    $this: FamilyRelationshipObservation(study, subject_id, family_members[], code);
-}
 
 // Description: Wrapper to create the group(s)
 // 
