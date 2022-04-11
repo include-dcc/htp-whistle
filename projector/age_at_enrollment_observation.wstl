@@ -16,7 +16,8 @@ def AgeAtEnrollmentObservation(study, subject) {
         identifier[0].use: "official";
 
         subject: Reference_Key_Identifier(study, "Patient", subject_id);
-        focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "participant", "Age at enrollment (d)"));
+        // Technically, this is supposed to work, but it doesn't
+        // basedOn[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "participant", "Age at enrollment (d)"));
         code.text: HarmonizedLocalDisplay("age_at_enrollment_d", "participant");
         code.coding[]: HarmonizeMapped("age_at_enrollment_d", "participant");
         code.coding[]: LocalCodeSystemReference(study.id, "participant", "Age at enrollment (d)");

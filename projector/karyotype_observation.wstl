@@ -16,7 +16,8 @@ def KaryotypeObservation(study, condition) {
     identifier[]: Key_Identifier(study, "Observation", BuildConditionId(study, subject_id, "karyotype"));
     identifier[0].use: "official";
     subject: Reference_Key_Identifier(study, "Patient", subject_id);
-    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "ds_condition", "Karyotype"));
+    // This is technically how you are expected to link to ODs, but it isn't working in the current version of FHIR
+    // basedOn[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "ds_condition", "Karyotype"));
     code.text: HarmonizedLocalDisplay("Karyotype", "ds_condition");
     code.coding[]: dscoding;
     code.coding[]: LocalCodeSystemReference(study.id, "ds_condition", "Karyotype");

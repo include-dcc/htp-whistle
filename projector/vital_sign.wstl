@@ -22,7 +22,8 @@ def VitalSign(study, encounter, varname, value, units) {
     identifier[]: Key_Identifier(study, "Observation", BuildObservationId(study, subject_id, encounter.event_name, varname));
     identifier[0].use: "official";
     subject: Reference_Key_Identifier(study, "Patient", subject_id);
-    focus[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "encounter", varname));
+    // This is technically how you are expected to link to ODs, but it isn't working in the current version of FHIR
+    // basedOn[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "encounter", varname));
     code.text: HarmonizedLocalDisplay(varname, "encounter");
     code.coding[]: varcode;
     code.coding[]: LocalCodeSystemReference(study.id, "encounter", varname);
