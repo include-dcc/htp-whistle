@@ -1,24 +1,9 @@
-// Participant
-
-// We create both a Patient record as well as a basic ResearchSubject here for each
-// subject specified
-
-// I'm not seeing any specimen details in the data I have at the moment
-
-// Description: Research Subject 
+// For basic demographics as well as tracking a participant's various resources, 
+// we'll use FHIR's Patient resource. 
 //
-// Arguments:
-//  study - This is the full study object created by Whistler
-//  subject - Must have a participantid
-def ResearchSubject(study, subject) {
-    meta.tag[]: StudyMeta(study);
-    identifier[]: Key_Identifier(study, "ResearchSubject", subject.participantid);
-    identifier[0].use: "official";
-    status: "on-study";
-    study: Reference_Key_Identifier(study, "ResearchStudy", study.id);
-    individual: Reference_Key_Identifier(study, "Patient", subject.participantid);
-    resourceType: "ResearchSubject";
-}
+// For Race and Ethnicity, we'll use their respective extensions provided by
+// HL7 as part of standard FHIR resources. Gender is strictly bound to 
+// AdministrativeGender. For this study, it should suffice. 
 
 // Description: Our Participant is basically a limited Patient record
 //
@@ -52,14 +37,4 @@ def ProcessParticipant(study, demo) {
     out observation: TraitObservation(study, demo.participantid, "Sex", demo.sex, "participant");
     out observation: TraitObservation(study, demo.participantid, "Race", demo.race, "participant");
     out observation: TraitObservation(study, demo.participantid, "Ethnicity", demo.ethnicity, "participant");
-}
-
-// Description: Wrapper for generating ResearchSubject records
-//
-// Arguments:
-//  study - This is the full study object created by Whistler
-//  demo - Must have a participantid
-// 
-def ProcessResearchSubject(study, demo) {
-    out research_study: ResearchSubject(study, demo);
 }
