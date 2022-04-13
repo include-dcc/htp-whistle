@@ -4,7 +4,7 @@
 //  study - This is the full study object created by Whistler
 //  substance - The name of the substance to be produced
 def ProcessSubstance(study, substance) {
-    var substance_code: HarmonizeMapped(substance, "SpecimenAdditive");
+    var substance_code: HarmonizeMapped(substance, "Preservation_Method");
 
     if (substance_code?) {
         meta.tag[]: StudyMeta(study);

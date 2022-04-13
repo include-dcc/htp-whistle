@@ -1,4 +1,36 @@
 local code,text,local code system,code,display,code system,comment
+B Cells,B-Lymphocyte,Sample_Type,C12474,B-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12474,
+Blood,Blood Sample,Sample_Type,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610,"For query purposes, can blood, whole blood, peripheral whole blood be grouped together?"
+Buffy coat,Buffy coat,Sample_Type,C84507,Buffy Coat,http://purl.obolibrary.org/obo/ncit.owl,,
+DNA,DNA,Sample_Type,OBI:0001051,DNA extract,http://purl.obolibrary.org/obo/obi.owl,
+RNA,RNA,Sample_Type,OBI:0000880,RNA extract,http://purl.obolibrary.org/obo/obi.owl,
+Tregs,Tregs,Sample_Type,CL:0000815,regulatory T cell,http://purl.obolibrary.org/obo/cl.owl,
+CD4+ Tconv cells,CD4+ Tconv cells,Sample_Type,C12537,CD4-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12537
+CD4+ Tconv Cells,CD4+ Tconv Cells,Sample_Type,C12537,CD4-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12537
+CD8+ T cells,CD8+ T cells,Sample_Type,C12542,CD8-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12542,
+CD8+ T Cells,CD8+ T Cells,Sample_Type,C12542,CD8-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12542,
+Derived Cell Line,Derived Cell Line,Sample_Type,C156445,Derived Cell Line,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C156445,
+Granulocytes,Granulocyte,Sample_Type,C12530,Granulocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12530,
+Monocytes,Monocyte,Sample_Type,C12547,Monocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12547,
+NK cells,Natural Killer Cell,Sample_Type,C12536,Natural Killer Cell,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12536,
+NK Cells,Natural Killer Cell,Sample_Type,C12536,Natural Killer Cell,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12536,
+PAXgene DNA,PAXgene Blood DNA Tube,Sample_Type,C126393,PAXgene Blood DNA Tube,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C126393,
+PAXgene RNA,PAXgene Blood RNA Tube,Sample_Type,C126394,PAXgene Blood RNA Tube,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C126394,
+PBMC Lysate,PBMC Lysate,Sample_Type,C178965,Peripheral Blood Mononuclear Cell Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C178965
+PBMCs,PBMCs,Sample_Type,C12954,Peripheral Blood Mononuclear Cell Sample,http://purl.obolibrary.org/obo/ncit.owl,
+Peripheral Whole Blood,Blood Sample,Sample_Type,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610,
+Plasma,Plasma,Sample_Type,C13356,Plasma,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C13356,
+Red Blood Cells,Red Blood Cells,Sample_Type,C12521,Erythrocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12521,
+Saliva,Saliva Sample,Sample_Type,C174119,Saliva Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C174119,"For query purposes, Saliva and saliva_bolus grouped together"
+saliva_bolus,Saliva Sample,Sample_Type,C174119,Saliva Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C174119,
+Solid Tissue,Solid Tissue Specimen,Sample_Type,C164014,Solid Tissue Specimen,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C164014,
+WBC Cryo,WBC Cryo,Sample_Type,C12529,Leukocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12529
+WBC Cryo,WBC Cryo,Sample_Type,C19314,Cryopreserved cell,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C19314
+WBCs,WBCs,Sample_Type,C12529,Leukocyte,http://purl.obolibrary.org/obo/ncit.owl,,
+WBC DNA,WBC DNA,Sample_Type,C12529,Leukocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12529
+WBC DNA,WBC DNA,Sample_Type,OBI:0001051, DNA extract,http://purl.obolibrary.org/obo/obi.owl,http://purl.obolibrary.org/obo/OBI_0001051
+Whole blood,Blood Sample,Sample_Type,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610,
+Bone Marrow,Bone Marrow Sample,Sample_Type,C164009,Bone Marrow Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C164009,
 Hispanic or Latino,Hispanic or Latino,ethnicity,2135-2,Hispanic or Latino,urn:oid:2.16.840.1.113883.6.238,
 Not Hispanic or Latino,Not Hispanic or Latino,ethnicity,2186-5,Not Hispanic or Latino,urn:oid:2.16.840.1.113883.6.238,
 Unknown,Unknown,ethnicity,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,
@@ -18,32 +50,27 @@ DS_diagnosis,What is the participant's Down syndrome diagnosis?,ds_condition,000
 Complete trisomy 21,Complete trisomy 21,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl
 Mosaic trisomy 21,Mosaic trisomy 21,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
 Translocation Down syndrome,Translocation Down syndrome,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
-Mosaic Translocation Down syndrome,Mosaic Translocation Down syndrome,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
+Mosaic translocation Down syndrome,Mosaic Translocation Down syndrome,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
 Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
 Not tested,Not tested,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
 Unsure,Unsure,DS_diagnosis,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,,
 Complete trisomy 21,Complete trisomy 21,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 Mosaic trisomy 21,Mosaic trisomy 21,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 Translocation Down syndrome,Translocation Down syndrome,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
-Mosaic Translocation Down syndrome,Mosaic Translocation Down syndrome,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
+Mosaic translocation Down syndrome,Mosaic Translocation Down syndrome,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),Partial Trisomy 21 (only a part of chromosome 21 is present in 3 copies),ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 Not tested,Not tested,ConditionPresent,unconfirmed,Unconfirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 Unsure,Unsure,ConditionPresent,unconfirmed,Unconfirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 FALSE,Condition Absent,ConditionPresent,refuted,Refuted,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 TRUE,Condition Present,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
-2,Condition Unconfirmed,ConditionPresent,unconfirmed,Unconfirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
-No,Condition Absent,ConditionPresent,refuted,Refuted,http://terminology.hl7.org/CodeSystem/condition-ver-status,
-Yes,Condition Present,ConditionPresent,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 Unsure,Condition Unconfirmed,ConditionPresent,unconfirmed,Unconfirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 BMI,BMI Derived from ht/wt at time of visit. ,encounter,39156-5,Body mass index (BMI) [Ratio],http://loinc.org
-bmi,BMI,encounter,39156-5,Body mass index (BMI) [Ratio],http://loinc.org
 Height_cm,"Obtained at time of visit. If not available at visit, height may be obtained from EMR within 3 months of visit. Height may be used within 12 months of visit for participants >18 years old.",encounter,8303-3,Body height,http://loinc.org
-height,Height,encounter,8303-3,Body height,http://loinc.org
-weight,Weight,encounter,29463-7,Body weight,http://loinc.org
 Weight_kg,"Obtained at time of visit. If not available at visit, weight may be obtained from EMR within 3 months of visit.",encounter,29463-7,Body weight,http://loinc.org
 kg,Kilograms,units,kg,Kilograms,http://ucum.org,
 cm,cm,units,cm,cm,http://ucum.org,
 ml,ml,units,ml,ml,http://ucum.org,
+ml,ml,Vial_Volume,ml,ml,http://ucum.org,
 permL,/mL,units,/mL,/mL,http://ucum.org,
 kg/m2,kg/m2,units,kg/m2,kg/m2,http://ucum.org,
 Female,Female,gender,female,Female,http://hl7.org/fhir/administrative-gender,
@@ -54,38 +81,6 @@ Other,Other,gender,other,Other,http://hl7.org/fhir/administrative-gender,
 Other,Other,sex,other,Other,http://hl7.org/fhir/administrative-gender,
 Unknown,Unknown,gender,unknown,Unknown,http://hl7.org/fhir/administrative-gender,
 Unknown,Unknown,sex,unknown,Unknown,http://hl7.org/fhir/administrative-gender,
-B Cells,B-Lymphocyte,SpecimenType,C12474,B-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12474,
-Blood,Blood Sample,SpecimenType,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610,"For query purposes, can blood, whole blood, peripheral whole blood be grouped together?"
-Buffy coat,Buffy coat,SpecimenType,C84507,Buffy Coat,http://purl.obolibrary.org/obo/ncit.owl,,
-DNA,DNA,SpecimenType,OBI:0001051,DNA extract,http://purl.obolibrary.org/obo/obi.owl,
-RNA,RNA,SpecimenType,OBI:0000880,RNA extract,http://purl.obolibrary.org/obo/obi.owl,
-Tregs,Tregs,SpecimenType,CL:0000815,regulatory T cell,http://purl.obolibrary.org/obo/cl.owl,
-CD4+ Tconv cells,CD4+ Tconv cells,SpecimenType,C12537,CD4-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12537
-CD4+ Tconv Cells,CD4+ Tconv Cells,SpecimenType,C12537,CD4-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12537
-CD8+ T cells,CD8+ T cells,SpecimenType,C12542,CD8-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12542,
-CD8+ T Cells,CD8+ T Cells,SpecimenType,C12542,CD8-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12542,
-Derived Cell Line,Derived Cell Line,SpecimenType,C156445,Derived Cell Line,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C156445,
-Granulocytes,Granulocyte,SpecimenType,C12530,Granulocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12530,
-Monocytes,Monocyte,SpecimenType,C12547,Monocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12547,
-NK cells,Natural Killer Cell,SpecimenType,C12536,Natural Killer Cell,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12536,
-NK Cells,Natural Killer Cell,SpecimenType,C12536,Natural Killer Cell,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12536,
-PAXgene DNA,PAXgene Blood DNA Tube,SpecimenType,C126393,PAXgene Blood DNA Tube,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C126393,
-PAXgene RNA,PAXgene Blood RNA Tube,SpecimenType,C126394,PAXgene Blood RNA Tube,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C126394,
-PBMC Lysate,PBMC Lysate,SpecimenType,C178965,Peripheral Blood Mononuclear Cell Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C178965
-PBMCs,PBMCs,SpecimenType,C12954,Peripheral Blood Mononuclear Cell Sample,http://purl.obolibrary.org/obo/ncit.owl,
-Peripheral Whole Blood,Blood Sample,SpecimenType,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610,
-Plasma,Plasma,SpecimenType,C13356,Plasma,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C13356,
-Red Blood Cells,Red Blood Cells,SpecimenType,C12521,Erythrocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12521,
-Saliva,Saliva Sample,SpecimenType,C174119,Saliva Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C174119,"For query purposes, Saliva and saliva_bolus grouped together"
-saliva_bolus,Saliva Sample,SpecimenType,C174119,Saliva Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C174119,
-Solid Tissue,Solid Tissue Specimen,SpecimenType,C164014,Solid Tissue Specimen,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C164014,
-WBC Cryo,WBC Cryo,SpecimenType,C12529,Leukocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12529
-WBC Cryo,WBC Cryo,SpecimenType,C19314,Cryopreserved cell,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C19314
-WBCs,WBCs,SpecimenType,C12529,Leukocyte,http://purl.obolibrary.org/obo/ncit.owl,,
-WBC DNA,WBC DNA,SpecimenType,C12529,Leukocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12529
-WBC DNA,WBC DNA,SpecimenType,OBI:0001051, DNA extract,http://purl.obolibrary.org/obo/obi.owl,http://purl.obolibrary.org/obo/OBI_0001051
-Whole blood,Blood Sample,SpecimenType,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610,
-Bone Marrow,Bone Marrow Sample,SpecimenType,C164009,Bone Marrow Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C164009,
 Cell Staining Buffer,Cell Staining Buffer,SpecimenCondition,,,,
 CryoStor,CryoStor,SpecimenCondition,FROZ,Frozen,http://terminology.hl7.org/CodeSystem/v2-0493,
 Freezing Media,Freezing Media,SpecimenCondition,FROZ,Frozen,http://terminology.hl7.org/CodeSystem/v2-0493,
@@ -101,13 +96,13 @@ PAXgene DNA,PAXgene DNA,SpecimenEnrichment,,,
 PAXgene RNA,PAXgene RNA,SpecimenEnrichment,,,
 Qiagen Allprep,Qiagen Allprep,SpecimenEnrichment,,,
 RBC lysis,RBC lysis,SpecimenEnrichment,,,,
-Cell Staining Buffer,Cell Staining Buffer,SpecimenAdditive,Cell Staining Buffer,Cell Staining Buffer,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-CryoStor,CryoStor,SpecimenAdditive,CryoStor,CryoStor,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-Freezing Media,Freezing Media,SpecimenAdditive,Freezing Media,Freezing Media,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-No Additive,No Additive,SpecimenAdditive,No Additive,No Additive,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-RNAse free water,RNAse free water,SpecimenAdditive,RNAse free water,RNAse free water,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,SpecimenAdditive,RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-Elution buffer,Elution buffer,SpecimenAdditive,Elution buffer,Elution buffer,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+Cell Staining Buffer,Cell Staining Buffer,Preservation_Method,Cell Staining Buffer,Cell Staining Buffer,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+CryoStor,CryoStor,Preservation_Method,CryoStor,CryoStor,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+Freezing Media,Freezing Media,Preservation_Method,Freezing Media,Freezing Media,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+No Additive,No Additive,Preservation_Method,No Additive,No Additive,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+RNAse free water,RNAse free water,Preservation_Method,RNAse free water,RNAse free water,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,Preservation_Method,RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+Elution buffer,Elution buffer,Preservation_Method,Elution buffer,Elution buffer,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
 WGS,WGS,experiment_strategy,WGS,Whole Genome,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies
 LCMS_Metabolomics,LCMS_Metabolomics,experiment_strategy,LCMS_Metabolomics,LCMS_Metabolomics,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies
 Multiplex ELISA,Multiplex ELISA,experiment_strategy,Multiplex ELISA,Multiplex ELISA,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies

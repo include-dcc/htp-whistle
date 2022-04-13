@@ -4,129 +4,7 @@
   "version": "v1",
   "group": [
     {
-      "source": "units",
-      "target": "http://ucum.org",
-      "element": [
-        {
-          "code": "kg",
-          "display": "Kilograms",
-          "target": [
-            {
-              "code": "kg",
-              "display": "Kilograms",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "cm",
-          "display": "cm",
-          "target": [
-            {
-              "code": "cm",
-              "display": "cm",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "ml",
-          "display": "ml",
-          "target": [
-            {
-              "code": "ml",
-              "display": "ml",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "permL",
-          "display": "/mL",
-          "target": [
-            {
-              "code": "/mL",
-              "display": "/mL",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "kg/m2",
-          "display": "kg/m2",
-          "target": [
-            {
-              "code": "kg/m2",
-              "display": "kg/m2",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "units",
-      "target": "self",
-      "element": [
-        {
-          "code": "kg",
-          "display": "Kilograms",
-          "target": [
-            {
-              "code": "kg",
-              "display": "Kilograms",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "cm",
-          "display": "cm",
-          "target": [
-            {
-              "code": "cm",
-              "display": "cm",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "ml",
-          "display": "ml",
-          "target": [
-            {
-              "code": "ml",
-              "display": "ml",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "permL",
-          "display": "/mL",
-          "target": [
-            {
-              "code": "permL",
-              "display": "/mL",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "kg/m2",
-          "display": "kg/m2",
-          "target": [
-            {
-              "code": "kg/m2",
-              "display": "kg/m2",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "SpecimenType",
+      "source": "Sample_Type",
       "target": "http://purl.obolibrary.org/obo/ncit.owl",
       "element": [
         {
@@ -265,11 +143,154 @@
               "equivalence": "equivalent"
             }
           ]
+        },
+        {
+          "code": "Saliva",
+          "display": "Saliva",
+          "target": [
+            {
+              "code": "C174119",
+              "display": "Saliva Sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WBCs",
+          "display": "WBCs",
+          "target": [
+            {
+              "code": "C12529",
+              "display": "Leukocyte",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Whole blood",
+          "display": "Whole blood",
+          "target": [
+            {
+              "code": "C17610",
+              "display": "Blood Sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "B Cells",
+          "display": "B Cells",
+          "target": [
+            {
+              "code": "C12474",
+              "display": "B-Lymphocyte",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Buffy coat",
+          "display": "Buffy coat",
+          "target": [
+            {
+              "code": "C84507",
+              "display": "Buffy Coat",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CD4+ Tconv Cells",
+          "display": "CD4+ Tconv Cells",
+          "target": [
+            {
+              "code": "C12537",
+              "display": "CD4-Positive T-Lymphocyte",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CD8+ T Cells",
+          "display": "CD8+ T Cells",
+          "target": [
+            {
+              "code": "C12542",
+              "display": "CD8-Positive T-Lymphocyte",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Granulocytes",
+          "display": "Granulocytes",
+          "target": [
+            {
+              "code": "C12530",
+              "display": "Granulocyte",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Monocytes",
+          "display": "Monocytes",
+          "target": [
+            {
+              "code": "C12547",
+              "display": "Monocyte",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NK Cells",
+          "display": "NK Cells",
+          "target": [
+            {
+              "code": "C12536",
+              "display": "Natural Killer Cell",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PBMCs",
+          "display": "PBMCs",
+          "target": [
+            {
+              "code": "C12954",
+              "display": "Peripheral Blood Mononuclear Cell Sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Plasma",
+          "display": "Plasma",
+          "target": [
+            {
+              "code": "C13356",
+              "display": "Plasma",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Red Blood Cells",
+          "display": "Red Blood Cells",
+          "target": [
+            {
+              "code": "C12521",
+              "display": "Erythrocyte",
+              "equivalence": "equivalent"
+            }
+          ]
         }
       ]
     },
     {
-      "source": "SpecimenType",
+      "source": "Sample_Type",
       "target": "self",
       "element": [
         {
@@ -413,11 +434,187 @@
               "equivalence": "equivalent"
             }
           ]
+        },
+        {
+          "code": "Saliva",
+          "display": "Saliva",
+          "target": [
+            {
+              "code": "Saliva",
+              "display": "Saliva",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WBCs",
+          "display": "WBCs",
+          "target": [
+            {
+              "code": "WBCs",
+              "display": "WBCs",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Whole blood",
+          "display": "Whole blood",
+          "target": [
+            {
+              "code": "Whole blood",
+              "display": "Whole blood",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "B Cells",
+          "display": "B Cells",
+          "target": [
+            {
+              "code": "B Cells",
+              "display": "B Cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Buffy coat",
+          "display": "Buffy coat",
+          "target": [
+            {
+              "code": "Buffy coat",
+              "display": "Buffy coat",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CD4+ Tconv Cells",
+          "display": "CD4+ Tconv Cells",
+          "target": [
+            {
+              "code": "CD4+ Tconv Cells",
+              "display": "CD4+ Tconv Cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CD8+ T Cells",
+          "display": "CD8+ T Cells",
+          "target": [
+            {
+              "code": "CD8+ T Cells",
+              "display": "CD8+ T Cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DNA",
+          "display": "DNA",
+          "target": [
+            {
+              "code": "DNA",
+              "display": "DNA",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Granulocytes",
+          "display": "Granulocytes",
+          "target": [
+            {
+              "code": "Granulocytes",
+              "display": "Granulocytes",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Monocytes",
+          "display": "Monocytes",
+          "target": [
+            {
+              "code": "Monocytes",
+              "display": "Monocytes",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NK Cells",
+          "display": "NK Cells",
+          "target": [
+            {
+              "code": "NK Cells",
+              "display": "NK Cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PBMCs",
+          "display": "PBMCs",
+          "target": [
+            {
+              "code": "PBMCs",
+              "display": "PBMCs",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Plasma",
+          "display": "Plasma",
+          "target": [
+            {
+              "code": "Plasma",
+              "display": "Plasma",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNA",
+          "display": "RNA",
+          "target": [
+            {
+              "code": "RNA",
+              "display": "RNA",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Red Blood Cells",
+          "display": "Red Blood Cells",
+          "target": [
+            {
+              "code": "Red Blood Cells",
+              "display": "Red Blood Cells",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Tregs",
+          "display": "Tregs",
+          "target": [
+            {
+              "code": "Tregs",
+              "display": "Tregs",
+              "equivalence": "equivalent"
+            }
+          ]
         }
       ]
     },
     {
-      "source": "SpecimenType",
+      "source": "Sample_Type",
       "target": "http://purl.obolibrary.org/obo/obi.owl",
       "element": [
         {
@@ -430,6 +627,201 @@
               "equivalence": "equivalent"
             }
           ]
+        },
+        {
+          "code": "DNA",
+          "display": "DNA",
+          "target": [
+            {
+              "code": "OBI:0001051",
+              "display": "DNA extract",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNA",
+          "display": "RNA",
+          "target": [
+            {
+              "code": "OBI:0000880",
+              "display": "RNA extract",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Sample_Type",
+      "target": "http://purl.obolibrary.org/obo/cl.owl",
+      "element": [
+        {
+          "code": "Tregs",
+          "display": "Tregs",
+          "target": [
+            {
+              "code": "CL:0000815",
+              "display": "regulatory T cell",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "units",
+      "target": "http://ucum.org",
+      "element": [
+        {
+          "code": "kg",
+          "display": "Kilograms",
+          "target": [
+            {
+              "code": "kg",
+              "display": "Kilograms",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "cm",
+          "display": "cm",
+          "target": [
+            {
+              "code": "cm",
+              "display": "cm",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ml",
+          "display": "ml",
+          "target": [
+            {
+              "code": "ml",
+              "display": "ml",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "permL",
+          "display": "/mL",
+          "target": [
+            {
+              "code": "/mL",
+              "display": "/mL",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "kg/m2",
+          "display": "kg/m2",
+          "target": [
+            {
+              "code": "kg/m2",
+              "display": "kg/m2",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "units",
+      "target": "self",
+      "element": [
+        {
+          "code": "kg",
+          "display": "Kilograms",
+          "target": [
+            {
+              "code": "kg",
+              "display": "Kilograms",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "cm",
+          "display": "cm",
+          "target": [
+            {
+              "code": "cm",
+              "display": "cm",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ml",
+          "display": "ml",
+          "target": [
+            {
+              "code": "ml",
+              "display": "ml",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "permL",
+          "display": "/mL",
+          "target": [
+            {
+              "code": "permL",
+              "display": "/mL",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "kg/m2",
+          "display": "kg/m2",
+          "target": [
+            {
+              "code": "kg/m2",
+              "display": "kg/m2",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Vial_Volume",
+      "target": "http://ucum.org",
+      "element": [
+        {
+          "code": "ml",
+          "display": "ml",
+          "target": [
+            {
+              "code": "ml",
+              "display": "ml",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Vial_Volume",
+      "target": "self",
+      "element": [
+        {
+          "code": "ml",
+          "display": "ml",
+          "target": [
+            {
+              "code": "ml",
+              "display": "ml",
+              "equivalence": "equivalent"
+            }
+          ]
         }
       ]
     },
@@ -437,39 +829,6 @@
       "source": "SpecimenCondition",
       "target": "self",
       "element": [
-        {
-          "code": "Cell Staining Buffer",
-          "display": "Cell Staining Buffer",
-          "target": [
-            {
-              "code": "Cell Staining Buffer",
-              "display": "Cell Staining Buffer",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "CryoStor",
-          "display": "CryoStor",
-          "target": [
-            {
-              "code": "CryoStor",
-              "display": "CryoStor",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Freezing Media",
-          "display": "Freezing Media",
-          "target": [
-            {
-              "code": "Freezing Media",
-              "display": "Freezing Media",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
         {
           "code": "No Additive (-80C Storage)",
           "display": "No Additive (-80C Storage)",
@@ -477,233 +836,6 @@
             {
               "code": "No Additive (-80C Storage)",
               "display": "No Additive (-80C Storage)",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "No Additive",
-          "display": "No Additive",
-          "target": [
-            {
-              "code": "No Additive",
-              "display": "No Additive",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "RNAse free water",
-          "display": "RNAse free water",
-          "target": [
-            {
-              "code": "RNAse free water",
-              "display": "RNAse free water",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-          "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-          "target": [
-            {
-              "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-              "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "SpecimenCondition",
-      "target": "http://terminology.hl7.org/CodeSystem/v2-0493",
-      "element": [
-        {
-          "code": "CryoStor",
-          "display": "CryoStor",
-          "target": [
-            {
-              "code": "FROZ",
-              "display": "Frozen",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Freezing Media",
-          "display": "Freezing Media",
-          "target": [
-            {
-              "code": "FROZ",
-              "display": "Frozen",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "SpecimenAdditive",
-      "target": "https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive",
-      "element": [
-        {
-          "code": "Cell Staining Buffer",
-          "display": "Cell Staining Buffer",
-          "target": [
-            {
-              "code": "Cell Staining Buffer",
-              "display": "Cell Staining Buffer",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "CryoStor",
-          "display": "CryoStor",
-          "target": [
-            {
-              "code": "CryoStor",
-              "display": "CryoStor",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Freezing Media",
-          "display": "Freezing Media",
-          "target": [
-            {
-              "code": "Freezing Media",
-              "display": "Freezing Media",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "No Additive",
-          "display": "No Additive",
-          "target": [
-            {
-              "code": "No Additive",
-              "display": "No Additive",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "RNAse free water",
-          "display": "RNAse free water",
-          "target": [
-            {
-              "code": "RNAse free water",
-              "display": "RNAse free water",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-          "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-          "target": [
-            {
-              "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-              "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Elution buffer",
-          "display": "Elution buffer",
-          "target": [
-            {
-              "code": "Elution buffer",
-              "display": "Elution buffer",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "SpecimenAdditive",
-      "target": "self",
-      "element": [
-        {
-          "code": "Cell Staining Buffer",
-          "display": "Cell Staining Buffer",
-          "target": [
-            {
-              "code": "Cell Staining Buffer",
-              "display": "Cell Staining Buffer",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "CryoStor",
-          "display": "CryoStor",
-          "target": [
-            {
-              "code": "CryoStor",
-              "display": "CryoStor",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Freezing Media",
-          "display": "Freezing Media",
-          "target": [
-            {
-              "code": "Freezing Media",
-              "display": "Freezing Media",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "No Additive",
-          "display": "No Additive",
-          "target": [
-            {
-              "code": "No Additive",
-              "display": "No Additive",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "RNAse free water",
-          "display": "RNAse free water",
-          "target": [
-            {
-              "code": "RNAse free water",
-              "display": "RNAse free water",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-          "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-          "target": [
-            {
-              "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-              "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Elution buffer",
-          "display": "Elution buffer",
-          "target": [
-            {
-              "code": "Elution buffer",
-              "display": "Elution buffer",
               "equivalence": "equivalent"
             }
           ]
@@ -938,6 +1070,326 @@
             {
               "code": "FAMMEMB",
               "display": "Family Member",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Concentration_Unit",
+      "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "element": [
+        {
+          "code": "NA",
+          "display": "NA",
+          "target": [
+            {
+              "code": "UNK",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Concentration_Unit",
+      "target": "self",
+      "element": [
+        {
+          "code": "NA",
+          "display": "NA",
+          "target": [
+            {
+              "code": "NA",
+              "display": "NA",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Preservation_Method",
+      "target": "self",
+      "element": [
+        {
+          "code": "Cell Staining Buffer",
+          "display": "Cell Staining Buffer",
+          "target": [
+            {
+              "code": "Cell Staining Buffer",
+              "display": "Cell Staining Buffer",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "Cell Staining Buffer",
+              "display": "Cell Staining Buffer",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CryoStor",
+          "display": "CryoStor",
+          "target": [
+            {
+              "code": "CryoStor",
+              "display": "CryoStor",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "CryoStor",
+              "display": "CryoStor",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Elution buffer",
+          "display": "Elution buffer",
+          "target": [
+            {
+              "code": "Elution buffer",
+              "display": "Elution buffer",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Freezing Media",
+          "display": "Freezing Media",
+          "target": [
+            {
+              "code": "Freezing Media",
+              "display": "Freezing Media",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "Freezing Media",
+              "display": "Freezing Media",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NA",
+          "display": "NA",
+          "target": [
+            {
+              "code": "NA",
+              "display": "NA",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "No Additive",
+          "display": "No Additive",
+          "target": [
+            {
+              "code": "No Additive",
+              "display": "No Additive",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "No Additive",
+              "display": "No Additive",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNAse free water",
+          "display": "RNAse free water",
+          "target": [
+            {
+              "code": "RNAse free water",
+              "display": "RNAse free water",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "RNAse free water",
+              "display": "RNAse free water",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+          "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+          "target": [
+            {
+              "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+              "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+              "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Preservation_Method",
+      "target": "https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive",
+      "element": [
+        {
+          "code": "Cell Staining Buffer",
+          "display": "Cell Staining Buffer",
+          "target": [
+            {
+              "code": "Cell Staining Buffer",
+              "display": "Cell Staining Buffer",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CryoStor",
+          "display": "CryoStor",
+          "target": [
+            {
+              "code": "CryoStor",
+              "display": "CryoStor",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Elution buffer",
+          "display": "Elution buffer",
+          "target": [
+            {
+              "code": "Elution buffer",
+              "display": "Elution buffer",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Freezing Media",
+          "display": "Freezing Media",
+          "target": [
+            {
+              "code": "Freezing Media",
+              "display": "Freezing Media",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "No Additive",
+          "display": "No Additive",
+          "target": [
+            {
+              "code": "No Additive",
+              "display": "No Additive",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNAse free water",
+          "display": "RNAse free water",
+          "target": [
+            {
+              "code": "RNAse free water",
+              "display": "RNAse free water",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+          "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+          "target": [
+            {
+              "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+              "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Preservation_Method",
+      "target": "http://terminology.hl7.org/CodeSystem/v2-0493",
+      "element": [
+        {
+          "code": "CryoStor",
+          "display": "CryoStor",
+          "target": [
+            {
+              "code": "FROZ",
+              "display": "Frozen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Freezing Media",
+          "display": "Freezing Media",
+          "target": [
+            {
+              "code": "FROZ",
+              "display": "Frozen",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Preservation_Method",
+      "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "element": [
+        {
+          "code": "NA",
+          "display": "NA",
+          "target": [
+            {
+              "code": "UNK",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Biospecimen_Storage",
+      "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "element": [
+        {
+          "code": "NA",
+          "display": "NA",
+          "target": [
+            {
+              "code": "UNK",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Biospecimen_Storage",
+      "target": "self",
+      "element": [
+        {
+          "code": "NA",
+          "display": "NA",
+          "target": [
+            {
+              "code": "NA",
+              "display": "NA",
               "equivalence": "equivalent"
             }
           ]
@@ -9224,382 +9676,6 @@
             {
               "code": "unknown",
               "display": "Unknown",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "Sample_Type",
-      "target": "http://purl.obolibrary.org/obo/ncit.owl",
-      "element": [
-        {
-          "code": "Saliva",
-          "display": "Saliva",
-          "target": [
-            {
-              "code": "C174119",
-              "display": "Saliva Sample",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "WBCs",
-          "display": "WBCs",
-          "target": [
-            {
-              "code": "C12529",
-              "display": "Leukocyte",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Whole blood",
-          "display": "Whole blood",
-          "target": [
-            {
-              "code": "C17610",
-              "display": "Blood Sample",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "B Cells",
-          "display": "B Cells",
-          "target": [
-            {
-              "code": "C12474",
-              "display": "B-Lymphocyte",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Buffy coat",
-          "display": "Buffy coat",
-          "target": [
-            {
-              "code": "C84507",
-              "display": "Buffy Coat",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "CD4+ Tconv Cells",
-          "display": "CD4+ Tconv Cells",
-          "target": [
-            {
-              "code": "C12537",
-              "display": "CD4-Positive T-Lymphocyte",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "CD8+ T Cells",
-          "display": "CD8+ T Cells",
-          "target": [
-            {
-              "code": "C12542",
-              "display": "CD8-Positive T-Lymphocyte",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Granulocytes",
-          "display": "Granulocytes",
-          "target": [
-            {
-              "code": "C12530",
-              "display": "Granulocyte",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Monocytes",
-          "display": "Monocytes",
-          "target": [
-            {
-              "code": "C12547",
-              "display": "Monocyte",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "NK Cells",
-          "display": "NK Cells",
-          "target": [
-            {
-              "code": "C12536",
-              "display": "Natural Killer Cell",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "PBMCs",
-          "display": "PBMCs",
-          "target": [
-            {
-              "code": "C12954",
-              "display": "Peripheral Blood Mononuclear Cell Sample",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Plasma",
-          "display": "Plasma",
-          "target": [
-            {
-              "code": "C13356",
-              "display": "Plasma",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Red Blood Cells",
-          "display": "Red Blood Cells",
-          "target": [
-            {
-              "code": "C12521",
-              "display": "Erythrocyte",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "Sample_Type",
-      "target": "self",
-      "element": [
-        {
-          "code": "Saliva",
-          "display": "Saliva",
-          "target": [
-            {
-              "code": "Saliva",
-              "display": "Saliva",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "WBCs",
-          "display": "WBCs",
-          "target": [
-            {
-              "code": "WBCs",
-              "display": "WBCs",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Whole blood",
-          "display": "Whole blood",
-          "target": [
-            {
-              "code": "Whole blood",
-              "display": "Whole blood",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "B Cells",
-          "display": "B Cells",
-          "target": [
-            {
-              "code": "B Cells",
-              "display": "B Cells",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Buffy coat",
-          "display": "Buffy coat",
-          "target": [
-            {
-              "code": "Buffy coat",
-              "display": "Buffy coat",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "CD4+ Tconv Cells",
-          "display": "CD4+ Tconv Cells",
-          "target": [
-            {
-              "code": "CD4+ Tconv Cells",
-              "display": "CD4+ Tconv Cells",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "CD8+ T Cells",
-          "display": "CD8+ T Cells",
-          "target": [
-            {
-              "code": "CD8+ T Cells",
-              "display": "CD8+ T Cells",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "DNA",
-          "display": "DNA",
-          "target": [
-            {
-              "code": "DNA",
-              "display": "DNA",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Granulocytes",
-          "display": "Granulocytes",
-          "target": [
-            {
-              "code": "Granulocytes",
-              "display": "Granulocytes",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Monocytes",
-          "display": "Monocytes",
-          "target": [
-            {
-              "code": "Monocytes",
-              "display": "Monocytes",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "NK Cells",
-          "display": "NK Cells",
-          "target": [
-            {
-              "code": "NK Cells",
-              "display": "NK Cells",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "PBMCs",
-          "display": "PBMCs",
-          "target": [
-            {
-              "code": "PBMCs",
-              "display": "PBMCs",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Plasma",
-          "display": "Plasma",
-          "target": [
-            {
-              "code": "Plasma",
-              "display": "Plasma",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "RNA",
-          "display": "RNA",
-          "target": [
-            {
-              "code": "RNA",
-              "display": "RNA",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Red Blood Cells",
-          "display": "Red Blood Cells",
-          "target": [
-            {
-              "code": "Red Blood Cells",
-              "display": "Red Blood Cells",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Tregs",
-          "display": "Tregs",
-          "target": [
-            {
-              "code": "Tregs",
-              "display": "Tregs",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "Sample_Type",
-      "target": "http://purl.obolibrary.org/obo/obi.owl",
-      "element": [
-        {
-          "code": "DNA",
-          "display": "DNA",
-          "target": [
-            {
-              "code": "OBI:0001051",
-              "display": "DNA extract",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "RNA",
-          "display": "RNA",
-          "target": [
-            {
-              "code": "OBI:0000880",
-              "display": "RNA extract",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "Sample_Type",
-      "target": "http://purl.obolibrary.org/obo/cl.owl",
-      "element": [
-        {
-          "code": "Tregs",
-          "display": "Tregs",
-          "target": [
-            {
-              "code": "CL:0000815",
-              "display": "regulatory T cell",
               "equivalence": "equivalent"
             }
           ]

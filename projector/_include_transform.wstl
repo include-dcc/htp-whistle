@@ -128,6 +128,9 @@ def Transform_HTP_Dataset_DD_Only(resource) {
         $this (if resource.code-systems?): ProcessCodeSystem(resource.study, resource.code-systems[]);
         $this (if resource.study.data-dictionary?): ProcessDatasetDefinitions(resource.study, resource.study.data-dictionary[]);
     }
+    if resource.harmony? {
+        $this: ProcessDDHarmony(resource.study, resource.harmony[]);
+    }
 
 }
 
@@ -170,6 +173,9 @@ def Transform_HTP_Dataset(resource) {
             //$this: ProcessSpecimenData(resource.study, resource.specimen[*], resource.aliquot[*], resource.participant[*]);
         }
 
+        if resource.harmony? {
+            $this: ProcessDDHarmony(resource.study, resource.harmony[]);
+        }
     }
 }
 
