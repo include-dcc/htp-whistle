@@ -24,16 +24,18 @@ def VsExpansion(study, code) {
 //               as a listing of all codings that should be added to the 
 //               valueset
 def VsInclude(study, code_group) {
-    if (code_group.table_name?) {
-        if (code_group.parent_varname?) {
-            system: VocabularyURL(study.id, code_group.table_name,code_group.parent_varname);
+    if (code_group.table_name? or code_group.system?) {
+        if (code_group.table_name?) {
+            if (code_group.parent_varname?) {
+                system: VocabularyURL(study.id, code_group.table_name,code_group.parent_varname);
+            } else {
+                system: VocabularyURL(study.id, code_group.table_name, "");
+            }
         } else {
-            system: VocabularyURL(study.id, code_group.table_name, "");
+            system: code_group.system;
         }
-    } else {
-        system: code_group.system;
+        concept[]: VsExpansion(study, code_group.codes[]);
     }
-    concept[]: VsExpansion(study, code_group.codes[]);
 }
 
 // Build the complete ValueSet 
