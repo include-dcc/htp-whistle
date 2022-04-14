@@ -166,11 +166,11 @@ def Transform_HTP_Dataset(resource) {
         // Filter out specimen without actual participants
         if resource.specimen2? {
             var emptylist: [];
-            //$this: ProcessSpecimenData(resource.study, resource.specimen2[*], emptylist[*], resource.participant[*]);
+            $this: ProcessSpecimenData(resource.study, resource.specimen2[*], emptylist[*], resource.participant[*]);
         }
 
         if resource.specimen? {
-            //$this: ProcessSpecimenData(resource.study, resource.specimen[*], resource.aliquot[*], resource.participant[*]);
+            $this: ProcessSpecimenData(resource.study, resource.specimen[*], resource.aliquot[*], resource.participant[*]);
         }
 
         if resource.harmony? {

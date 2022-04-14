@@ -11,6 +11,7 @@ def ProcessSpecimen(study, specimen, all_aliquots, participants) {
     var subject_id: specimen.subject_id;
 
     var matching_subject: participants[where $.participantid=subject_id];
+
     if ($ListLen(matching_subject) > 0) {
         var aliquots: all_aliquots[where $.sample_id=specimen.sample_id];
         
