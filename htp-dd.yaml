@@ -6,7 +6,7 @@ study_desc: TBD
 identifier_prefix: https://include.org/htp/fhir
 output_filename: htp-dd
 id_colname: ParticipantID
-whistle_src: htp-dd.wstl
+whistle_src: _htp.wstl
 code_harmonization_dir: harmony
 require_official: True
 curies:
@@ -104,4 +104,16 @@ dataset:
         type: type
         values: values
       code_harmonization: harmony/htp-harmony.csv     
- 
+active_tables:
+  study: true
+  code-systems: true
+  data-dictionary: true
+  participant: false
+  encounter: false
+  condition: false
+  ds_condition: false
+  harmony: false
+  additive: false
+  specimen: false
+  specimen2: false
+  aliquot: false

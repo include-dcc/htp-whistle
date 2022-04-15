@@ -6,7 +6,7 @@ url: https://includedcc.org/studies/human-trisome-project
 identifier_prefix: https://include.org/htp/fhir
 output_filename: htp
 id_colname: ParticipantID
-whistle_src: htp.wstl
+whistle_src: _htp.wstl
 code_harmonization_dir: harmony
 require_official: True
 curies:
@@ -104,3 +104,16 @@ dataset:
         type: type
         values: values
       code_harmonization: harmony/htp-harmony.csv     
+active_tables:
+  code-systems: true
+  data-dictionary: true
+  participant: true
+  study: true
+  encounter: false
+  condition: false
+  ds_condition: true
+  harmony: true
+  additive: true
+  specimen: false
+  specimen2: false
+  aliquot: false
