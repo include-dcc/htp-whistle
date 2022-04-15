@@ -1,0 +1,25 @@
+# Example YAML Config for extract_etl
+study_id: HTP
+gcp-cred: /home/est/.ncpi_fhir/etl-extraction-effbf874e5b9.json
+etl-key: 1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE
+prefill: harmony/htp-harmony-prefill
+outfile: harmony/htp-harmony.csv
+data-tables:
+  participant:
+    dd-filename: data/csv/dd/participant-dd.csv
+  condition: 
+    dd-filename:  data/csv/dd/condition-dd.csv
+  ds_condition: 
+    dd-filename:  data/csv/dd/ds_condition-dd.csv
+  encounter:
+    dd-filename:  data/csv/dd/encounter-dd.csv
+  additive:
+    dd-filename: data/csv/biospecimen-20220303.5/additive-dd.csv
+  specimen:
+    dd-filename: data/csv/biospecimen-20220303.5/htp_sample-dd.csv
+  aliquot:
+    dd-filename: data/csv/biospecimen-20220303.5/aliquot-dd.csv
+  kf-manifests:
+    dd-filename: data/csv/updated-kf-file-manifests-dd.csv
+  kf-omics:
+    dd-filename: data/csv/updated-kf-file-manifests-dd.csv
