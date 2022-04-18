@@ -86,6 +86,7 @@ dataset:
     code_harmonization: harmony/htp-harmony.csv   
   aliquot:
     filename: data/csv/biospecimen-20220303.5/aliquot.csv
+    group_by: Sample ID
     data_dictionary:
       filename: data/csv/biospecimen-20220303.5/aliquot-dd.csv
       colnames: 
@@ -105,15 +106,4 @@ dataset:
         values: values
       code_harmonization: harmony/htp-harmony.csv     
 active_tables:
-  code-systems: true
-  data-dictionary: true
-  participant: true
-  study: true
-  encounter: false
-  condition: false
-  ds_condition: true
-  harmony: true
-  additive: true
-  specimen: false
-  specimen2: false
-  aliquot: false
+  ALL: true

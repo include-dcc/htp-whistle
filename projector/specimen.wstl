@@ -46,7 +46,7 @@ def ProcessSpecimen(study, specimen, all_aliquots, participants) {
 
         // No consistency...ever
         collection._collectedDateTime.extension[0] (if specimen.age_at_collection ~= "NA" and specimen.age_at_collection ~= "#N/A"): AgeAtExtension(study, subject_id, specimen.age_at_collection, "days");
-        container[]: ProcessAliquot(study, subject_id, aliquots[]);
+        container[]: ProcessAliquot(study, subject_id, aliquots[0].content[]);
 
         subject: Reference_Key_Identifier(study, "Patient", subject_id);
         resourceType: "Specimen";    

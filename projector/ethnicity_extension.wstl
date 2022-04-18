@@ -12,7 +12,6 @@
 // whatever coding is found in the original source data (in the case of ds-connect,
 // that would be words and phrases like 'White' or 'Not Hispanic or ...')
 
-
 // Definition: Add the Race extension if the data is present 
 // 
 // Argument:

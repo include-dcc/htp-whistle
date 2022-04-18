@@ -86,6 +86,7 @@ dataset:
   aliquot:
     filename: data/csv/biospecimen-20220303.5/aliquot.csv
     filename_x: data/csv/biospecimen-20220303.5/aliquot-999.csv
+    group_by: Sample ID
     data_dictionary:
       filename: data/csv/biospecimen-20220303.5/aliquot-dd.csv
       colnames: 
