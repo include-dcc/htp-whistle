@@ -72,6 +72,7 @@ def DdTable(study, dd_entry) {
     identifier[0].use: "official";
     name: $StrCat(study.id, ".", dd_entry.table_name, "-vars");
     title: $StrCat("Variables for table ", study.id, ".", dd_entry.table_name);
+    url: VocabularyURL(study.id, dd_entry.table_name, "");
     topic[0].coding[0].code: "C0035168";
     topic[0].coding[0].display: "Research";
     topic[0].coding[0].system: "https://uts.nlm.nih.gov/uts/umls";

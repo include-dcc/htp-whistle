@@ -10,7 +10,8 @@
 //
 def Study(study) {
     meta.tag[]: StudyMeta(study);
-    
+    meta.profile[]: "https://ncpi-fhir.github.io/ncpi-fhir-study-summary-ig/StructureDefinition/ncpi-research-study";
+
     title: study.title;
     description: study.desc;
     status: "completed"
