@@ -426,6 +426,10 @@ CONTROLLED,CONTROLLED,kf-omics,access_type,access_type,controlled,Controlled,htt
 Registered,Registered,kf-omics,access_type,access_type,registered,Registered,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
 Metabolomics,Metabolomics,kf-omics,data_category,data_category,Metabolomics,Metabolomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
 Proteomics,Proteomics,kf-omics,data_category,data_category,Proteomics,Proteomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
+Transcriptomic,Transcriptomic,kf-manifests-rna,data_category,data_category,Transcriptomic,Transcriptomic,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
+RNA-Seq,RNA-Seq,kf-manifests-rna,experiment_strategy,experiment_strategy,RNA-Seq,RNA-Seq,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
+Gene Fusions,Gene Fusions,kf-manifests-rna,data_type,data_type,Gene-Fusions,Gene Fusions,https://nih-ncpi.github.io/ncpi-fhir-ig/data_types,
+Registered,Registered,kf-manifests-rna,access_type,access_type,registered,Registered,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
 Genomics,Genomics,kf-omics,data_category,data_category,Genomics,Genomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
 WGS,WGS,kf-omics,experiment_strategy,experiment_strategy,WGS,Whole Genome,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies,
 LCMS_Metabolomics,LCMS_Metabolomics,kf-omics,experiment_strategy,experiment_strategy,LCMS_Metabolomics,LCMS_Metabolomics,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies,

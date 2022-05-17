@@ -111,6 +111,9 @@ Metabolomics,Metabolomics,FileDataCategory,Metabolomics,Metabolomics,https://nih
 Proteomics,Proteomics,FileDataCategory,Proteomics,Proteomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories
 Genomics,Genomics,FileDataCategory,Genomics,Genomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories
 HTP,HTP,IncludeProgram,INCLUDE-KF,INCLUDE/KF,https://includedcc.org/fhir/code-systems/programs,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
-CONTROLLED,Controlled,AccessType,controlled,Controlled,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
-Registered,Registered,AccessType,registered,Registered,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
+CONTROLLED,Controlled,access_type,controlled,Controlled,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
+Registered,Registered,access_type,registered,Registered,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
 FAMMEMB,Family Member,FamilyRelationship,FAMMEMB,family member,http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Transcriptomic,Transcriptomic,data_category,data_category,Transcriptomic,Transcriptomic,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
+RNA-Seq,RNA-Seq,experiment_strategy,experiment_strategy,RNA-Seq,RNA-Seq,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
+Gene Fusions,Gene Fusions,data_type,data_type,Gene-Fusions,Gene Fusions,https://nih-ncpi.github.io/ncpi-fhir-ig/data_types,

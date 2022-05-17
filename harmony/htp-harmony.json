@@ -878,28 +878,6 @@
               "equivalence": "equivalent"
             }
           ]
-        },
-        {
-          "code": "WGS",
-          "display": "WGS",
-          "target": [
-            {
-              "code": "WGS",
-              "display": "Whole Genome",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "LCMS_Metabolomics",
-          "display": "LCMS_Metabolomics",
-          "target": [
-            {
-              "code": "LCMS_Metabolomics",
-              "display": "LCMS_Metabolomics",
-              "equivalence": "equivalent"
-            }
-          ]
         }
       ]
     },
@@ -952,34 +930,12 @@
           ]
         },
         {
-          "code": "WGS",
-          "display": "WGS",
+          "code": "RNA-Seq",
+          "display": "RNA-Seq",
           "target": [
             {
-              "code": "WGS",
-              "display": "WGS",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "LCMS_Metabolomics",
-          "display": "LCMS_Metabolomics",
-          "target": [
-            {
-              "code": "LCMS_Metabolomics",
-              "display": "LCMS_Metabolomics",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Multiplex Immunoassay",
-          "display": "Multiplex Immunoassay",
-          "target": [
-            {
-              "code": "Multiplex Immunoassay",
-              "display": "Multiplex Immunoassay",
+              "code": "RNA-Seq",
+              "display": "RNA-Seq",
               "equivalence": "equivalent"
             }
           ]
@@ -998,10 +954,22 @@
               "code": "Multiplex-Immunoassay",
               "display": "Multiplex Immunoassay",
               "equivalence": "equivalent"
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "experiment_strategy",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories",
+      "element": [
+        {
+          "code": "RNA-Seq",
+          "display": "RNA-Seq",
+          "target": [
             {
-              "code": "Multiplex-Immunoassay",
-              "display": "Multiplex Immunoassay",
+              "code": "RNA-Seq",
+              "display": "RNA-Seq",
               "equivalence": "equivalent"
             }
           ]
@@ -3155,11 +3123,6 @@
             {
               "code": "MONDO:0008661",
               "display": "Vitiligo",
-              "equivalence": "equivalent"
-            },
-            {
-              "code": "MONDO:0008661",
-              "display": "vitiligo",
               "equivalence": "equivalent"
             }
           ]
@@ -6023,16 +5986,6 @@
               "code": "Vitiligo",
               "display": "Vitiligo",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "Vitiligo",
-              "display": "Vitiligo",
-              "equivalence": "equivalent"
-            },
-            {
-              "code": "Vitiligo",
-              "display": "Vitiligo",
-              "equivalence": "equivalent"
             }
           ]
         }
@@ -7892,11 +7845,6 @@
               "code": "HP:0001045",
               "display": "Vitiligo",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "HP:0001045",
-              "display": "Vitiligo",
-              "equivalence": "equivalent"
             }
           ]
         }
@@ -8221,11 +8169,6 @@
               "code": "Unsure",
               "display": "Unsure",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "Unsure",
-              "display": "Unsure",
-              "equivalence": "equivalent"
             }
           ]
         }
@@ -8305,11 +8248,6 @@
           "code": "Unsure",
           "display": "Unsure",
           "target": [
-            {
-              "code": "unconfirmed",
-              "display": "Unconfirmed",
-              "equivalence": "equivalent"
-            },
             {
               "code": "unconfirmed",
               "display": "Unconfirmed",
@@ -8543,11 +8481,6 @@
               "code": "Unsure",
               "display": "Unsure",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "Unsure",
-              "display": "Unsure",
-              "equivalence": "equivalent"
             }
           ]
         }
@@ -8627,11 +8560,6 @@
           "code": "Unsure",
           "display": "Unsure",
           "target": [
-            {
-              "code": "unconfirmed",
-              "display": "Unconfirmed",
-              "equivalence": "equivalent"
-            },
             {
               "code": "unconfirmed",
               "display": "Unconfirmed",
@@ -8748,11 +8676,6 @@
               "code": "OBI:0001051",
               "display": "DNA extract",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "OBI:0001051",
-              "display": "DNA extract",
-              "equivalence": "equivalent"
             }
           ]
         }
@@ -8762,28 +8685,6 @@
       "source": "derived_sample_type",
       "target": "self",
       "element": [
-        {
-          "code": "DNA",
-          "display": "DNA",
-          "target": [
-            {
-              "code": "DNA",
-              "display": "DNA",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Plasma",
-          "display": "Plasma",
-          "target": [
-            {
-              "code": "Plasma",
-              "display": "Plasma",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
         {
           "code": "DNA",
           "display": "DNA",
@@ -8820,11 +8721,6 @@
               "code": "C13356",
               "display": "Plasma",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "C13356",
-              "display": "Plasma",
-              "equivalence": "equivalent"
             }
           ]
         }
@@ -8855,28 +8751,6 @@
               "equivalence": "equivalent"
             }
           ]
-        },
-        {
-          "code": "CONTROLLED",
-          "display": "CONTROLLED",
-          "target": [
-            {
-              "code": "controlled",
-              "display": "Controlled",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Registered",
-          "display": "Registered",
-          "target": [
-            {
-              "code": "registered",
-              "display": "Registered",
-              "equivalence": "equivalent"
-            }
-          ]
         }
       ]
     },
@@ -8884,28 +8758,6 @@
       "source": "access_type",
       "target": "self",
       "element": [
-        {
-          "code": "CONTROLLED",
-          "display": "CONTROLLED",
-          "target": [
-            {
-              "code": "CONTROLLED",
-              "display": "CONTROLLED",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Registered",
-          "display": "Registered",
-          "target": [
-            {
-              "code": "Registered",
-              "display": "Registered",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
         {
           "code": "CONTROLLED",
           "display": "CONTROLLED",
@@ -8968,34 +8820,12 @@
           ]
         },
         {
-          "code": "Metabolomics",
-          "display": "Metabolomics",
+          "code": "Transcriptomic",
+          "display": "Transcriptomic",
           "target": [
             {
-              "code": "Metabolomics",
-              "display": "Metabolomics",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Proteomics",
-          "display": "Proteomics",
-          "target": [
-            {
-              "code": "Proteomics",
-              "display": "Proteomics",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Genomics",
-          "display": "Genomics",
-          "target": [
-            {
-              "code": "Genomics",
-              "display": "Genomics",
+              "code": "Transcriptomic",
+              "display": "Transcriptomic",
               "equivalence": "equivalent"
             }
           ]
@@ -9040,34 +8870,46 @@
           ]
         },
         {
-          "code": "Metabolomics",
-          "display": "Metabolomics",
+          "code": "Transcriptomic",
+          "display": "Transcriptomic",
           "target": [
             {
-              "code": "Metabolomics",
-              "display": "Metabolomics",
+              "code": "Transcriptomic",
+              "display": "Transcriptomic",
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "data_type",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/data_types",
+      "element": [
         {
-          "code": "Proteomics",
-          "display": "Proteomics",
+          "code": "Gene Fusions",
+          "display": "Gene Fusions",
           "target": [
             {
-              "code": "Proteomics",
-              "display": "Proteomics",
+              "code": "Gene-Fusions",
+              "display": "Gene Fusions",
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "data_type",
+      "target": "self",
+      "element": [
         {
-          "code": "Genomics",
-          "display": "Genomics",
+          "code": "Gene Fusions",
+          "display": "Gene Fusions",
           "target": [
             {
-              "code": "Genomics",
-              "display": "Genomics",
+              "code": "Gene Fusions",
+              "display": "Gene Fusions",
               "equivalence": "equivalent"
             }
           ]
@@ -9086,11 +8928,6 @@
               "code": "male",
               "display": "Male",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "male",
-              "display": "Male",
-              "equivalence": "equivalent"
             }
           ]
         },
@@ -9098,11 +8935,6 @@
           "code": "Female",
           "display": "Female",
           "target": [
-            {
-              "code": "female",
-              "display": "Female",
-              "equivalence": "equivalent"
-            },
             {
               "code": "female",
               "display": "Female",
@@ -9124,11 +8956,6 @@
               "code": "Male",
               "display": "Male",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "Male",
-              "display": "Male",
-              "equivalence": "equivalent"
             }
           ]
         },
@@ -9136,11 +8963,6 @@
           "code": "Female",
           "display": "Female",
           "target": [
-            {
-              "code": "Female",
-              "display": "Female",
-              "equivalence": "equivalent"
-            },
             {
               "code": "Female",
               "display": "Female",
@@ -9267,11 +9089,6 @@
               "code": "More than one race",
               "display": "More than one race",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "More than one race",
-              "display": "More than one race",
-              "equivalence": "equivalent"
             }
           ]
         },
@@ -9310,11 +9127,6 @@
               "code": "Other",
               "display": "Other",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "Other",
-              "display": "Other",
-              "equivalence": "equivalent"
             }
           ]
         },
@@ -9322,11 +9134,6 @@
           "code": "Prefer not to answer",
           "display": "Prefer not to answer",
           "target": [
-            {
-              "code": "Prefer not to answer",
-              "display": "Prefer not to answer",
-              "equivalence": "equivalent"
-            },
             {
               "code": "Prefer not to answer",
               "display": "Prefer not to answer",
@@ -9344,11 +9151,6 @@
           "code": "More than one race",
           "display": "More than one race",
           "target": [
-            {
-              "code": "UNK",
-              "display": "Unknown",
-              "equivalence": "equivalent"
-            },
             {
               "code": "UNK",
               "display": "Unknown",
@@ -9386,11 +9188,6 @@
               "code": "ASKU",
               "display": "asked but unknown",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "ASKU",
-              "display": "asked but unknown",
-              "equivalence": "equivalent"
             }
           ]
         }
@@ -9404,11 +9201,6 @@
           "code": "Other",
           "display": "Other",
           "target": [
-            {
-              "code": "other",
-              "display": "Other",
-              "equivalence": "equivalent"
-            },
             {
               "code": "other",
               "display": "Other",
@@ -9491,11 +9283,6 @@
               "code": "Prefer not to answer",
               "display": "Prefer not to answer",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "Prefer not to answer",
-              "display": "Prefer not to answer",
-              "equivalence": "equivalent"
             }
           ]
         },
@@ -9503,11 +9290,6 @@
           "code": "Unsure",
           "display": "Unsure",
           "target": [
-            {
-              "code": "Unsure",
-              "display": "Unsure",
-              "equivalence": "equivalent"
-            },
             {
               "code": "Unsure",
               "display": "Unsure",
@@ -9545,11 +9327,6 @@
               "code": "ASKU",
               "display": "asked but unknown",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "ASKU",
-              "display": "asked but unknown",
-              "equivalence": "equivalent"
             }
           ]
         }
@@ -9580,11 +9357,6 @@
           "code": "Unsure",
           "display": "Unsure",
           "target": [
-            {
-              "code": "unconfirmed",
-              "display": "Unconfirmed",
-              "equivalence": "equivalent"
-            },
             {
               "code": "unconfirmed",
               "display": "Unconfirmed",
@@ -9650,11 +9422,6 @@
               "code": "Unknown",
               "display": "Unknown",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "Unknown",
-              "display": "Unknown",
-              "equivalence": "equivalent"
             }
           ]
         }
@@ -9668,11 +9435,6 @@
           "code": "Unknown",
           "display": "Unknown",
           "target": [
-            {
-              "code": "unknown",
-              "display": "Unknown",
-              "equivalence": "equivalent"
-            },
             {
               "code": "unknown",
               "display": "Unknown",
