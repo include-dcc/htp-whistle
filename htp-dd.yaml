@@ -112,7 +112,7 @@ active_tables:
   encounter: false
   condition: false
   ds_condition: false
-  harmony: false
+  harmony: true
   additive: false
   specimen: false
   specimen2: false
