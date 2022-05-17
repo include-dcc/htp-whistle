@@ -54,4 +54,22 @@ def Transform_HTP_Dataset(resource) {
         $this: ProcessDDHarmony(resource.study, resource.harmony[]);
     }
 
+    if resource.kf-manifests? {
+        // Group by aliquot and then sample
+        //var aliquots: $Unique(response.kf-manifests.aliquot_id);
+        //$this: ProcessKfManifestData(resource.study, resource.kf-manifests[*]);
+    }
+
+    if resource.kf-omics? {
+        //$this: ProcessKfManifestData(resource.study, resource.kf-omics[*]);
+    }
+
+    if resource.kf-manifest-rna? {
+        $this: ProcessKfManifestData(resource.study, resource.kf-manifest-rna[*])
+    }
+    
+    if resource.file_manifests? {
+        $this: ProcessKfManifestData()
+    }
+
 }

@@ -72,7 +72,7 @@ def KfDocReference(study, manifest, category) {
 }
 
 def FileSpecimenReference(study, manifest) {
-    $this: Reference_Key_Identifier(study, "Specimen", SpecimenIdentifier(study, manifest.subject_id, manifest.sample_id));
+    $this: Reference_Key_Identifier(study, "Specimen", BuildSpecimenIdentifier(study, manifest.subject_id, manifest.sample_id));
 }
 
 def FileSpecimenAsInput(study, manifest) {
@@ -164,7 +164,7 @@ def KfDocumentReference(study, fileid, all_manifests) {
     if ($ListLen(subject_ids) = 1) {
         subject: Reference_Key_Identifier(study, "Patient", subject_ids[0]);
     }
-    securityLabel[]: HarmonizeAsCoding(manifests[0].access_type, "AccessType");
+    securityLabel[]: HarmonizeAsCoding(manifests[0].access_type, "access_type");
 
     if (manifests[0].acl_list?) {
         var acls: $StrSplit(manifests[0].acl_list, ";");

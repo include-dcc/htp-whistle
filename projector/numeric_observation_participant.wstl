@@ -22,7 +22,9 @@ def NumericObservationParticipant(study, fhir_resource, tablename, varname, numv
             valueQuantity.value: value;
 
             encounter: Reference_Key_Identifier(study, "Encounter", BuildEncounterId(study, subject_id, fhir_resource.event_name));
-
+            if (fhir_resource.age_at_visit_d?) {
+                _effectiveDateTime.extension[0]: AgeAtExtension(study, subject_id, fhir_resource.age_at_visit_d, "days");
+            }
             status: "final";
             resourceType: "Observation";
         }
