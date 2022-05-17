@@ -1,0 +1,132 @@
+study_id: HTP
+study_accession: phs002330 
+study_title: Crnic Institute Human Trisome Project
+study_desc: TBD
+url: https://includedcc.org/studies/human-trisome-project
+identifier_prefix: https://include.org/htp/fhir
+output_filename: htp-file-manifest
+id_colname: ParticipantID
+whistle_src: _htp.wstl
+code_harmonization_dir: harmony
+require_official: True
+curies:
+  http://purl.obolibrary.org/obo/hp.owl: HP
+  http://purl.obolibrary.org/obo/mondo.owl: MONDO
+projector_lib: projector
+dataset:
+  participant:
+    filename: data/csv/participant.csv
+    data_dictionary: 
+      filename: data/csv/dd/participant-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv
+  condition: 
+    filename: data/csv/condition.csv
+    data_dictionary: 
+      filename:  data/csv/dd/condition-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv
+  ds_condition: 
+    filename: data/csv/ds_condition.csv
+    data_dictionary: 
+      filename:  data/csv/dd/ds_condition-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv
+  encounter:
+    filename: data/csv/encounter.csv
+    data_dictionary: 
+      filename:  data/csv/dd/encounter-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv
+  additive:
+    filename: data/csv/biospecimen-20220303.5/additive.csv
+    data_dictionary:
+      filename: data/csv/biospecimen-20220303.5/additive-dd.csv
+      colnames: 
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv        
+  specimen:
+    filename: data/csv/biospecimen-20220303.5/htp_sample.csv
+    data_dictionary:
+      filename: data/csv/biospecimen-20220303.5/htp_sample-dd.csv
+      colnames: 
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv        
+  specimen2:
+    filename: data/csv/biospecimen-20220303.5/updated-htp_sample_collection_supplement.csv
+    data_dictionary:
+      filename: data/csv/biospecimen-20220303.5/htp_sample-dd.csv
+      colnames: 
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv   
+  aliquot:
+    filename: data/csv/biospecimen-20220303.5/aliquot.csv
+    group_by: Sample ID
+    data_dictionary:
+      filename: data/csv/biospecimen-20220303.5/aliquot-dd.csv
+      colnames: 
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/htp-harmony.csv  
+  kf-manifests:
+    filename: data/csv/updated-kf-file-manifests.csv
+    data_dictionary:
+      filename: data/csv/updated-kf-file-manifests-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+      code_harmonization: harmony/htp-harmony.csv    
+  kf-manifest-rna:
+    filename:  data/csv/updated-kf-file-manifests-rna.csv
+    data_dictionary:
+      filename: data/csv/updated-kf-file-manifests-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+      code_harmonization: harmony/htp-harmony.csv    
+active_tables:
+  study: true
+  code-systems: false
+  data-dictionary: false
+  participant: false
+  encounter: false
+  condition: false
+  ds_condition: false
+  harmony: false
+  additive: false
+  specimen: false
+  specimen2: false
+  aliquot: false
+  kf-manifests: false
+  kf-manifest-rna: true
