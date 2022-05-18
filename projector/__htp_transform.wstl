@@ -55,13 +55,11 @@ def Transform_HTP_Dataset(resource) {
     }
 
     if resource.kf-manifests? {
-        // Group by aliquot and then sample
-        //var aliquots: $Unique(response.kf-manifests.aliquot_id);
-        //$this: ProcessKfManifestData(resource.study, resource.kf-manifests[*]);
+        $this: ProcessKfManifestData(resource.study, resource.kf-manifests[*]);
     }
 
     if resource.kf-omics? {
-        //$this: ProcessKfManifestData(resource.study, resource.kf-omics[*]);
+        $this: ProcessKfManifestData(resource.study, resource.kf-omics[*]);
     }
 
     if resource.kf-manifest-rna? {

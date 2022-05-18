@@ -41,7 +41,7 @@ def ProcessSpecimen(study, specimen, all_aliquots, participants) {
         condition[0].coding[]: HarmonizeMapped(specimen.preservation_method, "SpecimenCondition");
         condition[0].text: specimen.preservation_method;
 
-        type.coding[]: HarmonizeMapped(specimen.sample_type, "sample_type");
+        type.coding[]: HarmonizeMapped(specimen.sample_type, "Sample_Type");
         type.text: specimen.sample_type
 
         // No consistency...ever
