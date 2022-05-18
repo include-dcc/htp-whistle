@@ -463,22 +463,22 @@ NA,NA,participant,MRAbstractionStatus,MRAbstractionStatus,UNK,Unknown,http://ter
 Unknown,Unknown,participant,MRAbstractionStatus,MRAbstractionStatus,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,
 Unknown,Unknown,participant,MRAbstractionStatus,MRAbstractionStatus,unknown,Unknown,http://hl7.org/fhir/administrative-gender,
 Unknown,Unknown,participant,MRAbstractionStatus,MRAbstractionStatus,unknown,Unknown,http://hl7.org/fhir/administrative-gender,
-Saliva,Saliva,specimen,Sample_Type,Sample_Type,C174119,Saliva Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C174119
-WBCs,WBCs,specimen,Sample_Type,Sample_Type,C12529,Leukocyte,http://purl.obolibrary.org/obo/ncit.owl,
-Whole blood,Whole blood,specimen,Sample_Type,Sample_Type,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610
-B Cells,B Cells,specimen,Sample_Type,Sample_Type,C12474,B-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12474
-Buffy coat,Buffy coat,specimen,Sample_Type,Sample_Type,C84507,Buffy Coat,http://purl.obolibrary.org/obo/ncit.owl,
-CD4+ Tconv Cells,CD4+ Tconv Cells,specimen,Sample_Type,Sample_Type,C12537,CD4-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12537
-CD8+ T Cells,CD8+ T Cells,specimen,Sample_Type,Sample_Type,C12542,CD8-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12542
-DNA,DNA,specimen,Sample_Type,Sample_Type,OBI:0001051,DNA extract,http://purl.obolibrary.org/obo/obi.owl,
-Granulocytes,Granulocytes,specimen,Sample_Type,Sample_Type,C12530,Granulocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12530
-Monocytes,Monocytes,specimen,Sample_Type,Sample_Type,C12547,Monocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12547
-NK Cells,NK Cells,specimen,Sample_Type,Sample_Type,C12536,Natural Killer Cell,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12536
-PBMCs,PBMCs,specimen,Sample_Type,Sample_Type,C12954,Peripheral Blood Mononuclear Cell Sample,http://purl.obolibrary.org/obo/ncit.owl,
-Plasma,Plasma,specimen,Sample_Type,Sample_Type,C13356,Plasma,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C13356
-RNA,RNA,specimen,Sample_Type,Sample_Type,OBI:0000880,RNA extract,http://purl.obolibrary.org/obo/obi.owl,
-Red Blood Cells,Red Blood Cells,specimen,Sample_Type,Sample_Type,C12521,Erythrocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12521
-Tregs,Tregs,specimen,Sample_Type,Sample_Type,CL:0000815,regulatory T cell,http://purl.obolibrary.org/obo/cl.owl,
+Saliva,Saliva,specimen,sample_type,Sample_Type,C174119,Saliva Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C174119
+WBCs,WBCs,specimen,sample_type,Sample_Type,C12529,Leukocyte,http://purl.obolibrary.org/obo/ncit.owl,
+Whole blood,Whole blood,specimen,sample_type,Sample_Type,C17610,Blood Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C17610
+B Cells,B Cells,specimen,sample_type,Sample_Type,C12474,B-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12474
+Buffy coat,Buffy coat,specimen,sample_type,Sample_Type,C84507,Buffy Coat,http://purl.obolibrary.org/obo/ncit.owl,
+CD4+ Tconv Cells,CD4+ Tconv Cells,specimen,sample_type,Sample_Type,C12537,CD4-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12537
+CD8+ T Cells,CD8+ T Cells,specimen,sample_type,Sample_Type,C12542,CD8-Positive T-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12542
+DNA,DNA,specimen,sample_type,Sample_Type,OBI:0001051,DNA extract,http://purl.obolibrary.org/obo/obi.owl,
+Granulocytes,Granulocytes,specimen,sample_type,Sample_Type,C12530,Granulocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12530
+Monocytes,Monocytes,specimen,sample_type,Sample_Type,C12547,Monocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12547
+NK Cells,NK Cells,specimen,sample_type,Sample_Type,C12536,Natural Killer Cell,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12536
+PBMCs,PBMCs,specimen,sample_type,Sample_Type,C12954,Peripheral Blood Mononuclear Cell Sample,http://purl.obolibrary.org/obo/ncit.owl,
+Plasma,Plasma,specimen,sample_type,Sample_Type,C13356,Plasma,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C13356
+RNA,RNA,specimen,sample_type,Sample_Type,OBI:0000880,RNA extract,http://purl.obolibrary.org/obo/obi.owl,
+Red Blood Cells,Red Blood Cells,specimen,sample_type,Sample_Type,C12521,Erythrocyte,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C12521
+Tregs,Tregs,specimen,sample_type,Sample_Type,CL:0000815,regulatory T cell,http://purl.obolibrary.org/obo/cl.owl,
 Centrifugation,Centrifugation,specimen,Laboratory_Procedure,Laboratory_Procedure,,,,
 FACS,FACS,specimen,Laboratory_Procedure,Laboratory_Procedure,,,,
 Ficoll,Ficoll,specimen,Laboratory_Procedure,Laboratory_Procedure,,,,
