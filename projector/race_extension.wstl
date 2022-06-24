@@ -22,7 +22,7 @@
 // We will ignore any race details that are not checked 
 def RaceExtension(subject) {
     if (subject.race? and subject.race ~= "NA") {
-        var RaceValueCoding: HarmonizeMappedFirst(subject.race, "race");
+        var RaceValueCoding: HarmonizeMappedFirst(subject.race, "Race");
 
         if (RaceValueCoding?) {
             url: "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race";
