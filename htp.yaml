@@ -65,7 +65,7 @@ dataset:
         values: values
     code_harmonization: harmony/htp-harmony.csv        
   specimen:
-    filename: data/csv/biospecimen-20220303.5/htp_sample.csv
+    filename: data/csv/biospecimen-20220303.5/htp_sample.csv,data/csv/biospecimen-20220303.5/updated-htp_sample_collection_supplement.csv
     data_dictionary:
       filename: data/csv/biospecimen-20220303.5/htp_sample-dd.csv
       colnames: 
@@ -74,16 +74,6 @@ dataset:
         type: type
         values: values
     code_harmonization: harmony/htp-harmony.csv        
-  specimen2:
-    filename: data/csv/biospecimen-20220303.5/updated-htp_sample_collection_supplement.csv
-    data_dictionary:
-      filename: data/csv/biospecimen-20220303.5/htp_sample-dd.csv
-      colnames: 
-        varname: varname
-        desc: vardesc
-        type: type
-        values: values
-    code_harmonization: harmony/htp-harmony.csv   
   aliquot:
     filename: data/csv/biospecimen-20220303.5/aliquot.csv
     group_by: Sample ID
@@ -96,7 +86,7 @@ dataset:
         values: values
     code_harmonization: harmony/htp-harmony.csv  
   kf-manifests:
-    filename: data/csv/updated-kf-file-manifests.csv
+    filename: data/csv/updated-kf-file-manifests.csv,data/csv/updated-kf-file-manifests-rna.csv,data/csv/updated-kf-omics.csv
     data_dictionary:
       filename: data/csv/updated-kf-file-manifests-dd.csv
       colnames:
@@ -105,25 +95,5 @@ dataset:
         type: type
         values: values
       code_harmonization: harmony/htp-harmony.csv     
-  kf-manifest-rna:
-    filename:  data/csv/updated-kf-file-manifests-rna.csv
-    data_dictionary:
-      filename: data/csv/updated-kf-file-manifests-dd.csv
-      colnames:
-        varname: varname
-        desc: vardesc
-        type: type
-        values: values
-      code_harmonization: harmony/htp-harmony.csv      
-  kf-omics:
-    filename:  data/csv/updated-kf-omics.csv
-    data_dictionary:
-      filename: data/csv/updated-kf-file-manifests-dd.csv
-      colnames:
-        varname: varname
-        desc: vardesc
-        type: type
-        values: values
-      code_harmonization: harmony/htp-harmony.csv    
 active_tables:
   ALL: true
