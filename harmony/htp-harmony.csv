@@ -20,24 +20,21 @@ ml,ml,,,Vial_Volume,ml,ml,http://ucum.org,
 permL,/mL,,,units,/mL,/mL,http://ucum.org,
 kg/m2,kg/m2,,,units,kg/m2,kg/m2,http://ucum.org,
 No Additive (-80C Storage),No Additive (-80C Storage),,,SpecimenCondition,FROZ,Frozen,,
-Multiplex ELISA,Multiplex ELISA,,,experiment_strategy,Multiplex ELISA,Multiplex ELISA,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies,
+Multiplex ELISA,Multiplex ELISA,,,experiment_strategy,Multiplex ELISA,Multiplex ELISA,https://includedcc.org/fhir/code-systems/experimental_strategies,
 HTP,HTP,,,IncludeProgram,INCLUDE-KF,INCLUDE/KF,https://includedcc.org/fhir/code-systems/programs,
 FAMMEMB,Family Member,,,FamilyRelationship,FAMMEMB,family member,http://terminology.hl7.org/CodeSystem/v3-RoleCode,
 NA,NA,aliquot,Concentration_Unit,Concentration_Unit,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
-Cell Staining Buffer,Cell Staining Buffer,aliquot,Preservation_Method,Preservation_Method,,,,
-Cell Staining Buffer,Cell Staining Buffer,aliquot,Preservation_Method,Preservation_Method,Cell Staining Buffer,Cell Staining Buffer,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+Cell Staining Buffer,Cell Staining Buffer,aliquot,Preservation_Method,Preservation_Method,Cell Staining Buffer,Cell Staining Buffer,https://includedcc.org/fhir/code-systems/specimen-additive,
 CryoStor,CryoStor,aliquot,Preservation_Method,Preservation_Method,FROZ,Frozen,http://terminology.hl7.org/CodeSystem/v2-0493,
-CryoStor,CryoStor,aliquot,Preservation_Method,Preservation_Method,CryoStor,CryoStor,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-Elution buffer,Elution buffer,aliquot,Preservation_Method,Preservation_Method,Elution buffer,Elution buffer,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+CryoStor,CryoStor,aliquot,Preservation_Method,Preservation_Method,CryoStor,CryoStor,https://includedcc.org/fhir/code-systems/specimen-additive,
+Elution buffer,Elution buffer,aliquot,Preservation_Method,Preservation_Method,Elution buffer,Elution buffer,https://includedcc.org/fhir/code-systems/specimen-additive,
 Freezing Media,Freezing Media,aliquot,Preservation_Method,Preservation_Method,FROZ,Frozen,http://terminology.hl7.org/CodeSystem/v2-0493,
-Freezing Media,Freezing Media,aliquot,Preservation_Method,Preservation_Method,Freezing Media,Freezing Media,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+Freezing Media,Freezing Media,aliquot,Preservation_Method,Preservation_Method,Freezing Media,Freezing Media,https://includedcc.org/fhir/code-systems/specimen-additive,
 NA,NA,aliquot,Preservation_Method,Preservation_Method,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
-No Additive,No Additive,aliquot,Preservation_Method,Preservation_Method,FROZ,Frozen,,
-No Additive,No Additive,aliquot,Preservation_Method,Preservation_Method,No Additive,No Additive,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-RNAse free water,RNAse free water,aliquot,Preservation_Method,Preservation_Method,,,,
-RNAse free water,RNAse free water,aliquot,Preservation_Method,Preservation_Method,RNAse free water,RNAse free water,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,aliquot,Preservation_Method,Preservation_Method,,,,
-RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,aliquot,Preservation_Method,Preservation_Method,RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
+No Additive,No Additive,aliquot,Preservation_Method,Preservation_Method,FROZ,Frozen,http://terminology.hl7.org/CodeSystem/v2-0493,
+No Additive,No Additive,aliquot,Preservation_Method,Preservation_Method,No Additive,No Additive,https://includedcc.org/fhir/code-systems/specimen-additive,
+RNAse free water,RNAse free water,aliquot,Preservation_Method,Preservation_Method,RNAse free water,RNAse free water,https://includedcc.org/fhir/code-systems/specimen-additive,
+RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,aliquot,Preservation_Method,Preservation_Method,RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,https://includedcc.org/fhir/code-systems/specimen-additive,
 NA,NA,aliquot,Biospecimen_Storage,Biospecimen_Storage,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Aberrant subclavian artery,Aberrant subclavian artery,condition,condition_code,condition_code,0021727,aberrant subclavian artery,http://purl.obolibrary.org/obo/mondo.owl,
 Acute lymphocytic leukemia (B-cell Precursor ALL),Acute lymphocytic leukemia (B-cell Precursor ALL),condition,condition_code,condition_code,0004812,B Acute Lymphoblastic Leukemia,http://purl.obolibrary.org/obo/hp.owl,
@@ -370,7 +367,6 @@ Vitamin D deficiency,Vitamin D deficiency,condition,condition_code,condition_cod
 Vitiligo,Vitiligo,condition,condition_code,condition_code,0001045,Vitiligo,http://purl.obolibrary.org/obo/hp.owl,
 Vitiligo,Vitiligo,condition,condition_code,condition_code,0008661,Vitiligo,http://purl.obolibrary.org/obo/mondo.owl,
 Vitiligo,Vitiligo,condition,condition_code,condition_code,0001045,Vitiligo,http://purl.obolibrary.org/obo/hp.owl,
-Vitiligo,Vitiligo,condition,condition_code,condition_code,0008661,vitiligo,http://purl.obolibrary.org/obo/mondo.owl,
 TRUE,TRUE,condition,condition_status,condition_status,confirmed,Confirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 FALSE,FALSE,condition,condition_status,condition_status,refuted,Refuted,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 OfficialDSDiagnosis,Typically self/parent report.,ds_condition,,ds_condition,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,I just found this code for Down Syndrome using Mondo's website search
@@ -414,54 +410,36 @@ DNA,DNA,kf-manifests,derived_sample_type,derived_sample_type,OBI:0001051,DNA ext
 Plasma,Plasma,kf-manifests,derived_sample_type,derived_sample_type,C13356,Plasma,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C13356
 CONTROLLED,CONTROLLED,kf-manifests,access_type,access_type,controlled,Controlled,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
 Registered,Registered,kf-manifests,access_type,access_type,registered,Registered,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
-Metabolomics,Metabolomics,kf-manifests,data_category,data_category,Metabolomics,Metabolomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
-Proteomics,Proteomics,kf-manifests,data_category,data_category,Proteomics,Proteomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
-Genomics,Genomics,kf-manifests,data_category,data_category,Genomics,Genomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
-WGS,WGS,kf-manifests,experiment_strategy,experiment_strategy,WGS,Whole Genome,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies,
-LCMS_Metabolomics,LCMS_Metabolomics,kf-manifests,experiment_strategy,experiment_strategy,LCMS_Metabolomics,LCMS_Metabolomics,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies,
+Metabolomics,Metabolomics,kf-manifests,data_category,data_category,Metabolomics,Metabolomics,https://includedcc.org/fhir/code-systems/data_categories,
+Proteomics,Proteomics,kf-manifests,data_category,data_category,Proteomics,Proteomics,https://includedcc.org/fhir/code-systems/data_categories,
+Genomics,Genomics,kf-manifests,data_category,data_category,Genomics,Genomics,https://includedcc.org/fhir/code-systems/data_categories,
+WGS,WGS,kf-manifests,experiment_strategy,experiment_strategy,WGS,Whole Genome,https://includedcc.org/fhir/code-systems/experimental_strategies,
+LCMS_Metabolomics,LCMS_Metabolomics,kf-manifests,experiment_strategy,experiment_strategy,LCMS-Metabolomics,LCMS_Metabolomics,https://includedcc.org/fhir/code-systems/experimental_strategies,
 Multiplex Immunoassay,Multiplex Immunoassay,kf-manifests,experiment_strategy,experiment_strategy,Multiplex-Immunoassay,Multiplex Immunoassay,https://includedcc.org/fhir/code-systems/experimental_strategies,
-DNA,DNA,kf-omics,derived_sample_type,derived_sample_type,OBI:0001051,DNA extract,http://purl.obolibrary.org/obo/obi.owl,
-Plasma,Plasma,kf-omics,derived_sample_type,derived_sample_type,C13356,Plasma,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C13356
-CONTROLLED,CONTROLLED,kf-omics,access_type,access_type,controlled,Controlled,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
-Registered,Registered,kf-omics,access_type,access_type,registered,Registered,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
-Metabolomics,Metabolomics,kf-omics,data_category,data_category,Metabolomics,Metabolomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
-Proteomics,Proteomics,kf-omics,data_category,data_category,Proteomics,Proteomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
-Transcriptomic,Transcriptomic,kf-manifests-rna,data_category,data_category,Transcriptomic,Transcriptomic,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
-RNA-Seq,RNA-Seq,kf-manifests-rna,experiment_strategy,experiment_strategy,RNA-Seq,RNA-Seq,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
-Gene Fusions,Gene Fusions,kf-manifests-rna,data_type,data_type,Gene-Fusions,Gene Fusions,https://nih-ncpi.github.io/ncpi-fhir-ig/data_types,
-Registered,Registered,kf-manifests-rna,access_type,access_type,registered,Registered,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
-Genomics,Genomics,kf-omics,data_category,data_category,Genomics,Genomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
-WGS,WGS,kf-omics,experiment_strategy,experiment_strategy,WGS,Whole Genome,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies,
-LCMS_Metabolomics,LCMS_Metabolomics,kf-omics,experiment_strategy,experiment_strategy,LCMS_Metabolomics,LCMS_Metabolomics,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies,
-Multiplex Immunoassay,Multiplex Immunoassay,kf-omics,experiment_strategy,experiment_strategy,Multiplex-Immunoassay,Multiplex Immunoassay,https://includedcc.org/fhir/code-systems/experimental_strategies,
+Transcriptomic,Transcriptomic,kf-manifests-rna,data_category,data_category,Transcriptomic,Transcriptomic,https://includedcc.org/fhir/code-systems/data_categories,
+RNA-Seq,RNA-Seq,kf-manifests,experiment_strategy,experiment_strategy,RNA-Seq,RNA-Seq,https://includedcc.org/fhir/code-systems/experimental_strategies,
+Gene Fusions,Gene Fusions,kf-manifests,data_type,data_type,Gene-Fusions,Gene Fusions,https://includedcc.org/fhir/code-systems/data_types,
+Gene Expression,Gene Expression,kf-manifests,data_type,data_type,Gene-Expression-Quantifications,Gene Expression Quantifications,https://includedcc.org/fhir/code-systems/data_types,
 Male,Male,participant,Sex,Sex,male,Male,http://hl7.org/fhir/administrative-gender,
-Male,Male,participant,Sex,Sex,male,Male,http://hl7.org/fhir/administrative-gender,
-Female,Female,participant,Sex,Sex,female,Female,http://hl7.org/fhir/administrative-gender,
 Female,Female,participant,Sex,Sex,female,Female,http://hl7.org/fhir/administrative-gender,
 White,White,participant,Race,Race,2028-9,White,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 American Indian or Alaska Native,American Indian or Alaska Native,participant,Race,Race,1002-5,American Indian or Alaska Native,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Asian,Asian,participant,Race,Race,2028-9,Asian,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Black or African-American,Black or African-American,participant,Race,Race,2054-5,Black or African American,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 More than one race,More than one race,participant,Race,Race,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,
-More than one race,More than one race,participant,Race,Race,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,
 NA,NA,participant,Race,Race,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Native Hawaiian or Other Pacific Islander,Native Hawaiian or Other Pacific Islander,participant,Race,Race,2076-8,Native Hawaiian or Other Pacific Islander,urn:oid:2.16.840.1.113883.6.238,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Other,Other,participant,Race,Race,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Other,Other,participant,Race,Race,other,Other,http://hl7.org/fhir/administrative-gender,
-Other,Other,participant,Race,Race,other,Other,http://hl7.org/fhir/administrative-gender,
-Prefer not to answer,Prefer not to answer,participant,Race,Race,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Prefer not to answer,Prefer not to answer,participant,Race,Race,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Hispanic or Latino,Hispanic or Latino,participant,Ethnicity,Ethnicity,2135-2,Hispanic or Latino,urn:oid:2.16.840.1.113883.6.238,
 NA,NA,participant,Ethnicity,Ethnicity,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Not Hispanic or Latino,Not Hispanic or Latino,participant,Ethnicity,Ethnicity,2186-5,Not Hispanic or Latino,urn:oid:2.16.840.1.113883.6.238,
 Prefer not to answer,Prefer not to answer,participant,Ethnicity,Ethnicity,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
-Prefer not to answer,Prefer not to answer,participant,Ethnicity,Ethnicity,ASKU,asked but unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Unsure,Unsure,participant,Ethnicity,Ethnicity,0008608,Down Syndrome,http://purl.obolibrary.org/obo/mondo.owl,
-Unsure,Unsure,participant,Ethnicity,Ethnicity,unconfirmed,Unconfirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 Unsure,Unsure,participant,Ethnicity,Ethnicity,unconfirmed,Unconfirmed,http://terminology.hl7.org/CodeSystem/condition-ver-status,
 NA,NA,participant,MRAbstractionStatus,MRAbstractionStatus,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,https://docs.google.com/spreadsheets/d/1cHSburUDg6CR4az5FZR82FI992h7cyv-22pLVTFLZvE/edit#gid=1746314807
 Unknown,Unknown,participant,MRAbstractionStatus,MRAbstractionStatus,UNK,Unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,
-Unknown,Unknown,participant,MRAbstractionStatus,MRAbstractionStatus,unknown,Unknown,http://hl7.org/fhir/administrative-gender,
 Unknown,Unknown,participant,MRAbstractionStatus,MRAbstractionStatus,unknown,Unknown,http://hl7.org/fhir/administrative-gender,
 Saliva,Saliva,specimen,sample_type,Sample_Type,C174119,Saliva Sample,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C174119
 WBCs,WBCs,specimen,sample_type,Sample_Type,C12529,Leukocyte,http://purl.obolibrary.org/obo/ncit.owl,
@@ -484,8 +462,6 @@ FACS,FACS,specimen,Laboratory_Procedure,Laboratory_Procedure,,,,
 Ficoll,Ficoll,specimen,Laboratory_Procedure,Laboratory_Procedure,,,,
 Lyse/Fix Buffer,Lyse/Fix Buffer,specimen,Laboratory_Procedure,Laboratory_Procedure,,,,
 PAXgene DNA,PAXgene DNA,specimen,Laboratory_Procedure,Laboratory_Procedure,C126393,PAXgene Blood DNA Tube,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C126393
-PAXgene DNA,PAXgene DNA,specimen,Laboratory_Procedure,Laboratory_Procedure,,,,
 PAXgene RNA,PAXgene RNA,specimen,Laboratory_Procedure,Laboratory_Procedure,C126394,PAXgene Blood RNA Tube,http://purl.obolibrary.org/obo/ncit.owl,http://purl.obolibrary.org/obo/NCIT_C126394
-PAXgene RNA,PAXgene RNA,specimen,Laboratory_Procedure,Laboratory_Procedure,,,,
 Qiagen Allprep,Qiagen Allprep,specimen,Laboratory_Procedure,Laboratory_Procedure,,,,
 RBC lysis,RBC lysis,specimen,Laboratory_Procedure,Laboratory_Procedure,,,,

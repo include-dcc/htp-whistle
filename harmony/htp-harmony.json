@@ -844,7 +844,7 @@
     },
     {
       "source": "experiment_strategy",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies",
+      "target": "https://includedcc.org/fhir/code-systems/experimental_strategies",
       "element": [
         {
           "code": "Multiplex ELISA",
@@ -873,8 +873,30 @@
           "display": "LCMS_Metabolomics",
           "target": [
             {
-              "code": "LCMS_Metabolomics",
+              "code": "LCMS-Metabolomics",
               "display": "LCMS_Metabolomics",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Multiplex Immunoassay",
+          "display": "Multiplex Immunoassay",
+          "target": [
+            {
+              "code": "Multiplex-Immunoassay",
+              "display": "Multiplex Immunoassay",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNA-Seq",
+          "display": "RNA-Seq",
+          "target": [
+            {
+              "code": "RNA-Seq",
+              "display": "RNA-Seq",
               "equivalence": "equivalent"
             }
           ]
@@ -929,40 +951,6 @@
             }
           ]
         },
-        {
-          "code": "RNA-Seq",
-          "display": "RNA-Seq",
-          "target": [
-            {
-              "code": "RNA-Seq",
-              "display": "RNA-Seq",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "experiment_strategy",
-      "target": "https://includedcc.org/fhir/code-systems/experimental_strategies",
-      "element": [
-        {
-          "code": "Multiplex Immunoassay",
-          "display": "Multiplex Immunoassay",
-          "target": [
-            {
-              "code": "Multiplex-Immunoassay",
-              "display": "Multiplex Immunoassay",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "experiment_strategy",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories",
-      "element": [
         {
           "code": "RNA-Seq",
           "display": "RNA-Seq",
@@ -1080,7 +1068,7 @@
     },
     {
       "source": "Preservation_Method",
-      "target": "self",
+      "target": "https://includedcc.org/fhir/code-systems/specimen-additive",
       "element": [
         {
           "code": "Cell Staining Buffer",
@@ -1090,7 +1078,85 @@
               "code": "Cell Staining Buffer",
               "display": "Cell Staining Buffer",
               "equivalence": "equivalent"
-            },
+            }
+          ]
+        },
+        {
+          "code": "CryoStor",
+          "display": "CryoStor",
+          "target": [
+            {
+              "code": "CryoStor",
+              "display": "CryoStor",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Elution buffer",
+          "display": "Elution buffer",
+          "target": [
+            {
+              "code": "Elution buffer",
+              "display": "Elution buffer",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Freezing Media",
+          "display": "Freezing Media",
+          "target": [
+            {
+              "code": "Freezing Media",
+              "display": "Freezing Media",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "No Additive",
+          "display": "No Additive",
+          "target": [
+            {
+              "code": "No Additive",
+              "display": "No Additive",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNAse free water",
+          "display": "RNAse free water",
+          "target": [
+            {
+              "code": "RNAse free water",
+              "display": "RNAse free water",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+          "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+          "target": [
+            {
+              "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+              "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Preservation_Method",
+      "target": "self",
+      "element": [
+        {
+          "code": "Cell Staining Buffer",
+          "display": "Cell Staining Buffer",
+          "target": [
             {
               "code": "Cell Staining Buffer",
               "display": "Cell Staining Buffer",
@@ -1176,99 +1242,6 @@
               "code": "RNAse free water",
               "display": "RNAse free water",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "RNAse free water",
-              "display": "RNAse free water",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-          "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-          "target": [
-            {
-              "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-              "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-              "equivalence": "equivalent"
-            },
-            {
-              "code": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-              "display": "RNeasy Lysis Buffer /2-Mercaptoethanol",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "Preservation_Method",
-      "target": "https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive",
-      "element": [
-        {
-          "code": "Cell Staining Buffer",
-          "display": "Cell Staining Buffer",
-          "target": [
-            {
-              "code": "Cell Staining Buffer",
-              "display": "Cell Staining Buffer",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "CryoStor",
-          "display": "CryoStor",
-          "target": [
-            {
-              "code": "CryoStor",
-              "display": "CryoStor",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Elution buffer",
-          "display": "Elution buffer",
-          "target": [
-            {
-              "code": "Elution buffer",
-              "display": "Elution buffer",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Freezing Media",
-          "display": "Freezing Media",
-          "target": [
-            {
-              "code": "Freezing Media",
-              "display": "Freezing Media",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "No Additive",
-          "display": "No Additive",
-          "target": [
-            {
-              "code": "No Additive",
-              "display": "No Additive",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "RNAse free water",
-          "display": "RNAse free water",
-          "target": [
-            {
-              "code": "RNAse free water",
-              "display": "RNAse free water",
-              "equivalence": "equivalent"
             }
           ]
         },
@@ -1303,6 +1276,17 @@
         {
           "code": "Freezing Media",
           "display": "Freezing Media",
+          "target": [
+            {
+              "code": "FROZ",
+              "display": "Frozen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "No Additive",
+          "display": "No Additive",
           "target": [
             {
               "code": "FROZ",
@@ -8784,7 +8768,7 @@
     },
     {
       "source": "data_category",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories",
+      "target": "https://includedcc.org/fhir/code-systems/data_categories",
       "element": [
         {
           "code": "Metabolomics",
@@ -8884,7 +8868,7 @@
     },
     {
       "source": "data_type",
-      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/data_types",
+      "target": "https://includedcc.org/fhir/code-systems/data_types",
       "element": [
         {
           "code": "Gene Fusions",
@@ -8893,6 +8877,17 @@
             {
               "code": "Gene-Fusions",
               "display": "Gene Fusions",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Gene Expression",
+          "display": "Gene Expression",
+          "target": [
+            {
+              "code": "Gene-Expression-Quantifications",
+              "display": "Gene Expression Quantifications",
               "equivalence": "equivalent"
             }
           ]
@@ -8910,6 +8905,17 @@
             {
               "code": "Gene Fusions",
               "display": "Gene Fusions",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Gene Expression",
+          "display": "Gene Expression",
+          "target": [
+            {
+              "code": "Gene Expression",
+              "display": "Gene Expression",
               "equivalence": "equivalent"
             }
           ]
@@ -9500,11 +9506,6 @@
               "code": "PAXgene DNA",
               "display": "PAXgene DNA",
               "equivalence": "equivalent"
-            },
-            {
-              "code": "PAXgene DNA",
-              "display": "PAXgene DNA",
-              "equivalence": "equivalent"
             }
           ]
         },
@@ -9512,11 +9513,6 @@
           "code": "PAXgene RNA",
           "display": "PAXgene RNA",
           "target": [
-            {
-              "code": "PAXgene RNA",
-              "display": "PAXgene RNA",
-              "equivalence": "equivalent"
-            },
             {
               "code": "PAXgene RNA",
               "display": "PAXgene RNA",

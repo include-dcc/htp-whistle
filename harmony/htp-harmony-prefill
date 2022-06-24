@@ -96,24 +96,24 @@ PAXgene DNA,PAXgene DNA,SpecimenEnrichment,,,
 PAXgene RNA,PAXgene RNA,SpecimenEnrichment,,,
 Qiagen Allprep,Qiagen Allprep,SpecimenEnrichment,,,
 RBC lysis,RBC lysis,SpecimenEnrichment,,,,
-Cell Staining Buffer,Cell Staining Buffer,Preservation_Method,Cell Staining Buffer,Cell Staining Buffer,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-CryoStor,CryoStor,Preservation_Method,CryoStor,CryoStor,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-Freezing Media,Freezing Media,Preservation_Method,Freezing Media,Freezing Media,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-No Additive,No Additive,Preservation_Method,No Additive,No Additive,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-RNAse free water,RNAse free water,Preservation_Method,RNAse free water,RNAse free water,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,Preservation_Method,RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-Elution buffer,Elution buffer,Preservation_Method,Elution buffer,Elution buffer,https://ncpi-fhir.github.io/ncpi-fhir-ig/CodeSystem/specimen-additive,
-WGS,WGS,experiment_strategy,WGS,Whole Genome,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies
-LCMS_Metabolomics,LCMS_Metabolomics,experiment_strategy,LCMS_Metabolomics,LCMS_Metabolomics,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies
-Multiplex ELISA,Multiplex ELISA,experiment_strategy,Multiplex ELISA,Multiplex ELISA,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies
+Cell Staining Buffer,Cell Staining Buffer,Preservation_Method,Cell Staining Buffer,Cell Staining Buffer,https://includedcc.org/fhir/code-systems/specimen-additive,
+CryoStor,CryoStor,Preservation_Method,CryoStor,CryoStor,https://includedcc.org/fhir/code-systems/specimen-additive,
+Freezing Media,Freezing Media,Preservation_Method,Freezing Media,Freezing Media,https://includedcc.org/fhir/code-systems/specimen-additive,
+No Additive,No Additive,Preservation_Method,No Additive,No Additive,https://includedcc.org/fhir/code-systems/specimen-additive,
+RNAse free water,RNAse free water,Preservation_Method,RNAse free water,RNAse free water,https://includedcc.org/fhir/code-systems/specimen-additive,
+RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,Preservation_Method,RNeasy Lysis Buffer /2-Mercaptoethanol,RNeasy Lysis Buffer /2-Mercaptoethanol,https://includedcc.org/fhir/code-systems/specimen-additive,
+Elution buffer,Elution buffer,Preservation_Method,Elution buffer,Elution buffer,https://includedcc.org/fhir/code-systems/specimen-additive,
+WGS,WGS,experiment_strategy,WGS,Whole Genome,https://includedcc.org/fhir/code-systems/experimental_strategies
+LCMS_Metabolomics,LCMS_Metabolomics,experiment_strategy,LCMS_Metabolomics,LCMS_Metabolomics,https://includedcc.org/fhir/code-systems/experimental_strategies
+Multiplex ELISA,Multiplex ELISA,experiment_strategy,Multiplex ELISA,Multiplex ELISA,https://includedcc.org/fhir/code-systems/experimental_strategies
 Multiplex Immunoassay,Multiplex Immunoassay,experiment_strategy,Multiplex-Immunoassay,Multiplex Immunoassay,https://includedcc.org/fhir/code-systems/experimental_strategies
-Metabolomics,Metabolomics,FileDataCategory,Metabolomics,Metabolomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories
-Proteomics,Proteomics,FileDataCategory,Proteomics,Proteomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories
-Genomics,Genomics,FileDataCategory,Genomics,Genomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories
+Metabolomics,Metabolomics,FileDataCategory,Metabolomics,Metabolomics,https://includedcc.org/fhir/code-systems/data_categories
+Proteomics,Proteomics,FileDataCategory,Proteomics,Proteomics,https://includedcc.org/fhir/code-systems/data_categories
+Genomics,Genomics,FileDataCategory,Genomics,Genomics,https://includedcc.org/fhir/code-systems/data_categories
 HTP,HTP,IncludeProgram,INCLUDE-KF,INCLUDE/KF,https://includedcc.org/fhir/code-systems/programs,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
 CONTROLLED,Controlled,access_type,controlled,Controlled,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
 Registered,Registered,access_type,registered,Registered,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
 FAMMEMB,Family Member,FamilyRelationship,FAMMEMB,family member,http://terminology.hl7.org/CodeSystem/v3-RoleCode
-Transcriptomic,Transcriptomic,data_category,data_category,Transcriptomic,Transcriptomic,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
-RNA-Seq,RNA-Seq,experiment_strategy,experiment_strategy,RNA-Seq,RNA-Seq,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
+Transcriptomic,Transcriptomic,data_category,data_category,Transcriptomic,Transcriptomic,https://includedcc.org/fhir/code-systems/data_categories,
+RNA-Seq,RNA-Seq,experiment_strategy,experiment_strategy,RNA-Seq,RNA-Seq,https://includedcc.org/fhir/code-systems/data_categories,
 Gene Fusions,Gene Fusions,data_type,data_type,Gene-Fusions,Gene Fusions,https://nih-ncpi.github.io/ncpi-fhir-ig/data_types,
